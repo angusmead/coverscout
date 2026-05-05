@@ -107,6 +107,12 @@ export const ROUTES_META: RouteMeta[] = [
 
   // Reviews
   { path: "/reviews/", title: "Australian Car Insurance Provider Reviews and Comparisons", description: "Plain-English overviews of 15 Australian car insurance providers and 10 head-to-head comparisons — neutral, evergreen, no fake ratings.", breadcrumbs: [HOME, reviewsHub] },
+
+  // Company / legal
+  { path: "/about/", title: "About CoverScout", description: "What CoverScout is and isn't — a plain-English Australian insurance comparison and education site, not a broker, not a quote engine, not a financial adviser.", breadcrumbs: [HOME, { name: "About", url: "/about/" }] },
+  { path: "/contact/", title: "Contact CoverScout", description: "How to reach the CoverScout team — one email address, no forms, real responses within a couple of business days.", breadcrumbs: [HOME, { name: "Contact", url: "/contact/" }] },
+  { path: "/privacy/", title: "Privacy Policy", description: "How CoverScout handles information under the Australian Privacy Principles — what we collect (Cloudflare Web Analytics only), how we use it, and your rights.", breadcrumbs: [HOME, { name: "Privacy", url: "/privacy/" }] },
+  { path: "/how-we-make-money/", title: "How CoverScout Makes Money", description: "The honest version of CoverScout's commercial model — no active affiliate partnerships yet, no paid placements, no sponsored content.", breadcrumbs: [HOME, { name: "How we make money", url: "/how-we-make-money/" }] },
 ];
 
 // Provider review pages are derived from PROVIDERS so adding/removing a
