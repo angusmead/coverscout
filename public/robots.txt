@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coverscout.com.au/sitemap.xml
