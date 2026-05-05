@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Heart, Car, Home, Shield, Plane, Briefcase, PawPrint, Activity,
-  Star, ChevronDown, ArrowRight, ArrowUpRight, Clock, Sparkles,
+  Heart, Car, Home, Shield, Plane, Briefcase,
+  ChevronDown, ArrowRight, ArrowUpRight, Clock, Sparkles,
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
@@ -35,55 +35,42 @@ const featuredComparisons = [
   { label: "APIA vs NRMA", to: "/reviews/apia-vs-nrma/" },
 ];
 
-const categories = [
-  { name: "Health insurance", icon: Heart, providers: 18 },
-  { name: "Car insurance", icon: Car, providers: 22 },
-  { name: "Home & contents", icon: Home, providers: 15 },
-  { name: "Life insurance", icon: Shield, providers: 12 },
-  { name: "Travel insurance", icon: Plane, providers: 14 },
-  { name: "Business insurance", icon: Briefcase, providers: 9 },
-  { name: "Pet insurance", icon: PawPrint, providers: 11 },
-  { name: "Income protection", icon: Activity, providers: 8 },
+const categories: { name: string; icon: typeof Heart; to: string; blurb: string }[] = [
+  { name: "Car insurance", icon: Car, to: "/car-insurance/", blurb: "Compare cover, providers, and reviews" },
+  { name: "Home insurance", icon: Home, to: "/home-insurance/", blurb: "Coming soon — building, contents, renters" },
+  { name: "Life insurance", icon: Shield, to: "/life-insurance/", blurb: "Coming soon — life, income protection" },
+  { name: "Health insurance", icon: Heart, to: "/health-insurance/", blurb: "Coming soon — hospital and extras" },
+  { name: "Travel insurance", icon: Plane, to: "/travel-insurance/", blurb: "Coming soon — domestic and international" },
+  { name: "Business insurance", icon: Briefcase, to: "/business-insurance/", blurb: "Coming soon — public liability and more" },
 ];
 
 const insuranceOptions = [
-  "Health insurance", "Car insurance", "Home & contents", "Life insurance",
-  "Travel insurance", "Business insurance", "Pet insurance",
-];
-
-const tableRows = [
-  { provider: "Bupa", product: "Top Hospital Gold", price: 198, excess: "$500", tier: "Gold", rating: 4.6 },
-  { provider: "Medibank", product: "Premier Hospital", price: 187, excess: "$500", tier: "Gold", rating: 4.5 },
-  { provider: "NIB", product: "Top Hospital Plus", price: 174, excess: "$750", tier: "Gold", rating: 4.3 },
-  { provider: "HCF", product: "Silver Plus Hospital", price: 143, excess: "$500", tier: "Silver", rating: 4.4 },
-  { provider: "Budget Direct", product: "Essential Hospital", price: 128, excess: "$750", tier: "Silver", rating: 4.1 },
+  "Car insurance",
 ];
 
 const guides = [
-  { tag: "Health", title: "What does hospital cover actually include?", read: "8 min read" },
-  { tag: "Car", title: "Comprehensive vs. third party: what's the difference?", read: "5 min read" },
-  { tag: "Life", title: "How much life cover do Australians actually need?", read: "10 min read" },
+  {
+    tag: "Cover types",
+    title: "Comprehensive vs third party — what's the difference?",
+    to: "/car-insurance/comprehensive/",
+    read: "8 min read",
+  },
+  {
+    tag: "Pricing",
+    title: "How to lower your car insurance premium without losing cover",
+    to: "/car-insurance/lower-premiums/",
+    read: "9 min read",
+  },
+  {
+    tag: "Young drivers",
+    title: "Why young drivers pay more — and what may help",
+    to: "/car-insurance/young-drivers/",
+    read: "7 min read",
+  },
 ];
-
-const tickerProviders = [
-  "Bupa", "Medibank", "NIB", "HCF", "AHM", "Budget Direct", "Allianz", "AAMI",
-  "Youi", "RACV", "NRMA", "QBE", "Suncorp", "TAL", "AIA", "Zurich",
-];
-
-const Stars = ({ rating }: { rating: number }) => (
-  <div className="flex items-center gap-1">
-    <div className="flex">
-      {[1, 2, 3, 4, 5].map((i) => (
-        <Star key={i} size={14} className={i <= Math.round(rating) ? "fill-primary text-primary" : "text-border"} />
-      ))}
-    </div>
-    <span className="text-sm text-muted-foreground">{rating.toFixed(1)}</span>
-  </div>
-);
 
 const Index = () => {
-  const [selected, setSelected] = useState("Health insurance");
-  const [tab, setTab] = useState<"Singles" | "Couples" | "Family">("Singles");
+  const [selected, setSelected] = useState("Car insurance");
 
   return (
     <>
@@ -191,42 +178,41 @@ const Index = () => {
               </Link>
             </div>
 
-            <div className="mt-8 flex items-center gap-6 text-xs text-muted-foreground">
-              <div className="flex -space-x-2">
-                {["B","M","N","H"].map((c, i) => (
-                  <div key={i} className="w-7 h-7 rounded-full bg-card border border-border flex items-center justify-center text-[10px] font-semibold text-foreground/70">{c}</div>
-                ))}
-              </div>
-              <span>Comparing 100+ policies from 47 Australian insurers</span>
+            <div className="mt-8 flex items-center gap-3 text-xs text-muted-foreground">
+              <Sparkles size={14} className="text-primary" />
+              <span>Plain-English guides covering 15 Australian car insurers and 10 head-to-head comparisons</span>
             </div>
           </div>
 
           {/* Editorial card stack */}
           <div className="md:col-span-5 relative h-[420px] hidden md:block animate-fade-in [animation-delay:120ms]">
-            <div className="absolute top-8 right-12 w-72 rounded-xl bg-card border border-border p-5 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.15)] rotate-[-4deg] hover:rotate-0 transition-transform duration-500">
-              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-3">Hospital · Gold</div>
-              <div className="font-sans font-extrabold text-2xl tracking-tight">Bupa</div>
-              <div className="text-sm text-muted-foreground">Top Hospital Gold</div>
-              <div className="mt-4 flex items-end justify-between">
-                <div>
-                  <div className="font-sans font-extrabold text-3xl tracking-tight">$198<span className="text-base text-muted-foreground">/mo</span></div>
-                  <div className="text-[11px] text-muted-foreground">after rebate</div>
-                </div>
-                <Stars rating={4.6} />
+            <Link
+              to="/car-insurance/compare/"
+              className="absolute top-8 right-12 w-72 rounded-xl bg-card border border-border p-5 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.15)] rotate-[-4deg] hover:rotate-0 transition-transform duration-500 block"
+            >
+              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-3">Compare car insurance</div>
+              <div className="font-sans font-extrabold text-2xl tracking-tight">What to put side by side</div>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                Cover types, excess, agreed value vs market value — the things that actually move the price.
+              </p>
+              <div className="mt-4 inline-flex items-center gap-1 text-sm text-primary">
+                Read the comparison guide <ArrowRight size={14} />
               </div>
-            </div>
-            <div className="absolute top-44 right-0 w-72 rounded-xl bg-ink text-ink-foreground p-5 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.4)] rotate-[3deg] hover:rotate-0 transition-transform duration-500">
-              <div className="text-xs uppercase tracking-[0.18em] text-ink-foreground/60 mb-3">Recommended match</div>
-              <div className="font-sans font-extrabold text-2xl tracking-tight">HCF</div>
-              <div className="text-sm text-ink-foreground/60">Silver Plus Hospital</div>
-              <div className="mt-4 flex items-end justify-between">
-                <div>
-                  <div className="font-sans font-extrabold text-3xl text-primary tracking-tight">$143<span className="text-base text-ink-foreground/60">/mo</span></div>
-                  <div className="text-[11px] text-ink-foreground/50">save $55 vs avg</div>
-                </div>
+            </Link>
+            <Link
+              to="/reviews/aami-vs-nrma/"
+              className="absolute top-44 right-0 w-72 rounded-xl bg-ink text-ink-foreground p-5 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.4)] rotate-[3deg] hover:rotate-0 transition-transform duration-500 block"
+            >
+              <div className="text-xs uppercase tracking-[0.18em] text-ink-foreground/60 mb-3">Head-to-head</div>
+              <div className="font-sans font-extrabold text-2xl tracking-tight">AAMI vs NRMA</div>
+              <p className="text-sm text-ink-foreground/70 mt-2 leading-relaxed">
+                Two of Australia's most recognisable car insurance brands compared side by side.
+              </p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="text-sm text-primary">Read the comparison</span>
                 <ArrowUpRight className="text-primary" />
               </div>
-            </div>
+            </Link>
             <div className="absolute bottom-0 right-32 w-60 rounded-xl bg-card border border-border p-4 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.15)] rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -358,98 +344,28 @@ const Index = () => {
       </section>
 
       {/* CATEGORY GRID */}
-      <section className="container py-20">
-        <div className="flex items-end justify-between mb-10">
-          <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">Browse by category</h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {categories.map((c) => {
-            const Icon = c.icon;
-            return (
-              <a
-                key={c.name}
-                href="#"
-                className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
-              >
-                <Icon className="text-primary mb-6" size={24} strokeWidth={1.75} />
-                <div className="font-sans font-extrabold text-lg leading-tight mb-1 tracking-tight">{c.name}</div>
-                <div className="text-sm text-muted-foreground">{c.providers} providers</div>
-              </a>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* COMPARISON TABLE */}
       <section className="bg-secondary/40 border-y border-border">
         <div className="container py-20">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Sample comparison</p>
-              <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
-                Health insurance — <span className="italic">Hospital cover</span>
-              </h2>
-            </div>
-            <div className="flex gap-2 bg-card border border-border rounded-full p-1 w-fit">
-              {(["Singles", "Couples", "Family"] as const).map((t) => (
-                <button
-                  key={t}
-                  onClick={() => setTab(t)}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition ${
-                    tab === t ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground"
-                  }`}
+          <div className="flex items-end justify-between mb-10">
+            <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">Browse by category</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {categories.map((c) => {
+              const Icon = c.icon;
+              return (
+                <Link
+                  key={c.name}
+                  to={c.to}
+                  className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
                 >
-                  {t}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-card border border-border rounded-lg overflow-x-auto">
-            <table className="w-full min-w-[820px] text-left">
-              <thead className="border-b border-border text-xs uppercase tracking-wider text-muted-foreground">
-                <tr>
-                  <th className="px-6 py-4 font-medium">Provider</th>
-                  <th className="px-6 py-4 font-medium">Monthly est.</th>
-                  <th className="px-6 py-4 font-medium">Excess</th>
-                  <th className="px-6 py-4 font-medium">Cover type</th>
-                  <th className="px-6 py-4 font-medium">Rating</th>
-                  <th className="px-6 py-4 font-medium"></th>
-                </tr>
-              </thead>
-              <tbody>
-                {tableRows.map((r) => (
-                  <tr key={r.provider} className="border-b border-border last:border-0 hover:bg-secondary/40 transition">
-                    <td className="px-6 py-5">
-                      <div className="font-sans font-extrabold text-lg tracking-tight">{r.provider}</div>
-                      <div className="text-sm text-muted-foreground">{r.product}</div>
-                    </td>
-                    <td className="px-6 py-5">
-                      <div className="font-medium">${r.price}</div>
-                      <div className="text-xs text-muted-foreground">after rebate</div>
-                    </td>
-                    <td className="px-6 py-5 text-sm">{r.excess}</td>
-                    <td className="px-6 py-5">
-                      <span className={`inline-block px-2.5 py-1 rounded-full text-xs font-medium border ${
-                        r.tier === "Gold"
-                          ? "bg-[hsl(45_80%_95%)] text-[hsl(35_70%_30%)] border-[hsl(45_70%_80%)]"
-                          : "bg-muted text-foreground/70 border-border"
-                      }`}>{r.tier}</span>
-                    </td>
-                    <td className="px-6 py-5"><Stars rating={r.rating} /></td>
-                    <td className="px-6 py-5 text-right">
-                      <button className="group inline-flex items-center gap-1 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition whitespace-nowrap">
-                        Get quote <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="mt-6 bg-card border border-border rounded-lg p-5 text-sm text-muted-foreground leading-relaxed">
-            The information above is general in nature and does not take into account your personal circumstances. Prices are estimates only. We may receive a commission if you click through to a provider. Always read the PDS before purchasing.
+                  <Icon className="text-primary mb-6" size={24} strokeWidth={1.75} />
+                  <div className="font-sans font-extrabold text-lg leading-tight mb-1 tracking-tight group-hover:text-primary transition-colors">
+                    {c.name}
+                  </div>
+                  <div className="text-sm text-muted-foreground">{c.blurb}</div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -460,15 +376,18 @@ const Index = () => {
           <h2 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight">
             Guides & <span className="italic">explainers</span>
           </h2>
-          <a href="#" className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all">
-            All guides <ArrowRight size={14} />
-          </a>
+          <Link
+            to="/car-insurance/"
+            className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            All car insurance guides <ArrowRight size={14} />
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {guides.map((g, i) => (
-            <a
+            <Link
               key={g.title}
-              href="#"
+              to={g.to}
               className="group bg-card border border-border rounded-lg p-7 hover:border-primary hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-6">
@@ -482,7 +401,7 @@ const Index = () => {
                 <span className="flex items-center gap-2"><Clock size={14} /> {g.read}</span>
                 <ArrowUpRight size={16} className="group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition" />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>

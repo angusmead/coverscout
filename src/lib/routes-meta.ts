@@ -106,7 +106,7 @@ export const ROUTES_META: RouteMeta[] = [
   { path: "/guides/questions-to-ask-before-buying-insurance/", title: "Questions to ask before buying insurance", description: "Questions worth asking yourself — and the insurer — before buying any insurance policy.", breadcrumbs: [HOME, guidesHub, { name: "Questions to ask", url: "/guides/questions-to-ask-before-buying-insurance/" }], placeholder: true },
 
   // Reviews
-  { path: "/reviews/", title: "Insurance provider reviews", description: "Plain-English overviews of Australian insurance providers — products, features and what to compare.", breadcrumbs: [HOME, reviewsHub], placeholder: true },
+  { path: "/reviews/", title: "Australian Car Insurance Provider Reviews and Comparisons", description: "Plain-English overviews of 15 Australian car insurance providers and 10 head-to-head comparisons — neutral, evergreen, no fake ratings.", breadcrumbs: [HOME, reviewsHub] },
 ];
 
 // Provider review pages are derived from PROVIDERS so adding/removing a

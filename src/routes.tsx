@@ -19,6 +19,7 @@ import CarInsuranceNoClaimBonus from "@/pages/car-insurance/CarInsuranceNoClaimB
 import CarInsuranceClaims from "@/pages/car-insurance/CarInsuranceClaims";
 import CarInsurancePayMonthly from "@/pages/car-insurance/CarInsurancePayMonthly";
 import CarInsuranceHighRiskDrivers from "@/pages/car-insurance/CarInsuranceHighRiskDrivers";
+import ReviewsHub from "@/pages/ReviewsHub";
 import { ProviderReviewPage } from "@/components/ProviderReviewPage";
 import { ProviderVsPage } from "@/components/ProviderVsPage";
 import { PROVIDERS } from "@/lib/providers-data";
@@ -47,6 +48,7 @@ const PAGE_REGISTRY: Record<string, ReactNode> = {
   "/car-insurance/claims/": <CarInsuranceClaims />,
   "/car-insurance/pay-monthly/": <CarInsurancePayMonthly />,
   "/car-insurance/high-risk-drivers/": <CarInsuranceHighRiskDrivers />,
+  "/reviews/": <ReviewsHub />,
   ...Object.fromEntries(
     PROVIDERS.map((p) => [p.path, <ProviderReviewPage slug={p.slug} />] as const),
   ),
