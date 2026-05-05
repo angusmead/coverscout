@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Heart, Car, Home, Shield, Plane, Briefcase, PawPrint, Activity,
   Star, ChevronDown, ArrowRight, ArrowUpRight, Clock, Sparkles,
@@ -6,6 +7,33 @@ import {
 import { SEO } from "@/components/SEO";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/site";
+
+const popularTopics = [
+  { title: "Cheap car insurance — how to save without losing cover", to: "/car-insurance/cheap/", tag: "Pricing" },
+  { title: "How to compare car insurance properly", to: "/car-insurance/compare/", tag: "Compare" },
+  { title: "Car insurance quotes — getting useful comparisons", to: "/car-insurance/quotes/", tag: "Quotes" },
+  { title: "Car insurance for young drivers", to: "/car-insurance/young-drivers/", tag: "Young drivers" },
+  { title: "Comprehensive vs third party — what's the difference?", to: "/car-insurance/comprehensive/", tag: "Cover types" },
+  { title: "How to lower your car insurance premium", to: "/car-insurance/lower-premiums/", tag: "Premiums" },
+];
+
+const featuredProviders = [
+  { name: "AAMI", blurb: "National mainstream brand, online + phone", to: "/reviews/aami/" },
+  { name: "NRMA", blurb: "Strong eastern-state presence with branches", to: "/reviews/nrma/" },
+  { name: "Budget Direct", blurb: "Direct-to-consumer, price-positioned", to: "/reviews/budget-direct/" },
+  { name: "Youi", blurb: "Tailored phone-led quote process", to: "/reviews/youi/" },
+  { name: "Allianz", blurb: "Global insurer with broad Australian presence", to: "/reviews/allianz/" },
+  { name: "Bingle", blurb: "Online-only, no-frills budget brand", to: "/reviews/bingle/" },
+];
+
+const featuredComparisons = [
+  { label: "AAMI vs NRMA", to: "/reviews/aami-vs-nrma/" },
+  { label: "Budget Direct vs Youi", to: "/reviews/budget-direct-vs-youi/" },
+  { label: "Bingle vs Budget Direct", to: "/reviews/bingle-vs-budget-direct/" },
+  { label: "Coles vs Woolworths", to: "/reviews/coles-vs-woolworths/" },
+  { label: "RACQ vs Suncorp", to: "/reviews/racq-vs-suncorp/" },
+  { label: "APIA vs NRMA", to: "/reviews/apia-vs-nrma/" },
+];
 
 const categories = [
   { name: "Health insurance", icon: Heart, providers: 18 },
@@ -155,9 +183,12 @@ const Index = () => {
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" size={18} />
               </div>
-              <button className="group inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-md font-medium hover:opacity-90 transition whitespace-nowrap">
+              <Link
+                to="/car-insurance/compare/"
+                className="group inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-md font-medium hover:opacity-90 transition whitespace-nowrap"
+              >
                 Compare <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
             </div>
 
             <div className="mt-8 flex items-center gap-6 text-xs text-muted-foreground">
@@ -218,7 +249,111 @@ const Index = () => {
           <span className="text-border">·</span>
           <span>We may earn a commission from providers</span>
           <span className="text-border">·</span>
-          <span>Updated May 2025</span>
+          <span>Updated May 2026</span>
+        </div>
+      </section>
+
+      {/* POPULAR TOPICS */}
+      <section className="container py-20">
+        <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Start here</p>
+            <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
+              Popular car insurance topics
+            </h2>
+          </div>
+          <Link
+            to="/car-insurance/"
+            className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            All car insurance pages <ArrowRight size={14} />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {popularTopics.map((t) => (
+            <Link
+              key={t.to}
+              to={t.to}
+              className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">{t.tag}</div>
+              <div className="font-sans font-extrabold text-lg leading-snug tracking-tight group-hover:text-primary transition-colors">
+                {t.title}
+              </div>
+              <div className="mt-6 inline-flex items-center gap-1 text-sm text-muted-foreground group-hover:text-primary group-hover:gap-2 transition-all">
+                Read guide <ArrowRight size={14} />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* PROVIDER REVIEWS */}
+      <section className="bg-secondary/40 border-y border-border">
+        <div className="container py-20">
+          <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Provider reviews</p>
+              <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
+                Australian car insurance providers
+              </h2>
+            </div>
+            <Link
+              to="/reviews/"
+              className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+            >
+              All provider reviews <ArrowRight size={14} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredProviders.map((p) => (
+              <Link
+                key={p.to}
+                to={p.to}
+                className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="font-sans font-extrabold text-2xl tracking-tight mb-2 group-hover:text-primary transition-colors">
+                  {p.name}
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.blurb}</p>
+                <div className="mt-5 inline-flex items-center gap-1 text-sm text-foreground/70 group-hover:text-primary group-hover:gap-2 transition-all">
+                  Read review <ArrowRight size={14} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COMPARING TWO PROVIDERS */}
+      <section className="container py-20">
+        <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Side-by-side</p>
+            <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
+              Comparing two providers?
+            </h2>
+          </div>
+          <Link
+            to="/reviews/"
+            className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            All comparisons <ArrowRight size={14} />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {featuredComparisons.map((c) => (
+            <Link
+              key={c.to}
+              to={c.to}
+              className="group flex items-center justify-between bg-card border border-border rounded-lg px-5 py-4 hover:border-primary hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <span className="font-sans font-extrabold text-base tracking-tight group-hover:text-primary transition-colors">
+                {c.label}
+              </span>
+              <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition" />
+            </Link>
+          ))}
         </div>
       </section>
 
