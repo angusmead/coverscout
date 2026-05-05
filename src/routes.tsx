@@ -19,6 +19,7 @@ import CarInsuranceNoClaimBonus from "@/pages/car-insurance/CarInsuranceNoClaimB
 import CarInsuranceClaims from "@/pages/car-insurance/CarInsuranceClaims";
 import CarInsurancePayMonthly from "@/pages/car-insurance/CarInsurancePayMonthly";
 import CarInsuranceHighRiskDrivers from "@/pages/car-insurance/CarInsuranceHighRiskDrivers";
+import CarInsuranceHowMuch from "@/pages/car-insurance/CarInsuranceHowMuch";
 import ReviewsHub from "@/pages/ReviewsHub";
 import ProviderCategoryPage from "@/pages/ProviderCategoryPage";
 import About from "@/pages/About";
@@ -53,6 +54,7 @@ const PAGE_REGISTRY: Record<string, ReactNode> = {
   "/car-insurance/claims/": <CarInsuranceClaims />,
   "/car-insurance/pay-monthly/": <CarInsurancePayMonthly />,
   "/car-insurance/high-risk-drivers/": <CarInsuranceHighRiskDrivers />,
+  "/car-insurance/how-much-is-car-insurance/": <CarInsuranceHowMuch />,
   "/reviews/": <ReviewsHub />,
   "/reviews/budget-friendly/": <ProviderCategoryPage category="budget-friendly" />,
   "/reviews/balanced/": <ProviderCategoryPage category="balanced" />,
