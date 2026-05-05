@@ -5,6 +5,7 @@ import {
   ChevronDown, ArrowRight, ArrowUpRight, Clock, Sparkles,
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { ProviderDirectory } from "@/components/insurance/ProviderDirectory";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/site";
 
@@ -17,13 +18,13 @@ const popularTopics = [
   { title: "How to lower your car insurance premium", to: "/car-insurance/lower-premiums/", tag: "Premiums" },
 ];
 
-const featuredProviders = [
-  { name: "AAMI", blurb: "National mainstream brand, online + phone", to: "/reviews/aami/" },
-  { name: "NRMA", blurb: "Strong eastern-state presence with branches", to: "/reviews/nrma/" },
-  { name: "Budget Direct", blurb: "Direct-to-consumer, price-positioned", to: "/reviews/budget-direct/" },
-  { name: "Youi", blurb: "Tailored phone-led quote process", to: "/reviews/youi/" },
-  { name: "Allianz", blurb: "Global insurer with broad Australian presence", to: "/reviews/allianz/" },
-  { name: "Bingle", blurb: "Online-only, no-frills budget brand", to: "/reviews/bingle/" },
+const FEATURED_PROVIDER_SLUGS = [
+  "aami",
+  "nrma",
+  "budget-direct",
+  "youi",
+  "allianz",
+  "bingle",
 ];
 
 const featuredComparisons = [
@@ -171,11 +172,19 @@ const Index = () => {
                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" size={18} />
               </div>
               <Link
-                to="/car-insurance/compare/"
+                to="/reviews/"
                 className="group inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-md font-medium hover:opacity-90 transition whitespace-nowrap"
               >
-                Compare <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                Compare providers <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
+            </div>
+
+            <div className="mt-3 text-sm text-muted-foreground">
+              Or try the{" "}
+              <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+                3-step comparison tool
+              </Link>{" "}
+              to narrow your options first.
             </div>
 
             <div className="mt-8 flex items-center gap-3 text-xs text-muted-foreground">
@@ -274,40 +283,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PROVIDER REVIEWS */}
+      {/* PROVIDER DIRECTORY (compact) */}
       <section className="bg-secondary/40 border-y border-border">
         <div className="container py-20">
-          <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Provider reviews</p>
-              <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
-                Australian car insurance providers
-              </h2>
-            </div>
-            <Link
-              to="/reviews/"
-              className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
-            >
-              All provider reviews <ArrowRight size={14} />
-            </Link>
+          <div className="mb-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Provider directory</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredProviders.map((p) => (
-              <Link
-                key={p.to}
-                to={p.to}
-                className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="font-sans font-extrabold text-2xl tracking-tight mb-2 group-hover:text-primary transition-colors">
-                  {p.name}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.blurb}</p>
-                <div className="mt-5 inline-flex items-center gap-1 text-sm text-foreground/70 group-hover:text-primary group-hover:gap-2 transition-all">
-                  Read review <ArrowRight size={14} />
-                </div>
-              </Link>
-            ))}
-          </div>
+          <ProviderDirectory
+            compact
+            slugs={FEATURED_PROVIDER_SLUGS}
+            heading="Compare 15 Australian car insurance providers"
+            subheading="A snapshot of six of the most-asked-about brands. The full directory has filters and the rest."
+          />
         </div>
       </section>
 

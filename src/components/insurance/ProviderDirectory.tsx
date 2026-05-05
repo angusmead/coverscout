@@ -73,19 +73,53 @@ const ROWS: ProviderRow[] = [...PROVIDERS]
     };
   });
 
-export const ProviderDirectory = () => {
+const ROW_BY_SLUG = new Map(ROWS.map((r) => [r.slug, r]));
+
+type Props = {
+  /** Compact mode: hides search, filters and methodology; adds "view all" footer CTA. */
+  compact?: boolean;
+  /** Optional explicit slug list — shows only these, in given order. Implies compact view. */
+  slugs?: string[];
+  /** Optional max rows when not using `slugs`. */
+  limit?: number;
+  /** Heading override. Default depends on mode. */
+  heading?: string;
+  /** Subheading override. */
+  subheading?: string;
+};
+
+export const ProviderDirectory = ({
+  compact = false,
+  slugs,
+  limit,
+  heading,
+  subheading,
+}: Props = {}) => {
+  const isCompact = compact || Boolean(slugs) || Boolean(limit);
+
+  const baseRows = useMemo<ProviderRow[]>(() => {
+    if (slugs) {
+      return slugs
+        .map((s) => ROW_BY_SLUG.get(s))
+        .filter((r): r is ProviderRow => Boolean(r));
+    }
+    if (limit) return ROWS.slice(0, limit);
+    return ROWS;
+  }, [slugs, limit]);
+
   const [brandType, setBrandType] = useState<BrandType | "all">("all");
   const [query, setQuery] = useState("");
   const [methodologyOpen, setMethodologyOpen] = useState(false);
 
   const filtered = useMemo(() => {
+    if (isCompact) return baseRows;
     const q = query.trim().toLowerCase();
-    return ROWS.filter((r) => {
+    return baseRows.filter((r) => {
       if (brandType !== "all" && r.facts.brandType !== brandType) return false;
       if (q && !r.name.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [brandType, query]);
+  }, [baseRows, brandType, query, isCompact]);
 
   const onBrandTypeChange = (next: BrandType | "all") => {
     setBrandType(next);
@@ -109,73 +143,80 @@ export const ProviderDirectory = () => {
       aria-label="Provider directory"
       className="bg-card border border-border rounded-2xl p-5 md:p-7 shadow-[0_20px_60px_-30px_hsl(160_30%_10%/0.18)]"
     >
-      {/* Header + search */}
+      {/* Header + (full mode only) search */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-5">
         <div>
           <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight">
-            Australian car insurance provider directory
+            {heading ?? "Australian car insurance provider directory"}
           </h2>
           <p className="text-sm text-muted-foreground mt-1">
-            {filtered.length} of {ROWS.length} providers · sorted alphabetically
+            {subheading ??
+              (isCompact
+                ? `Showing ${filtered.length} of ${ROWS.length} providers`
+                : `${filtered.length} of ${ROWS.length} providers · sorted alphabetically`)}
           </p>
         </div>
-        <div className="relative w-full md:w-72">
-          <Search
-            size={16}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
-            aria-hidden
-          />
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => onQueryChange(e.target.value)}
-            placeholder="Search providers"
-            aria-label="Search providers by name"
-            className="w-full bg-background border border-border rounded-md pl-9 pr-9 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-          {query && (
+        {!isCompact && (
+          <div className="relative w-full md:w-72">
+            <Search
+              size={16}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+              aria-hidden
+            />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => onQueryChange(e.target.value)}
+              placeholder="Search providers"
+              aria-label="Search providers by name"
+              className="w-full bg-background border border-border rounded-md pl-9 pr-9 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => onQueryChange("")}
+                aria-label="Clear search"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition"
+              >
+                <X size={16} />
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Brand-type chips — hidden in compact mode */}
+      {!isCompact && (
+        <div className="flex flex-wrap gap-2 mb-6">
+          {ALL_BRAND_TYPES.map((b) => {
+            const isActive = brandType === b.value;
+            return (
+              <button
+                key={b.value}
+                type="button"
+                onClick={() => onBrandTypeChange(b.value)}
+                aria-pressed={isActive}
+                className={`text-xs font-medium px-3 py-1.5 rounded-full border transition ${
+                  isActive
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-foreground/70 border-border hover:border-primary hover:text-foreground"
+                }`}
+              >
+                {b.label}
+              </button>
+            );
+          })}
+          {hasFilters && (
             <button
               type="button"
-              onClick={() => onQueryChange("")}
-              aria-label="Clear search"
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition"
+              onClick={reset}
+              className="text-xs font-medium px-3 py-1.5 rounded-full border border-transparent text-muted-foreground hover:text-foreground hover:underline transition"
             >
-              <X size={16} />
+              Clear filters
             </button>
           )}
         </div>
-      </div>
-
-      {/* Brand-type chips */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        {ALL_BRAND_TYPES.map((b) => {
-          const isActive = brandType === b.value;
-          return (
-            <button
-              key={b.value}
-              type="button"
-              onClick={() => onBrandTypeChange(b.value)}
-              aria-pressed={isActive}
-              className={`text-xs font-medium px-3 py-1.5 rounded-full border transition ${
-                isActive
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-card text-foreground/70 border-border hover:border-primary hover:text-foreground"
-              }`}
-            >
-              {b.label}
-            </button>
-          );
-        })}
-        {hasFilters && (
-          <button
-            type="button"
-            onClick={reset}
-            className="text-xs font-medium px-3 py-1.5 rounded-full border border-transparent text-muted-foreground hover:text-foreground hover:underline transition"
-          >
-            Clear filters
-          </button>
-        )}
-      </div>
+      )}
 
       {/* Provider rows */}
       {filtered.length === 0 ? (
@@ -292,42 +333,57 @@ export const ProviderDirectory = () => {
         </ul>
       )}
 
-      {/* Methodology / why no scores */}
-      <div className="mt-6 border-t border-border pt-5">
-        <button
-          type="button"
-          onClick={() => setMethodologyOpen((v) => !v)}
-          aria-expanded={methodologyOpen}
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
-        >
-          <Info size={14} className="text-primary" />
-          Why we don't score insurers numerically
-        </button>
-        {methodologyOpen && (
-          <div className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl space-y-3">
-            <p>
-              We deliberately don't run a numerical scoring system on Australian car insurers.
-              Building a defensible score would require a published methodology, calibrated inputs
-              (claims data, customer satisfaction surveys, feature analysis) and ongoing research —
-              and even then, scores compress nuance into a single number that often hides the
-              trade-offs that matter.
-            </p>
-            <p>
-              Instead, every provider here gets a plain-English review and a categorical summary
-              based on facts you can verify. The trade-off you're weighing depends on your vehicle,
-              location and what you value in an insurer — that's the question the directory exists
-              to support.
-            </p>
-            <p>
-              For background on how to compare car insurance properly, see our{" "}
-              <Link to="/car-insurance/compare/" className="text-primary hover:underline">
-                comparison guide
-              </Link>
-              .
-            </p>
-          </div>
-        )}
-      </div>
+      {/* Compact mode: link to full directory */}
+      {isCompact && filtered.length < ROWS.length && (
+        <div className="mt-5 flex justify-center">
+          <Link
+            to="/reviews/"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
+          >
+            See all {ROWS.length} providers and filters
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
+      )}
+
+      {/* Full mode: methodology / why no scores */}
+      {!isCompact && (
+        <div className="mt-6 border-t border-border pt-5">
+          <button
+            type="button"
+            onClick={() => setMethodologyOpen((v) => !v)}
+            aria-expanded={methodologyOpen}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+          >
+            <Info size={14} className="text-primary" />
+            Why we don't score insurers numerically
+          </button>
+          {methodologyOpen && (
+            <div className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl space-y-3">
+              <p>
+                We deliberately don't run a numerical scoring system on Australian car insurers.
+                Building a defensible score would require a published methodology, calibrated inputs
+                (claims data, customer satisfaction surveys, feature analysis) and ongoing research —
+                and even then, scores compress nuance into a single number that often hides the
+                trade-offs that matter.
+              </p>
+              <p>
+                Instead, every provider here gets a plain-English review and a categorical summary
+                based on facts you can verify. The trade-off you're weighing depends on your vehicle,
+                location and what you value in an insurer — that's the question the directory exists
+                to support.
+              </p>
+              <p>
+                For background on how to compare car insurance properly, see our{" "}
+                <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+                  comparison guide
+                </Link>
+                .
+              </p>
+            </div>
+          )}
+        </div>
+      )}
     </section>
   );
 };
