@@ -4,18 +4,16 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
 import { AffiliateDisclosure } from "@/components/insurance/AffiliateDisclosure";
+import { ProviderDirectory } from "@/components/insurance/ProviderDirectory";
 import { breadcrumbSchema } from "@/lib/schema";
-import { PROVIDERS } from "@/lib/providers-data";
+import { PROVIDERS, getProvider } from "@/lib/providers-data";
 import { COMPARISONS } from "@/lib/comparisons-data";
-import { getProvider } from "@/lib/providers-data";
 
 const HOME = { name: "Home", url: "/" };
 const REVIEWS = { name: "Reviews", url: "/reviews/" };
 const breadcrumbs = [HOME, REVIEWS];
 
 const ReviewsHub = () => {
-  const sortedProviders = [...PROVIDERS].sort((a, b) => a.name.localeCompare(b.name));
-
   return (
     <>
       <SEO
@@ -37,25 +35,8 @@ const ReviewsHub = () => {
           PDS as a starting point for your own comparison.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-10 mb-6">
-          Provider reviews
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-          {sortedProviders.map((p) => (
-            <Link
-              key={p.slug}
-              to={p.path}
-              className="group bg-card border border-border rounded-lg p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="font-sans font-extrabold text-xl tracking-tight mb-2 group-hover:text-primary transition-colors">
-                {p.name}
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{p.lead}</p>
-              <div className="mt-4 inline-flex items-center gap-1 text-sm text-foreground/70 group-hover:text-primary group-hover:gap-2 transition-all">
-                Read review <ArrowRight size={14} />
-              </div>
-            </Link>
-          ))}
+        <div className="mt-10 mb-16">
+          <ProviderDirectory />
         </div>
 
         <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-10 mb-3">
