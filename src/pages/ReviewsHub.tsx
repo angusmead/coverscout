@@ -35,6 +35,45 @@ const ReviewsHub = () => {
           PDS as a starting point for your own comparison.
         </p>
 
+        <div className="mb-10">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Browse by priority</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <Link
+              to="/reviews/budget-friendly/"
+              className="group bg-card border border-border rounded-lg p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="font-sans font-extrabold text-base tracking-tight mb-1 group-hover:text-primary transition-colors">
+                Budget-friendly
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Insurers that publicly position around price.
+              </p>
+            </Link>
+            <Link
+              to="/reviews/balanced/"
+              className="group bg-card border border-border rounded-lg p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="font-sans font-extrabold text-base tracking-tight mb-1 group-hover:text-primary transition-colors">
+                Balanced
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Mid-market mainstream and member-club brands.
+              </p>
+            </Link>
+            <Link
+              to="/reviews/broader-cover/"
+              className="group bg-card border border-border rounded-lg p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="font-sans font-extrabold text-base tracking-tight mb-1 group-hover:text-primary transition-colors">
+                Broader cover
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Broader feature sets, branch networks, partner channels.
+              </p>
+            </Link>
+          </div>
+        </div>
+
         <div className="mt-10 mb-16">
           <ProviderDirectory />
         </div>

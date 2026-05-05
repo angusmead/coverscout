@@ -26,11 +26,20 @@ export type Channel =
 
 export type StateFocus = "national" | "eastern" | "QLD" | "VIC";
 
+/**
+ * Editorial grouping for the comparison-tool result pages. Reflects each
+ * insurer's *public brand positioning*, not a quality judgement. Most large
+ * insurers actually offer products across the spectrum — every category page
+ * spells this caveat out.
+ */
+export type CategoryBucket = "budget-friendly" | "balanced" | "broader-cover";
+
 export type DirectoryFacts = {
   slug: string;
   brandType: BrandType;
   channels: Channel[];
   stateFocus: StateFocus;
+  category: CategoryBucket;
   /** ~80 character one-liner for the card. Different from providers-data.lead which is longer. */
   taglineShort: string;
   /** 4 short key-fact strings rendered as the right-hand column. */
@@ -50,6 +59,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "mainstream",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "balanced",
     taglineShort: "Long-established national mainstream brand, online and phone.",
     keyFacts: {
       distribution: "Direct (online, app, phone)",
@@ -64,6 +74,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "mainstream",
     channels: ["branch", "direct-online", "direct-phone"],
     stateFocus: "eastern",
+    category: "broader-cover",
     taglineShort: "Mainstream Australian brand with branch network in eastern states.",
     keyFacts: {
       distribution: "Direct + branch",
@@ -78,6 +89,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "budget",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "budget-friendly",
     taglineShort: "Budget direct insurer with streamlined online quoting.",
     keyFacts: {
       distribution: "Direct online + phone",
@@ -92,6 +104,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "specialist",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "broader-cover",
     taglineShort: "Tailored direct quoting, traditionally phone-led.",
     keyFacts: {
       distribution: "Phone-led direct",
@@ -106,6 +119,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "mainstream",
     channels: ["direct-online", "broker"],
     stateFocus: "national",
+    category: "broader-cover",
     taglineShort: "Global insurer with broad Australian operations and partner channels.",
     keyFacts: {
       distribution: "Direct + partner channels",
@@ -120,6 +134,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "mainstream",
     channels: ["direct-online", "broker"],
     stateFocus: "national",
+    category: "broader-cover",
     taglineShort: "Major Australian insurer accessible direct and via brokers.",
     keyFacts: {
       distribution: "Direct + broker channels",
@@ -134,6 +149,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "member-club",
     channels: ["direct-online", "direct-phone", "branch"],
     stateFocus: "QLD",
+    category: "balanced",
     taglineShort: "Queensland motoring-club insurer with member benefits.",
     keyFacts: {
       distribution: "Member-aligned, branch + digital",
@@ -148,6 +164,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "member-club",
     channels: ["direct-online", "direct-phone", "branch"],
     stateFocus: "VIC",
+    category: "balanced",
     taglineShort: "Victorian motoring-club insurer with member benefits.",
     keyFacts: {
       distribution: "Member-aligned, branch + digital",
@@ -162,6 +179,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "budget",
     channels: ["direct-online"],
     stateFocus: "national",
+    category: "budget-friendly",
     taglineShort: "Online-only no-frills budget insurer.",
     keyFacts: {
       distribution: "Online-only direct",
@@ -176,6 +194,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "retail-branded",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "budget-friendly",
     taglineShort: "Retail-distributed insurance underwritten by a partner insurer.",
     keyFacts: {
       distribution: "Retail-branded direct",
@@ -190,6 +209,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "retail-branded",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "budget-friendly",
     taglineShort: "Retail-distributed insurance underwritten by a partner insurer.",
     keyFacts: {
       distribution: "Retail-branded direct",
@@ -204,6 +224,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "mainstream",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "balanced",
     taglineShort: "Major Australian insurer with strong Queensland heritage.",
     keyFacts: {
       distribution: "Direct (online, app, phone)",
@@ -218,6 +239,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "mainstream",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "balanced",
     taglineShort: "Long-established mainstream Australian insurer, direct and phone.",
     keyFacts: {
       distribution: "Direct (online, app, phone)",
@@ -232,6 +254,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "specialist",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "broader-cover",
     taglineShort: "Specialist insurer pitched at Australians aged 50 and over.",
     keyFacts: {
       distribution: "Direct, over-50s focused",
@@ -246,6 +269,7 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     brandType: "specialist",
     channels: ["direct-online", "direct-phone"],
     stateFocus: "national",
+    category: "budget-friendly",
     taglineShort: "Direct insurer offering car, life and pet insurance products.",
     keyFacts: {
       distribution: "Direct (online, phone)",
@@ -278,3 +302,20 @@ export const STATE_FOCUS_LABELS: Record<StateFocus, string> = {
   QLD: "QLD focus",
   VIC: "VIC focus",
 };
+
+export const CATEGORY_LABELS: Record<CategoryBucket, string> = {
+  "budget-friendly": "Budget-friendly",
+  balanced: "Balanced",
+  "broader-cover": "Broader cover",
+};
+
+export const CATEGORY_PATHS: Record<CategoryBucket, string> = {
+  "budget-friendly": "/reviews/budget-friendly/",
+  balanced: "/reviews/balanced/",
+  "broader-cover": "/reviews/broader-cover/",
+};
+
+export const getProvidersInCategory = (category: CategoryBucket): string[] =>
+  Object.values(DIRECTORY_FACTS)
+    .filter((f) => f.category === category)
+    .map((f) => f.slug);

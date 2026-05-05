@@ -107,6 +107,9 @@ export const ROUTES_META: RouteMeta[] = [
 
   // Reviews
   { path: "/reviews/", title: "Australian Car Insurance Provider Reviews and Comparisons", description: "Plain-English overviews of 15 Australian car insurance providers and 10 head-to-head comparisons — neutral, evergreen, no fake ratings.", breadcrumbs: [HOME, reviewsHub] },
+  { path: "/reviews/budget-friendly/", title: "Budget-Friendly Australian Car Insurance Providers", description: "Five Australian car insurers that publicly position around price. Plain-English overviews, key facts and links to each review — neutral, no fake ratings.", breadcrumbs: [HOME, reviewsHub, { name: "Budget-friendly", url: "/reviews/budget-friendly/" }] },
+  { path: "/reviews/balanced/", title: "Balanced Australian Car Insurance Providers", description: "Five mid-market Australian car insurers without specific budget or specialist tilt — plain-English overviews and key facts for shoppers wanting a balance of price and features.", breadcrumbs: [HOME, reviewsHub, { name: "Balanced", url: "/reviews/balanced/" }] },
+  { path: "/reviews/broader-cover/", title: "Broader Cover Australian Car Insurance Providers", description: "Five Australian car insurers offering broader feature sets, branch networks, partner channels or specialist features — plain-English overviews and key facts.", breadcrumbs: [HOME, reviewsHub, { name: "Broader cover", url: "/reviews/broader-cover/" }] },
 
   // Company / legal
   { path: "/about/", title: "About CoverScout", description: "What CoverScout is and isn't — a plain-English Australian insurance comparison and education site, not a broker, not a quote engine, not a financial adviser.", breadcrumbs: [HOME, { name: "About", url: "/about/" }] },

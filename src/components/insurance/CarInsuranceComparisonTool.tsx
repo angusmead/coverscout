@@ -94,8 +94,8 @@ const RESULTS: Result[] = [
       "May involve higher excess",
       "Check exclusions carefully",
     ],
-    ctaLabel: "Compare cheap car insurance",
-    href: "/car-insurance/cheap/",
+    ctaLabel: "See budget-friendly providers",
+    href: "/reviews/budget-friendly/",
   },
   {
     key: "balanced",
@@ -108,8 +108,8 @@ const RESULTS: Result[] = [
       "Useful for everyday drivers",
       "Compare add-ons carefully",
     ],
-    ctaLabel: "Compare car insurance",
-    href: "/car-insurance/compare/",
+    ctaLabel: "See balanced providers",
+    href: "/reviews/balanced/",
   },
   {
     key: "premium",
@@ -122,8 +122,8 @@ const RESULTS: Result[] = [
       "Optional extras may be available",
       "Usually higher premiums",
     ],
-    ctaLabel: "Explore comprehensive cover",
-    href: "/car-insurance/comprehensive/",
+    ctaLabel: "See providers offering broader cover",
+    href: "/reviews/broader-cover/",
   },
 ];
 
