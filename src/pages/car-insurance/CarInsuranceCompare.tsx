@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQAccordion } from "@/components/insurance/FAQAccordion";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
 import { AffiliateDisclosure } from "@/components/insurance/AffiliateDisclosure";
+import { CarInsuranceComparisonTool } from "@/components/insurance/CarInsuranceComparisonTool";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getRouteMeta } from "@/lib/routes-meta";
 
@@ -67,7 +68,9 @@ const CarInsuranceCompare = () => {
           for anyone shopping new cover, weighing a renewal, or wondering whether to switch.
         </p>
 
-        <p className="text-base leading-relaxed mb-5">
+        <CarInsuranceComparisonTool />
+
+        <p className="text-base leading-relaxed mb-5 mt-12">
           Most car insurance comparisons collapse the question down to a single number: which one is
           cheapest? That's understandable, but it leaves a lot on the table. Two policies that look
           almost identical at the top of a results page can behave very differently the day you actually
