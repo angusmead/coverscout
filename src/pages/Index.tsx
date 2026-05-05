@@ -248,53 +248,53 @@ const Index = () => {
         </div>
       </section>
 
-      {/* POPULAR TOPICS */}
-      <section className="container py-20">
-        <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Start here</p>
-            <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
-              Popular car insurance topics
-            </h2>
-          </div>
-          <Link
-            to="/car-insurance/"
-            className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
-          >
-            All car insurance pages <ArrowRight size={14} />
-          </Link>
+      {/* PROVIDER DIRECTORY (compact) — moved up to sit right under the hero */}
+      <section className="container py-16 md:py-20">
+        <div className="mb-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Provider directory</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {popularTopics.map((t) => (
-            <Link
-              key={t.to}
-              to={t.to}
-              className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">{t.tag}</div>
-              <div className="font-sans font-extrabold text-lg leading-snug tracking-tight group-hover:text-primary transition-colors">
-                {t.title}
-              </div>
-              <div className="mt-6 inline-flex items-center gap-1 text-sm text-muted-foreground group-hover:text-primary group-hover:gap-2 transition-all">
-                Read guide <ArrowRight size={14} />
-              </div>
-            </Link>
-          ))}
-        </div>
+        <ProviderDirectory
+          compact
+          slugs={FEATURED_PROVIDER_SLUGS}
+          heading="Compare 15 Australian car insurance providers"
+          subheading="A snapshot of six of the most-asked-about brands. The full directory has filters and the rest."
+        />
       </section>
 
-      {/* PROVIDER DIRECTORY (compact) */}
+      {/* POPULAR TOPICS */}
       <section className="bg-secondary/40 border-y border-border">
         <div className="container py-20">
-          <div className="mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Provider directory</p>
+          <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Start here</p>
+              <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
+                Popular car insurance topics
+              </h2>
+            </div>
+            <Link
+              to="/car-insurance/"
+              className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+            >
+              All car insurance pages <ArrowRight size={14} />
+            </Link>
           </div>
-          <ProviderDirectory
-            compact
-            slugs={FEATURED_PROVIDER_SLUGS}
-            heading="Compare 15 Australian car insurance providers"
-            subheading="A snapshot of six of the most-asked-about brands. The full directory has filters and the rest."
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {popularTopics.map((t) => (
+              <Link
+                key={t.to}
+                to={t.to}
+                className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">{t.tag}</div>
+                <div className="font-sans font-extrabold text-lg leading-snug tracking-tight group-hover:text-primary transition-colors">
+                  {t.title}
+                </div>
+                <div className="mt-6 inline-flex items-center gap-1 text-sm text-muted-foreground group-hover:text-primary group-hover:gap-2 transition-all">
+                  Read guide <ArrowRight size={14} />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
