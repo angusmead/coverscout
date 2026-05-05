@@ -6,8 +6,47 @@ import { FAQAccordion } from "@/components/insurance/FAQAccordion";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getRouteMeta } from "@/lib/routes-meta";
+import { PROVIDERS, getProvider } from "@/lib/providers-data";
+import { COMPARISONS } from "@/lib/comparisons-data";
 
 const PATH = "/car-insurance/";
+
+const TOPIC_GROUPS: { heading: string; items: { label: string; to: string }[] }[] = [
+  {
+    heading: "Cover types",
+    items: [
+      { label: "Comprehensive car insurance", to: "/car-insurance/comprehensive/" },
+      { label: "Third party car insurance", to: "/car-insurance/third-party/" },
+      { label: "Car insurance excess explained", to: "/car-insurance/excess/" },
+    ],
+  },
+  {
+    heading: "Pricing & premiums",
+    items: [
+      { label: "Cheap car insurance", to: "/car-insurance/cheap/" },
+      { label: "Lower your car insurance premium", to: "/car-insurance/lower-premiums/" },
+      { label: "Pay monthly car insurance", to: "/car-insurance/pay-monthly/" },
+      { label: "No-claim bonus explained", to: "/car-insurance/no-claim-bonus/" },
+    ],
+  },
+  {
+    heading: "Drivers & profiles",
+    items: [
+      { label: "Car insurance for young drivers", to: "/car-insurance/young-drivers/" },
+      { label: "Car insurance for over 50s", to: "/car-insurance/over-50s/" },
+      { label: "Car insurance for high-risk drivers", to: "/car-insurance/high-risk-drivers/" },
+    ],
+  },
+  {
+    heading: "Compare, quote & claim",
+    items: [
+      { label: "Compare car insurance", to: "/car-insurance/compare/" },
+      { label: "Get car insurance quotes", to: "/car-insurance/quotes/" },
+      { label: "Best car insurance — how to choose", to: "/car-insurance/best/" },
+      { label: "Car insurance claims process", to: "/car-insurance/claims/" },
+    ],
+  },
+];
 
 const faqs = [
   {
@@ -134,8 +173,8 @@ const CarInsuranceHub = () => {
           <li>
             <strong>Excess</strong> — the amount you contribute toward a claim before the insurer pays
             the rest. We unpack this in our guide on{" "}
-            <Link to="/guides/insurance-excess-explained/" className="text-primary hover:underline">
-              how insurance excess works
+            <Link to="/car-insurance/excess/" className="text-primary hover:underline">
+              how car insurance excess works
             </Link>
             .
           </li>
@@ -283,12 +322,92 @@ const CarInsuranceHub = () => {
           </li>
         </ul>
         <p className="text-base leading-relaxed mb-5">
-          For a more detailed breakdown, see our explainer on{" "}
-          <Link to="/car-insurance/cost/" className="text-primary hover:underline">
-            how much car insurance costs in Australia
+          For more on what shapes the headline number, see our pages on{" "}
+          <Link to="/car-insurance/cheap/" className="text-primary hover:underline">
+            cheap car insurance
+          </Link>{" "}
+          and{" "}
+          <Link to="/car-insurance/lower-premiums/" className="text-primary hover:underline">
+            lowering your premium
           </Link>
           .
         </p>
+
+        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-16 mb-3">
+          Browse all car insurance topics
+        </h2>
+        <p className="text-base leading-relaxed mb-6">
+          The full set of plain-English car insurance pages, grouped by what you're trying to work out.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {TOPIC_GROUPS.map((g) => (
+            <div key={g.heading} className="bg-card border border-border rounded-lg p-5">
+              <div className="font-sans font-extrabold text-base tracking-tight mb-3">{g.heading}</div>
+              <ul className="space-y-2 text-sm leading-relaxed">
+                {g.items.map((item) => (
+                  <li key={item.to}>
+                    <Link to={item.to} className="text-primary hover:underline">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-3">
+          Australian car insurance providers
+        </h2>
+        <p className="text-base leading-relaxed mb-6">
+          Plain-English overviews of {PROVIDERS.length} Australian car insurance brands — what each
+          offers, who it may suit, and how it compares.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3">
+          {[...PROVIDERS]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((p) => (
+              <Link
+                key={p.slug}
+                to={p.path}
+                className="text-sm bg-card border border-border rounded-md px-3 py-2 hover:border-primary hover:text-primary transition"
+              >
+                {p.name}
+              </Link>
+            ))}
+        </div>
+        <p className="text-sm text-muted-foreground mb-12">
+          See the{" "}
+          <Link to="/reviews/" className="text-primary hover:underline">
+            full reviews hub
+          </Link>{" "}
+          for more detail on each.
+        </p>
+
+        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-3">
+          Head-to-head comparisons
+        </h2>
+        <p className="text-base leading-relaxed mb-6">
+          Side-by-side comparisons of the most-asked-about pairings. None declare a winner — the right
+          fit depends on your vehicle, location and what you value in an insurer.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-12">
+          {COMPARISONS.map((c) => {
+            const a = getProvider(c.slugA);
+            const b = getProvider(c.slugB);
+            if (!a || !b) return null;
+            return (
+              <Link
+                key={c.path}
+                to={c.path}
+                className="text-sm bg-card border border-border rounded-md px-3 py-2 hover:border-primary hover:text-primary transition flex items-center justify-between"
+              >
+                <span>{a.name} vs {b.name}</span>
+                <ArrowRight size={14} className="text-muted-foreground" />
+              </Link>
+            );
+          })}
+        </div>
 
         <FAQAccordion
           items={faqs}
