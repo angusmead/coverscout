@@ -28,6 +28,7 @@ import CarInsuranceBestForYoungDrivers from "@/pages/car-insurance/CarInsuranceB
 import CarInsuranceBestCheap from "@/pages/car-insurance/CarInsuranceBestCheap";
 import CarInsuranceBestComprehensive from "@/pages/car-insurance/CarInsuranceBestComprehensive";
 import CarInsuranceCompanies from "@/pages/car-insurance/CarInsuranceCompanies";
+import CarInsuranceComparisonSites from "@/pages/car-insurance/CarInsuranceComparisonSites";
 import ReviewsHub from "@/pages/ReviewsHub";
 import ProviderCategoryPage from "@/pages/ProviderCategoryPage";
 import About from "@/pages/About";
@@ -71,6 +72,7 @@ const PAGE_REGISTRY: Record<string, ReactNode> = {
   "/car-insurance/best-cheap/": <CarInsuranceBestCheap />,
   "/car-insurance/best-comprehensive/": <CarInsuranceBestComprehensive />,
   "/car-insurance/car-insurance-companies/": <CarInsuranceCompanies />,
+  "/car-insurance/insurance-comparison-sites/": <CarInsuranceComparisonSites />,
   "/reviews/": <ReviewsHub />,
   "/reviews/budget-friendly/": <ProviderCategoryPage category="budget-friendly" />,
   "/reviews/balanced/": <ProviderCategoryPage category="balanced" />,
