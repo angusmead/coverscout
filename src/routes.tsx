@@ -24,6 +24,7 @@ import CarInsuranceAustralia from "@/pages/car-insurance/CarInsuranceAustralia";
 import CarInsuranceComparison from "@/pages/car-insurance/CarInsuranceComparison";
 import CarInsuranceCompareNSW from "@/pages/car-insurance/CarInsuranceCompareNSW";
 import CarInsuranceCompareQLD from "@/pages/car-insurance/CarInsuranceCompareQLD";
+import CarInsuranceBestForYoungDrivers from "@/pages/car-insurance/CarInsuranceBestForYoungDrivers";
 import ReviewsHub from "@/pages/ReviewsHub";
 import ProviderCategoryPage from "@/pages/ProviderCategoryPage";
 import About from "@/pages/About";
@@ -63,6 +64,7 @@ const PAGE_REGISTRY: Record<string, ReactNode> = {
   "/car-insurance/comparison/": <CarInsuranceComparison />,
   "/car-insurance/compare/nsw/": <CarInsuranceCompareNSW />,
   "/car-insurance/compare/qld/": <CarInsuranceCompareQLD />,
+  "/car-insurance/best-for-young-drivers/": <CarInsuranceBestForYoungDrivers />,
   "/reviews/": <ReviewsHub />,
   "/reviews/budget-friendly/": <ProviderCategoryPage category="budget-friendly" />,
   "/reviews/balanced/": <ProviderCategoryPage category="balanced" />,
