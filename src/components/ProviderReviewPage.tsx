@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQAccordion } from "@/components/insurance/FAQAccordion";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
 import { AffiliateDisclosure } from "@/components/insurance/AffiliateDisclosure";
+import { ProviderLogo } from "@/components/insurance/ProviderLogo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getProvider, type ProviderProfile } from "@/lib/providers-data";
 
@@ -47,9 +48,12 @@ export const ProviderReviewPage = ({ slug }: Props) => {
       <article className="container py-12 md:py-16 max-w-4xl">
         <Breadcrumbs items={breadcrumbs} className="mb-6" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
-          {provider.name} car insurance review: cover, features and how it compares
-        </h1>
+        <div className="flex items-center gap-4 mb-6">
+          <ProviderLogo slug={provider.slug} name={provider.name} size="lg" />
+          <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight">
+            {provider.name} car insurance review: cover, features and how it compares
+          </h1>
+        </div>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
           {provider.lead}
@@ -161,15 +165,20 @@ export const ProviderReviewPage = ({ slug }: Props) => {
         {relatedProviders.length > 0 && (
           <div className="mb-6">
             <p className="text-base leading-relaxed mb-3">Related provider reviews worth comparing:</p>
-            <ul className="list-disc pl-6 space-y-2 leading-relaxed">
+            <div className="grid sm:grid-cols-2 gap-3">
               {relatedProviders.map((rp) => (
-                <li key={rp.slug}>
-                  <Link to={rp.path} className="text-primary hover:underline">
+                <Link
+                  key={rp.slug}
+                  to={rp.path}
+                  className="group flex items-center gap-3 bg-card border border-border rounded-lg p-3 hover:border-primary transition"
+                >
+                  <ProviderLogo slug={rp.slug} name={rp.name} size="sm" />
+                  <span className="text-sm font-medium text-foreground group-hover:text-primary">
                     {rp.name} car insurance review
-                  </Link>
-                </li>
+                  </span>
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
         )}
 

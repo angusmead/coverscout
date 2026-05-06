@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQAccordion } from "@/components/insurance/FAQAccordion";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
 import { AffiliateDisclosure } from "@/components/insurance/AffiliateDisclosure";
+import { ProviderLogo } from "@/components/insurance/ProviderLogo";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import {
   getComparisonByPath,
@@ -66,6 +67,11 @@ export const ProviderVsPage = ({ path }: Props) => {
       <article className="container py-12 md:py-16 max-w-4xl">
         <Breadcrumbs items={breadcrumbs} className="mb-6" />
 
+        <div className="flex items-center gap-3 mb-6 flex-wrap">
+          <ProviderLogo slug={a.slug} name={a.name} size="lg" />
+          <span className="text-2xl font-sans font-extrabold text-muted-foreground">vs</span>
+          <ProviderLogo slug={b.slug} name={b.name} size="lg" />
+        </div>
         <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
           {a.name} vs {b.name} car insurance: how they compare
         </h1>
@@ -100,16 +106,22 @@ export const ProviderVsPage = ({ path }: Props) => {
         </h2>
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           <div className="bg-card border border-border rounded-lg p-5">
-            <div className="font-sans font-extrabold text-base tracking-tight mb-3">
-              {a.name} may suit
+            <div className="flex items-center gap-2 mb-3">
+              <ProviderLogo slug={a.slug} name={a.name} size="sm" />
+              <div className="font-sans font-extrabold text-base tracking-tight">
+                {a.name} may suit
+              </div>
             </div>
             <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
               {comparison.whoSuitsA.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
           <div className="bg-card border border-border rounded-lg p-5">
-            <div className="font-sans font-extrabold text-base tracking-tight mb-3">
-              {b.name} may suit
+            <div className="flex items-center gap-2 mb-3">
+              <ProviderLogo slug={b.slug} name={b.name} size="sm" />
+              <div className="font-sans font-extrabold text-base tracking-tight">
+                {b.name} may suit
+              </div>
             </div>
             <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
               {comparison.whoSuitsB.map((item) => <li key={item}>{item}</li>)}
@@ -122,8 +134,11 @@ export const ProviderVsPage = ({ path }: Props) => {
         </h2>
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           <div className="bg-card border border-border rounded-lg p-5">
-            <div className="font-sans font-extrabold text-base tracking-tight mb-3">
-              {a.name}
+            <div className="flex items-center gap-2 mb-3">
+              <ProviderLogo slug={a.slug} name={a.name} size="sm" />
+              <div className="font-sans font-extrabold text-base tracking-tight">
+                {a.name}
+              </div>
             </div>
             <ul className="space-y-2 mb-4">
               {comparison.prosA.map((p) => (
@@ -143,8 +158,11 @@ export const ProviderVsPage = ({ path }: Props) => {
             </ul>
           </div>
           <div className="bg-card border border-border rounded-lg p-5">
-            <div className="font-sans font-extrabold text-base tracking-tight mb-3">
-              {b.name}
+            <div className="flex items-center gap-2 mb-3">
+              <ProviderLogo slug={b.slug} name={b.name} size="sm" />
+              <div className="font-sans font-extrabold text-base tracking-tight">
+                {b.name}
+              </div>
             </div>
             <ul className="space-y-2 mb-4">
               {comparison.prosB.map((p) => (

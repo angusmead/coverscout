@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQAccordion } from "@/components/insurance/FAQAccordion";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
+import { ProviderLogo } from "@/components/insurance/ProviderLogo";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { getRouteMeta } from "@/lib/routes-meta";
 
@@ -96,7 +97,10 @@ const CarInsuranceBestComprehensive = () => {
         </p>
         <div className="grid gap-4 md:grid-cols-2 mb-8">
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">NRMA Insurance</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="nrma" name="NRMA" size="md" />
+              <h3 className="font-sans font-bold text-lg">NRMA Insurance</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               One of Australia's largest comprehensive insurers, with strong NSW and ACT presence
               and broad feature inclusions.
@@ -106,7 +110,10 @@ const CarInsuranceBestComprehensive = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">AAMI</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="aami" name="AAMI" size="md" />
+              <h3 className="font-sans font-bold text-lg">AAMI</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               National coverage with broad comprehensive features and a long-established claims
               process. Part of the Suncorp Group.
@@ -116,7 +123,10 @@ const CarInsuranceBestComprehensive = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Allianz</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="allianz" name="Allianz" size="md" />
+              <h3 className="font-sans font-bold text-lg">Allianz</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Global insurer with strong Australian presence, broader feature options and access
               to specialist cover types.
@@ -126,7 +136,10 @@ const CarInsuranceBestComprehensive = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Suncorp Insurance</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="suncorp" name="Suncorp" size="md" />
+              <h3 className="font-sans font-bold text-lg">Suncorp Insurance</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Major Australian insurer (Brisbane-headquartered) with broad comprehensive features
               and a national branch and partner footprint.
@@ -136,7 +149,11 @@ const CarInsuranceBestComprehensive = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">RACQ / RACV</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="racq" name="RACQ" size="md" />
+              <ProviderLogo slug="racv" name="RACV" size="md" />
+              <h3 className="font-sans font-bold text-lg">RACQ / RACV</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               State motoring clubs (Queensland and Victoria) with member benefits and integrated
               roadside assistance — strong fits for in-state members.
@@ -146,7 +163,10 @@ const CarInsuranceBestComprehensive = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">APIA</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="apia" name="APIA" size="md" />
+              <h3 className="font-sans font-bold text-lg">APIA</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Specialist insurer for over-50s with comprehensive features tailored to that segment
               — worth comparing if you qualify on age.

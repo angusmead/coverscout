@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQAccordion } from "@/components/insurance/FAQAccordion";
 import { DisclaimerBlock } from "@/components/insurance/DisclaimerBlock";
+import { ProviderLogo } from "@/components/insurance/ProviderLogo";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { getRouteMeta } from "@/lib/routes-meta";
 
@@ -96,7 +97,10 @@ const CarInsuranceBestCheap = () => {
         </p>
         <div className="grid gap-4 md:grid-cols-2 mb-8">
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Bingle</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="bingle" name="Bingle" size="md" />
+              <h3 className="font-sans font-bold text-lg">Bingle</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Stripped-back, online-only insurer designed around a low-cost direct model. Often
               priced at the budget end, with limited optional extras.
@@ -106,7 +110,10 @@ const CarInsuranceBestCheap = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Budget Direct</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="budget-direct" name="Budget Direct" size="md" />
+              <h3 className="font-sans font-bold text-lg">Budget Direct</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Direct-channel insurer with broad cover available, often quoting competitively
               especially for lower-risk profiles.
@@ -116,7 +123,10 @@ const CarInsuranceBestCheap = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Coles Car Insurance</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="coles" name="Coles" size="md" />
+              <h3 className="font-sans font-bold text-lg">Coles Car Insurance</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Retail-branded and underwritten by a partner insurer (disclosed in the PDS), often
               with promotional pricing and flybuys-linked benefits.
@@ -126,7 +136,10 @@ const CarInsuranceBestCheap = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Real Insurance</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="real-insurance" name="Real Insurance" size="md" />
+              <h3 className="font-sans font-bold text-lg">Real Insurance</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Direct-channel insurer with simple online quoting, often competitive for everyday
               drivers with standard requirements.
@@ -136,7 +149,10 @@ const CarInsuranceBestCheap = () => {
             </Link>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
-            <h3 className="font-sans font-bold text-lg mb-2">Woolworths Car Insurance</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="woolworths" name="Woolworths" size="md" />
+              <h3 className="font-sans font-bold text-lg">Woolworths Car Insurance</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               Retail-branded and underwritten by a partner insurer (disclosed in the PDS), with
               Everyday Rewards integration and frequent promotional pricing.

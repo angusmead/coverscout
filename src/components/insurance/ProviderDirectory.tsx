@@ -8,6 +8,7 @@ import {
   type BrandType,
   type DirectoryFacts,
 } from "@/lib/provider-directory-data";
+import { ProviderLogo } from "@/components/insurance/ProviderLogo";
 
 type DirectoryEvent =
   | { type: "filter_changed"; brandType: BrandType | "all"; query: string }
@@ -237,16 +238,9 @@ export const ProviderDirectory = ({
               key={row.slug}
               className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)_auto] gap-5 lg:gap-6 p-5 md:p-6 hover:bg-secondary/30 transition-colors"
             >
-              {/* Left: avatar + name + tagline + badges */}
+              {/* Left: logo + name + tagline + badges */}
               <div className="flex items-start gap-4 min-w-0">
-                <div
-                  className={`w-12 h-12 rounded-lg flex items-center justify-center font-sans font-extrabold text-base shrink-0 ${
-                    AVATAR_PALETTE[row.paletteIndex]
-                  }`}
-                  aria-hidden
-                >
-                  {initialsOf(row.name)}
-                </div>
+                <ProviderLogo slug={row.slug} name={row.name} size="md" />
                 <div className="min-w-0">
                   <div className="font-sans font-extrabold text-lg tracking-tight">
                     {row.name}
