@@ -910,15 +910,15 @@ export const PROVIDERS: ProviderProfile[] = [
     name: "Rollin'",
     path: "/reviews/rollin/",
     metaTitle: "Rollin' Car Insurance Review: Cover, Features and How It Compares",
-    metaDescription: "Rollin' car insurance overview — its app-led pay-as-you-drive model, who it may suit, and how it may compare with other Australian car insurers.",
+    metaDescription: "Rollin' car insurance overview — its digital-first pay-as-you-drive model, who it may suit, and how it may compare with other Australian car insurers.",
     lead: "A neutral, plain-English overview of Rollin' car insurance in Australia — a digital-first insurer built around a pay-as-you-drive model, who it may suit, and what's worth weighing in comparison.",
     overview: [
-      "Rollin' is a more recent entrant to the Australian car insurance market, built around a fully digital, app-led customer experience and a pay-as-you-drive pricing model. Rather than charging a flat annual premium, Rollin' typically prices comprehensive cover off the kilometres you actually drive, with the aim of suiting lower-mileage drivers who feel they're subsidising heavier road users on traditional policies.",
+      "Rollin' is a more recent entrant to the Australian car insurance market, built around a digital-first customer experience — both web and app — and a pay-as-you-drive pricing model. Rather than charging a flat annual premium, Rollin' typically prices comprehensive cover off the kilometres you actually drive, with the aim of suiting lower-mileage drivers who feel they're subsidising heavier road users on traditional policies.",
       "Like other Australian car insurance brands, Rollin' is underwritten by a partner insurer that's disclosed in the PDS. The PDS is the source of truth for cover terms, exclusions, the specific km-based pricing mechanics and how monthly billing works.",
     ],
     maySuit: [
       "Lower-mileage drivers who travel well below the average annual kilometres",
-      "Drivers comfortable with an app-only experience and digital claims",
+      "Drivers comfortable with a fully digital experience (web or app) and digital claims",
       "People wanting clearer line-of-sight between how much they drive and what they pay",
     ],
     mayNotSuit: [
@@ -929,20 +929,20 @@ export const PROVIDERS: ProviderProfile[] = [
     coverTypes: COMMON_COVER,
     features: [
       { heading: "Pay-as-you-drive pricing", body: "Premiums are linked to kilometres driven rather than charged purely as a flat annual figure. Exact mechanics — base charge, per-km rate, caps — are spelled out in the Rollin' PDS." },
-      { heading: "Claims process", body: "Claims are typically lodged through the Rollin' app, with the underwriting insurer handling assessment and repair coordination. Specifics sit in the PDS." },
+      { heading: "Claims process", body: "Claims are typically lodged through the Rollin' app or web portal, with the underwriting insurer handling assessment and repair coordination. Specifics sit in the PDS." },
       { heading: "Excess options", body: "Standard and voluntary excess choices apply at quote stage, with age-based and inexperienced driver excesses commonly stacking per the PDS." },
-      { heading: "Digital experience", body: "App-led account management, quoting, claims and policy changes. No branch network, with most contact happening via the app or digital channels." },
+      { heading: "Digital experience", body: "Account management, quoting, claims and policy changes are all handled through the Rollin' web portal and mobile app. No branch network, with most contact happening via digital channels." },
     ],
     pricingPositioning: "Rollin' is positioned at lower-mileage drivers — the model is designed to save money for people who drive below-average kilometres each year. For higher-mileage drivers the maths can flip the other way, so it's worth quoting Rollin' alongside flat-rate brands using your honest annual kilometre figure.",
     pros: [
       "Pay-as-you-drive pricing can suit genuinely low-mileage drivers",
-      "App-led experience for quoting, billing and claims",
+      "Digital-first experience for quoting, billing and claims, available via web and app",
       "Transparent link between usage and cost",
       "Comprehensive cover available, underwritten by a partner insurer",
     ],
     cons: [
       "Less suitable for high-mileage drivers, where flat-rate brands often quote lower",
-      "App-only experience may not suit drivers who prefer phone or branch service",
+      "Digital-only experience may not suit drivers who prefer phone or branch service",
       "Newer brand with a shorter Australian track record than mainstream incumbents",
     ],
     comparison: "Rollin' is most usefully compared against budget-direct brands like Bingle and Budget Direct on price for a low-mileage profile, and against mainstream insurers like AAMI, NRMA or Allianz on features and claims experience. Quoting all three styles using identical inputs — including your real annual kilometres — gives the cleanest read.",
@@ -957,7 +957,7 @@ export const PROVIDERS: ProviderProfile[] = [
       { q: "Who underwrites Rollin' car insurance?", a: "Rollin' is distributed under its own brand but underwritten by a partner insurer that's disclosed in the PDS. The underwriting insurer is the entity that actually pays claims, so it's worth checking before deciding." },
       { q: "Is Rollin' cheaper than other Australian car insurance brands?", a: "It depends entirely on how much you drive. For lower-mileage drivers, the pay-as-you-drive model can produce a meaningfully lower annual cost. For higher-mileage drivers, flat-rate brands often work out cheaper. Quoting both with your honest kilometre figure is the only reliable test." },
       { q: "Does Rollin' offer third party cover or only comprehensive?", a: "Rollin's product offering and the specific cover types available — comprehensive, third party fire and theft, third party property — are set out in the current Rollin' PDS. Worth checking the latest version on the Rollin' site since product menus can change." },
-      { q: "How do I lodge a Rollin' claim?", a: "Claims are typically lodged through the Rollin' app, with the underwriting insurer handling assessment and repair coordination. The full claims process and your obligations sit in the PDS." },
+      { q: "How do I lodge a Rollin' claim?", a: "Claims are typically lodged through the Rollin' app or web portal, with the underwriting insurer handling assessment and repair coordination. The full claims process and your obligations sit in the PDS." },
     ],
   },
 ];

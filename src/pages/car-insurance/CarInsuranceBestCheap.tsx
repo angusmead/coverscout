@@ -154,8 +154,8 @@ const CarInsuranceBestCheap = () => {
               <h3 className="font-sans font-bold text-lg">Rollin'</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-              App-led pay-as-you-drive insurer that prices comprehensive cover off your kilometres
-              — often the cheapest option for genuinely low-mileage drivers.
+              Digital-first pay-as-you-drive insurer (web and app) that prices comprehensive cover
+              off your kilometres — often the cheapest option for genuinely low-mileage drivers.
             </p>
             <Link to="/reviews/rollin/" className="text-sm text-primary hover:underline">
               Read the Rollin' overview →

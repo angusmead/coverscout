@@ -285,14 +285,14 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     channels: ["direct-online"],
     stateFocus: "national",
     category: "budget-friendly",
-    taglineShort: "App-led pay-as-you-drive insurer pitched at low-mileage drivers.",
+    taglineShort: "Digital-first pay-as-you-drive insurer pitched at low-mileage drivers.",
     keyFacts: {
-      distribution: "App-only direct",
+      distribution: "Direct (web + app)",
       coverTypes: "Pay-as-you-drive comprehensive",
       geography: "National",
       bundling: "Standalone",
     },
-    badges: ["Pay-as-you-drive", "App-only", "Low mileage"],
+    badges: ["Pay-as-you-drive", "Digital-first", "Low mileage"],
   },
 };
 
