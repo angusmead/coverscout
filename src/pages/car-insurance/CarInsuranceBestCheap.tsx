@@ -150,6 +150,19 @@ const CarInsuranceBestCheap = () => {
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
             <div className="flex items-center gap-3 mb-2">
+              <ProviderLogo slug="rollin" name="Rollin'" size="md" />
+              <h3 className="font-sans font-bold text-lg">Rollin'</h3>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+              App-led pay-as-you-drive insurer that prices comprehensive cover off your kilometres
+              — often the cheapest option for genuinely low-mileage drivers.
+            </p>
+            <Link to="/reviews/rollin/" className="text-sm text-primary hover:underline">
+              Read the Rollin' overview →
+            </Link>
+          </div>
+          <div className="border border-border rounded-lg p-5 bg-card">
+            <div className="flex items-center gap-3 mb-2">
               <ProviderLogo slug="woolworths" name="Woolworths" size="md" />
               <h3 className="font-sans font-bold text-lg">Woolworths Car Insurance</h3>
             </div>
@@ -164,7 +177,7 @@ const CarInsuranceBestCheap = () => {
           <div className="border border-border rounded-lg p-5 bg-card">
             <h3 className="font-sans font-bold text-lg mb-2">Browse the budget category</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-              Five insurers that publicly position around price, with plain-English overviews and
+              Six insurers that publicly position around price, with plain-English overviews and
               key facts.
             </p>
             <Link
