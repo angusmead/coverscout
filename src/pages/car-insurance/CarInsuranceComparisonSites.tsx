@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Is CoverScout a comparison site?",
     answer:
-      "Not in the traditional sense. We're an editorial site — we publish neutral plain-English overviews of fifteen Australian car insurers and head-to-head comparisons so you can shortlist before going to insurers directly. We don't pull live quotes, take applications, or earn referral fees from insurer panels. We're funded differently and don't have any active affiliate programs as of writing.",
+      "Not in the traditional sense. We're an editorial site — we publish neutral plain-English overviews of sixteen Australian car insurers and head-to-head comparisons so you can shortlist before going to insurers directly. We don't pull live quotes, take applications, or earn referral fees from insurer panels. We're funded differently and don't have any active affiliate programs as of writing.",
   },
   {
     question: "What questions should I ask before using a comparison site?",
@@ -184,7 +184,7 @@ const CarInsuranceComparisonSites = () => {
         <p className="text-base leading-relaxed mb-5">
           CoverScout isn't a comparison site in the traditional sense. We don't pull live quotes
           and we don't take applications. We're an editorial site — we publish neutral plain-English
-          overviews of fifteen Australian car insurers (including the off-panel ones), a small
+          overviews of sixteen Australian car insurers (including the off-panel ones), a small
           number of head-to-head comparisons, and guides to help you understand what you're
           actually buying.
         </p>
@@ -239,7 +239,7 @@ const CarInsuranceComparisonSites = () => {
             Build your shortlist on CoverScout
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Plain-English overviews of fifteen Australian car insurers — including the off-panel
+            Plain-English overviews of sixteen Australian car insurers — including the off-panel
             ones comparison sites typically miss. No live quotes, no fake star ratings, no
             sponsored placements.
           </p>

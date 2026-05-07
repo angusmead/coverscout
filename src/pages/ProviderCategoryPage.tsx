@@ -26,9 +26,9 @@ type CategoryCopy = {
 const COPY: Record<CategoryBucket, CategoryCopy> = {
   "budget-friendly": {
     metaTitle: "Budget-Friendly Australian Car Insurance Providers",
-    metaDescription: "Five Australian car insurers that publicly position around price. Plain-English overviews, key facts and links to each review — neutral, no fake ratings.",
+    metaDescription: "Six Australian car insurers that publicly position around price — including pay-as-you-drive options. Plain-English overviews, key facts and links to each review.",
     h1: "Budget-friendly car insurance providers",
-    lead: "Five Australian car insurers grouped here because they publicly position themselves around price — through low-cost direct distribution, no-frills product design, or retail-distribution.",
+    lead: "Six Australian car insurers grouped here because they publicly position themselves around price — through low-cost direct distribution, no-frills product design, retail-distribution, or pay-as-you-drive pricing for low-mileage drivers.",
     whatTheyShare:
       "These insurers tend to compete on headline premium and lean toward streamlined product menus. None of this means they're the cheapest for your specific profile — every insurer rates risk against its own model. Worth getting matched quotes from a couple of these alongside at least one mainstream brand to see the spread.",
     relatedArticle: {
@@ -127,7 +127,7 @@ const ProviderCategoryPage = ({ category }: Props) => {
           How we group providers
         </h2>
         <p className="text-base leading-relaxed mb-3 max-w-3xl">
-          We've organised the 15 Australian car insurance brands we cover into three editorial
+          We've organised the 16 Australian car insurance brands we cover into three editorial
           groups — budget-friendly, balanced and broader cover — based on each insurer's public
           brand positioning. The categorisation reflects how each brand markets itself, not a
           quality judgement.
@@ -190,7 +190,7 @@ const ProviderCategoryPage = ({ category }: Props) => {
               to="/reviews/"
               className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
             >
-              Browse all 15 providers
+              Browse all 16 providers
             </Link>
           </div>
         </section>

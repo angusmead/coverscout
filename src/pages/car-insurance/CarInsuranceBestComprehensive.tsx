@@ -286,7 +286,7 @@ const CarInsuranceBestComprehensive = () => {
             Compare comprehensive insurers
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Browse five insurers with broader feature sets and the full directory of fifteen
+            Browse five insurers with broader feature sets and the full directory of sixteen
             Australian car insurers, then quote a handful direct using identical inputs.
           </p>
           <div className="flex flex-wrap gap-3">

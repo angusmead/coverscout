@@ -240,7 +240,7 @@ const CarInsuranceCompareNSW = () => {
             Build your NSW shortlist
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Browse plain-English overviews of fifteen Australian car insurers — including NRMA and
+            Browse plain-English overviews of sixteen Australian car insurers — including NRMA and
             other off-panel brands — then quote a handful direct using identical inputs.
           </p>
           <div className="flex flex-wrap gap-3">

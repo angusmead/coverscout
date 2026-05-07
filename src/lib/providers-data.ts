@@ -903,6 +903,63 @@ export const PROVIDERS: ProviderProfile[] = [
       { q: "Is Real Insurance the same as Coles or Woolworths car insurance?", a: "No — Real Insurance is its own brand, separate from retail-distributed brands like Coles or Woolworths car insurance. They may share underwriting partners at times, but they're sold as different products with different PDS documents." },
     ],
   },
+
+  // ─── Rollin' ──────────────────────────────────────────────
+  {
+    slug: "rollin",
+    name: "Rollin'",
+    path: "/reviews/rollin/",
+    metaTitle: "Rollin' Car Insurance Review: Cover, Features and How It Compares",
+    metaDescription: "Rollin' car insurance overview — its app-led pay-as-you-drive model, who it may suit, and how it may compare with other Australian car insurers.",
+    lead: "A neutral, plain-English overview of Rollin' car insurance in Australia — a digital-first insurer built around a pay-as-you-drive model, who it may suit, and what's worth weighing in comparison.",
+    overview: [
+      "Rollin' is a more recent entrant to the Australian car insurance market, built around a fully digital, app-led customer experience and a pay-as-you-drive pricing model. Rather than charging a flat annual premium, Rollin' typically prices comprehensive cover off the kilometres you actually drive, with the aim of suiting lower-mileage drivers who feel they're subsidising heavier road users on traditional policies.",
+      "Like other Australian car insurance brands, Rollin' is underwritten by a partner insurer that's disclosed in the PDS. The PDS is the source of truth for cover terms, exclusions, the specific km-based pricing mechanics and how monthly billing works.",
+    ],
+    maySuit: [
+      "Lower-mileage drivers who travel well below the average annual kilometres",
+      "Drivers comfortable with an app-only experience and digital claims",
+      "People wanting clearer line-of-sight between how much they drive and what they pay",
+    ],
+    mayNotSuit: [
+      "High-kilometre drivers — heavier road use can erode the pay-as-you-drive saving",
+      "Drivers who prefer a branch network, phone-led service or a long-established brand",
+      "Customers who want fixed annual pricing rather than usage-linked billing",
+    ],
+    coverTypes: COMMON_COVER,
+    features: [
+      { heading: "Pay-as-you-drive pricing", body: "Premiums are linked to kilometres driven rather than charged purely as a flat annual figure. Exact mechanics — base charge, per-km rate, caps — are spelled out in the Rollin' PDS." },
+      { heading: "Claims process", body: "Claims are typically lodged through the Rollin' app, with the underwriting insurer handling assessment and repair coordination. Specifics sit in the PDS." },
+      { heading: "Excess options", body: "Standard and voluntary excess choices apply at quote stage, with age-based and inexperienced driver excesses commonly stacking per the PDS." },
+      { heading: "Digital experience", body: "App-led account management, quoting, claims and policy changes. No branch network, with most contact happening via the app or digital channels." },
+    ],
+    pricingPositioning: "Rollin' is positioned at lower-mileage drivers — the model is designed to save money for people who drive below-average kilometres each year. For higher-mileage drivers the maths can flip the other way, so it's worth quoting Rollin' alongside flat-rate brands using your honest annual kilometre figure.",
+    pros: [
+      "Pay-as-you-drive pricing can suit genuinely low-mileage drivers",
+      "App-led experience for quoting, billing and claims",
+      "Transparent link between usage and cost",
+      "Comprehensive cover available, underwritten by a partner insurer",
+    ],
+    cons: [
+      "Less suitable for high-mileage drivers, where flat-rate brands often quote lower",
+      "App-only experience may not suit drivers who prefer phone or branch service",
+      "Newer brand with a shorter Australian track record than mainstream incumbents",
+    ],
+    comparison: "Rollin' is most usefully compared against budget-direct brands like Bingle and Budget Direct on price for a low-mileage profile, and against mainstream insurers like AAMI, NRMA or Allianz on features and claims experience. Quoting all three styles using identical inputs — including your real annual kilometres — gives the cleanest read.",
+    relatedSlugs: ["bingle", "budget-direct", "youi", "real-insurance", "aami"],
+    longTailLinks: [
+      { url: "/car-insurance/cheap/", label: "Cheap car insurance — what to watch for" },
+      { url: "/car-insurance/comprehensive/", label: "Comprehensive car insurance explained" },
+      { url: "/car-insurance/lower-premiums/", label: "Ways to lower your car insurance premium" },
+    ],
+    faqs: [
+      { q: "How does Rollin's pay-as-you-drive pricing work?", a: "Rollin' typically prices comprehensive cover with a base charge plus a per-kilometre component, billed monthly. The exact mechanics — base rate, per-km rate, any monthly caps — are set out in the Rollin' PDS, which is the source of truth before you sign up." },
+      { q: "Who underwrites Rollin' car insurance?", a: "Rollin' is distributed under its own brand but underwritten by a partner insurer that's disclosed in the PDS. The underwriting insurer is the entity that actually pays claims, so it's worth checking before deciding." },
+      { q: "Is Rollin' cheaper than other Australian car insurance brands?", a: "It depends entirely on how much you drive. For lower-mileage drivers, the pay-as-you-drive model can produce a meaningfully lower annual cost. For higher-mileage drivers, flat-rate brands often work out cheaper. Quoting both with your honest kilometre figure is the only reliable test." },
+      { q: "Does Rollin' offer third party cover or only comprehensive?", a: "Rollin's product offering and the specific cover types available — comprehensive, third party fire and theft, third party property — are set out in the current Rollin' PDS. Worth checking the latest version on the Rollin' site since product menus can change." },
+      { q: "How do I lodge a Rollin' claim?", a: "Claims are typically lodged through the Rollin' app, with the underwriting insurer handling assessment and repair coordination. The full claims process and your obligations sit in the PDS." },
+    ],
+  },
 ];
 
 export const getProvider = (slug: string): ProviderProfile | undefined =>

@@ -129,7 +129,7 @@ const CarInsuranceComparison = () => {
           <Link to="/reviews/" className="text-primary hover:underline">
             provider directory
           </Link>{" "}
-          covers fifteen insurers including the ones panels typically miss.
+          covers sixteen insurers including the ones panels typically miss.
         </p>
 
         <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
@@ -244,7 +244,7 @@ const CarInsuranceComparison = () => {
         </h2>
         <p className="text-base leading-relaxed mb-5">
           CoverScout isn't a comparison engine and we don't pull live quotes. We publish neutral
-          plain-English overviews of fifteen Australian car insurers and a small number of
+          plain-English overviews of sixteen Australian car insurers and a small number of
           head-to-head comparisons, with the aim of helping you shortlist before going to insurers
           directly. There are no fake star ratings, no invented prices, and no insurer pays to
           appear.
@@ -271,7 +271,7 @@ const CarInsuranceComparison = () => {
             Start your shortlist
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Browse plain-English overviews of fifteen Australian car insurers, or jump to the
+            Browse plain-English overviews of sixteen Australian car insurers, or jump to the
             comparison framework to plan a side-by-side.
           </p>
           <div className="flex flex-wrap gap-3">

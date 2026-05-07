@@ -140,7 +140,7 @@ const CarInsuranceCompanies = () => {
           </div>
         </div>
         <p className="text-base leading-relaxed mb-5">
-          Plain-English overviews of fifteen of the brands above sit in our{" "}
+          Plain-English overviews of sixteen of the brands above sit in our{" "}
           <Link to="/reviews/" className="text-primary hover:underline">
             provider directory
           </Link>
@@ -175,14 +175,14 @@ const CarInsuranceCompanies = () => {
           Reviewed brands by category
         </h2>
         <p className="text-base leading-relaxed mb-5">
-          We've grouped the fifteen Australian car insurance brands we cover into three editorial
+          We've grouped the sixteen Australian car insurance brands we cover into three editorial
           buckets — not rankings, but groupings that reflect how each insurer publicly positions:
         </p>
         <div className="grid gap-4 md:grid-cols-3 mb-8">
           <div className="border border-border rounded-lg p-5 bg-card">
             <h3 className="font-sans font-bold text-lg mb-2">Budget-friendly</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-              Bingle, Budget Direct, Coles, Real Insurance, Woolworths
+              Bingle, Budget Direct, Coles, Real Insurance, Rollin', Woolworths
             </p>
             <Link
               to="/reviews/budget-friendly/"
@@ -255,7 +255,7 @@ const CarInsuranceCompanies = () => {
             Browse the directory
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Plain-English overviews of fifteen Australian car insurance brands — neutral, evergreen,
+            Plain-English overviews of sixteen Australian car insurance brands — neutral, evergreen,
             no fake star ratings, with the underwriter for each disclosed where relevant.
           </p>
           <div className="flex flex-wrap gap-3">

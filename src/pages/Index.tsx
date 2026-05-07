@@ -189,7 +189,7 @@ const Index = () => {
 
             <div className="mt-8 flex items-center gap-3 text-xs text-muted-foreground">
               <Sparkles size={14} className="text-primary" />
-              <span>Plain-English guides covering 15 Australian car insurers and 10 head-to-head comparisons</span>
+              <span>Plain-English guides covering 16 Australian car insurers and 10 head-to-head comparisons</span>
             </div>
           </div>
 
@@ -256,7 +256,7 @@ const Index = () => {
         <ProviderDirectory
           compact
           slugs={FEATURED_PROVIDER_SLUGS}
-          heading="Compare 15 Australian car insurance providers"
+          heading="Compare 16 Australian car insurance providers"
           subheading="A snapshot of six of the most-asked-about brands. The full directory has filters and the rest."
         />
       </section>

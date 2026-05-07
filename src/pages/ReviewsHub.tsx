@@ -18,7 +18,7 @@ const ReviewsHub = () => {
     <>
       <SEO
         title="Australian Car Insurance Provider Reviews and Comparisons"
-        description="Plain-English overviews of 15 Australian car insurance providers and 10 head-to-head comparisons — neutral, evergreen, no fake ratings."
+        description="Plain-English overviews of 16 Australian car insurance providers and 10 head-to-head comparisons — neutral, evergreen, no fake ratings."
         canonicalPath="/reviews/"
         jsonLd={breadcrumbSchema(breadcrumbs)}
       />

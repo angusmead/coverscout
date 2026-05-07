@@ -236,7 +236,7 @@ const CarInsuranceCompareQLD = () => {
             Build your QLD shortlist
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Browse plain-English overviews of fifteen Australian car insurers — including RACQ,
+            Browse plain-English overviews of sixteen Australian car insurers — including RACQ,
             Suncorp, Youi and other QLD players — then quote a handful direct using identical
             inputs.
           </p>

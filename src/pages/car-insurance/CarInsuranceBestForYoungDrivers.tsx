@@ -245,7 +245,7 @@ const CarInsuranceBestForYoungDrivers = () => {
             Compare insurers as a young driver
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            Browse plain-English overviews of fifteen Australian car insurers, then quote three to
+            Browse plain-English overviews of sixteen Australian car insurers, then quote three to
             five direct using identical inputs to find the policy that may suit you best.
           </p>
           <div className="flex flex-wrap gap-3">

@@ -279,6 +279,21 @@ export const DIRECTORY_FACTS: Record<string, DirectoryFacts> = {
     },
     badges: ["Direct + phone", "Specialist", "National"],
   },
+  rollin: {
+    slug: "rollin",
+    brandType: "specialist",
+    channels: ["direct-online"],
+    stateFocus: "national",
+    category: "budget-friendly",
+    taglineShort: "App-led pay-as-you-drive insurer pitched at low-mileage drivers.",
+    keyFacts: {
+      distribution: "App-only direct",
+      coverTypes: "Pay-as-you-drive comprehensive",
+      geography: "National",
+      bundling: "Standalone",
+    },
+    badges: ["Pay-as-you-drive", "App-only", "Low mileage"],
+  },
 };
 
 export const BRAND_TYPE_LABELS: Record<BrandType, string> = {
