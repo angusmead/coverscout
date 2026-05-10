@@ -31,23 +31,26 @@ const COMPANY_LINKS = [
   { label: "Contact", to: "/contact/" },
 ];
 
+const linkStyle = "text-[13.5px] text-muted-foreground hover:text-foreground transition-colors";
+const headingStyle = "text-[11px] uppercase tracking-[0.08em] font-semibold text-muted-foreground/70 mb-4";
+
 export const Footer = () => {
   return (
-    <footer className="border-t border-border bg-secondary/40">
-      <div className="container py-16">
+    <footer className="border-t border-border bg-secondary/60">
+      <div className="container py-20">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="col-span-2 md:col-span-1">
             <Logo />
-            <p className="mt-4 text-muted-foreground max-w-xs leading-relaxed">
+            <p className="mt-5 text-[14px] text-muted-foreground leading-relaxed max-w-xs">
               Plain-English guides and comparisons to help Australians understand their insurance options.
             </p>
           </div>
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Insurance</div>
-            <ul className="space-y-3 text-sm">
+            <div className={headingStyle}>Insurance</div>
+            <ul className="space-y-3">
               {PRIMARY_NAV.map((item) => (
                 <li key={item.label}>
-                  <Link to={item.to} className="hover:text-primary transition">
+                  <Link to={item.to} className={linkStyle}>
                     {item.label}
                   </Link>
                 </li>
@@ -55,11 +58,11 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Car insurance</div>
-            <ul className="space-y-3 text-sm">
+            <div className={headingStyle}>Car insurance</div>
+            <ul className="space-y-3">
               {CAR_INSURANCE_LINKS.map((item) => (
                 <li key={item.label}>
-                  <Link to={item.to} className="hover:text-primary transition">
+                  <Link to={item.to} className={linkStyle}>
                     {item.label}
                   </Link>
                 </li>
@@ -67,11 +70,11 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Reviews</div>
-            <ul className="space-y-3 text-sm">
+            <div className={headingStyle}>Reviews</div>
+            <ul className="space-y-3">
               {REVIEW_LINKS.map((item) => (
                 <li key={item.label}>
-                  <Link to={item.to} className="hover:text-primary transition">
+                  <Link to={item.to} className={linkStyle}>
                     {item.label}
                   </Link>
                 </li>
@@ -79,11 +82,11 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">About</div>
-            <ul className="space-y-3 text-sm">
+            <div className={headingStyle}>About</div>
+            <ul className="space-y-3">
               {COMPANY_LINKS.map((item) => (
                 <li key={item.label}>
-                  <Link to={item.to} className="hover:text-primary transition">
+                  <Link to={item.to} className={linkStyle}>
                     {item.label}
                   </Link>
                 </li>
@@ -93,10 +96,10 @@ export const Footer = () => {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="container py-6 text-xs text-muted-foreground leading-relaxed">
+        <div className="container py-6 text-[12.5px] text-muted-foreground leading-relaxed">
           CoverScout provides general information only and does not provide personal financial advice.
           We may receive commissions from insurers — see{" "}
-          <Link to="/how-we-make-money/" className="text-primary hover:underline">
+          <Link to="/how-we-make-money/" className="text-foreground hover:underline">
             how we make money
           </Link>
           . Always read the Product Disclosure Statement (PDS) and Target Market Determination (TMD)

@@ -6,25 +6,26 @@ import { PRIMARY_NAV } from "@/lib/site";
 
 export const Nav = () => {
   return (
-    <header className="border-b border-border bg-background/80 backdrop-blur sticky top-0 z-40">
-      <div className="container flex items-center justify-between h-16">
-        <Logo />
-
-        <nav className="hidden md:flex items-center gap-8">
-          {PRIMARY_NAV.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
+      <div className="container flex items-center justify-between h-[72px]">
+        <div className="flex items-center gap-8">
+          <Logo />
+          <nav className="hidden lg:flex items-center gap-6">
+            {PRIMARY_NAV.map((item) => (
+              <Link
+                key={item.label}
+                to={item.to}
+                className="text-[14.5px] font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
         <Link
           to="/car-insurance/compare/"
-          className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition"
+          className="hidden md:inline-flex items-center bg-foreground text-background px-[18px] py-[10px] rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
         >
           Compare car insurance
         </Link>
@@ -62,7 +63,7 @@ export const Nav = () => {
               <SheetClose asChild>
                 <Link
                   to="/car-insurance/compare/"
-                  className="inline-flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground px-4 py-4 rounded-md text-base font-medium hover:opacity-90 transition"
+                  className="inline-flex items-center justify-center w-full bg-foreground text-background px-4 py-4 rounded-full text-base font-medium hover:bg-foreground/90 transition"
                 >
                   Compare car insurance
                 </Link>

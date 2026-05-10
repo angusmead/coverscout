@@ -45,30 +45,16 @@ const categories: { name: string; icon: typeof Heart; to: string; blurb: string 
   { name: "Business insurance", icon: Briefcase, to: "/business-insurance/", blurb: "Coming soon — public liability and more" },
 ];
 
-const insuranceOptions = [
-  "Car insurance",
-];
+const insuranceOptions = ["Car insurance"];
 
 const guides = [
-  {
-    tag: "Cover types",
-    title: "Comprehensive vs third party — what's the difference?",
-    to: "/car-insurance/comprehensive/",
-    read: "8 min read",
-  },
-  {
-    tag: "Pricing",
-    title: "How to lower your car insurance premium without losing cover",
-    to: "/car-insurance/lower-premiums/",
-    read: "9 min read",
-  },
-  {
-    tag: "Young drivers",
-    title: "Why young drivers pay more — and what may help",
-    to: "/car-insurance/young-drivers/",
-    read: "7 min read",
-  },
+  { tag: "Cover types",   title: "Comprehensive vs third party — what's the difference?",        to: "/car-insurance/comprehensive/",   read: "8 min read" },
+  { tag: "Pricing",       title: "How to lower your car insurance premium without losing cover", to: "/car-insurance/lower-premiums/",  read: "9 min read" },
+  { tag: "Young drivers", title: "Why young drivers pay more — and what may help",               to: "/car-insurance/young-drivers/",   read: "7 min read" },
 ];
+
+const eyebrow = "text-[11.5px] uppercase tracking-[0.08em] font-semibold text-muted-foreground/70";
+const sectionH2 = "font-sans font-semibold text-[42px] md:text-[60px] tracking-[-0.035em] leading-[1.02]";
 
 const Index = () => {
   const [selected, setSelected] = useState("Car insurance");
@@ -81,156 +67,111 @@ const Index = () => {
         canonicalPath="/"
         jsonLd={[organizationSchema(), websiteSchema()]}
       />
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        {/* compass rose watermark */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
-          <svg
-            viewBox="0 0 500 500"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] text-primary opacity-[0.06]"
-            fill="none"
-            stroke="currentColor"
+
+      {/* HERO — centered, oversized type */}
+      <section className="px-6 pt-24 md:pt-32 pb-16 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary text-[12.5px] font-medium text-muted-foreground mb-8">
+          <Sparkles size={12} className="text-brand-blue" />
+          Australian insurance comparison
+        </div>
+        <h1 className="font-sans font-semibold text-[52px] sm:text-[72px] md:text-[96px] leading-[0.98] tracking-[-0.04em] max-w-[1040px] mx-auto">
+          Find cover that<br />
+          <span
+            className="text-brand-blue"
+            style={{
+              fontFamily: '"Instrument Serif", "Geist", serif',
+              fontStyle: "italic",
+              fontWeight: 400,
+              letterSpacing: "-0.02em",
+            }}
           >
-            {/* Outer rings */}
-            <circle cx="250" cy="250" r="240" strokeWidth="1" />
-            <circle cx="250" cy="250" r="220" strokeWidth="0.5" strokeDasharray="4 8" />
-            <circle cx="250" cy="250" r="180" strokeWidth="1" />
-            <circle cx="250" cy="250" r="140" strokeWidth="0.5" />
-            <circle cx="250" cy="250" r="80" strokeWidth="1" />
-            <circle cx="250" cy="250" r="30" strokeWidth="0.75" />
-            {/* Cardinal lines */}
-            <line x1="250" y1="10" x2="250" y2="490" strokeWidth="0.75" />
-            <line x1="10" y1="250" x2="490" y2="250" strokeWidth="0.75" />
-            {/* Diagonal lines */}
-            <line x1="80" y1="80" x2="420" y2="420" strokeWidth="0.5" opacity="0.6" />
-            <line x1="420" y1="80" x2="80" y2="420" strokeWidth="0.5" opacity="0.6" />
-            {/* Cardinal tick marks */}
-            <line x1="250" y1="10" x2="250" y2="30" strokeWidth="2" />
-            <line x1="250" y1="470" x2="250" y2="490" strokeWidth="2" />
-            <line x1="10" y1="250" x2="30" y2="250" strokeWidth="2" />
-            <line x1="470" y1="250" x2="490" y2="250" strokeWidth="2" />
-            {/* Intercardinal ticks */}
-            <line x1="80" y1="80" x2="92" y2="92" strokeWidth="1.5" />
-            <line x1="420" y1="80" x2="408" y2="92" strokeWidth="1.5" />
-            <line x1="80" y1="420" x2="92" y2="408" strokeWidth="1.5" />
-            <line x1="420" y1="420" x2="408" y2="408" strokeWidth="1.5" />
-            {/* N marker */}
-            <circle cx="250" cy="18" r="5" fill="currentColor" stroke="none" />
-            {/* Needle north — filled */}
-            <path d="M250 40 L265 250 L250 230 L235 250 Z" fill="currentColor" stroke="none" />
-            {/* Needle south — outline */}
-            <path d="M250 460 L265 250 L250 270 L235 250 Z" strokeWidth="1.5" strokeLinejoin="round" opacity="0.5" />
-            {/* Hub */}
-            <circle cx="250" cy="250" r="10" fill="currentColor" stroke="none" />
-            <circle cx="250" cy="250" r="4" fill="white" stroke="none" />
-            {/* Degree marks — every 30deg */}
-            {[30, 60, 120, 150, 210, 240, 300, 330].map((deg) => {
-              const r1 = 220, r2 = 232;
-              const angle = ((deg - 90) * Math.PI) / 180;
-              return (
-                <line
-                  key={deg}
-                  x1={250 + r1 * Math.cos(angle)}
-                  y1={250 + r1 * Math.sin(angle)}
-                  x2={250 + r2 * Math.cos(angle)}
-                  y2={250 + r2 * Math.sin(angle)}
-                  strokeWidth="1"
-                />
-              );
-            })}
-          </svg>
-        </div>
+            actually fits.
+          </span>
+        </h1>
+        <p className="mt-7 text-[18px] md:text-[20px] text-muted-foreground max-w-[600px] mx-auto leading-relaxed">
+          Compare policies from Australia's leading insurers. No jargon, no pressure — just clear information to help you decide.
+        </p>
 
-        {/* organic background shapes */}
-        <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-primary/[0.06] blur-3xl animate-blob" />
-          <div className="absolute top-40 -left-40 w-[440px] h-[440px] rounded-full bg-primary/[0.06] blur-3xl animate-blob [animation-delay:-7s]" />
-        </div>
-
-        <div className="container relative py-20 md:py-28 grid md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-7 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card border border-border text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6">
-              <Sparkles size={12} className="text-primary" />
-              Australian insurance comparison
-            </div>
-            <h1 className="font-sans font-extrabold text-5xl md:text-7xl leading-[1.02] tracking-tight">
-              Find cover that<br/>actually <span className="italic font-extrabold text-primary">fits</span>.
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Compare policies from Australia's leading insurers. No jargon, no pressure — just clear information to help you decide.
-            </p>
-
-            <div id="compare" className="mt-10 flex flex-col sm:flex-row gap-3 max-w-xl">
-              <div className="relative flex-1">
-                <select
-                  value={selected}
-                  onChange={(e) => setSelected(e.target.value)}
-                  className="w-full appearance-none bg-card border border-border rounded-md px-4 py-4 pr-10 text-base font-medium focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  {insuranceOptions.map((o) => <option key={o}>{o}</option>)}
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" size={18} />
-              </div>
-              <Link
-                to="/reviews/"
-                className="group inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-md font-medium hover:opacity-90 transition whitespace-nowrap"
-              >
-                Compare providers <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="mt-3 text-sm text-muted-foreground">
-              Or try the{" "}
-              <Link to="/car-insurance/compare/" className="text-primary hover:underline">
-                3-step comparison tool
-              </Link>{" "}
-              to narrow your options first.
-            </div>
-
-            <div className="mt-8 flex items-center gap-3 text-xs text-muted-foreground">
-              <Sparkles size={14} className="text-primary" />
-              <span>Plain-English guides covering 16 Australian car insurers and 10 head-to-head comparisons</span>
-            </div>
+        <div id="compare" className="mt-10 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+          <div className="relative flex-1">
+            <select
+              value={selected}
+              onChange={(e) => setSelected(e.target.value)}
+              className="w-full appearance-none bg-card border border-border rounded-full px-6 py-4 pr-12 text-[15px] font-medium focus:outline-none focus:ring-2 focus:ring-foreground/20 text-left"
+            >
+              {insuranceOptions.map((o) => <option key={o}>{o}</option>)}
+            </select>
+            <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" size={18} />
           </div>
+          <Link
+            to="/reviews/"
+            className="group inline-flex items-center justify-center gap-2 bg-foreground text-background px-7 py-4 rounded-full text-[15px] font-medium hover:bg-foreground/90 transition whitespace-nowrap"
+          >
+            Compare providers <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
 
-          {/* Editorial card stack */}
-          <div className="md:col-span-5 relative h-[420px] hidden md:block animate-fade-in [animation-delay:120ms]">
-            <Link
-              to="/car-insurance/compare/"
-              className="absolute top-8 right-12 w-72 rounded-xl bg-card border border-border p-5 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.15)] rotate-[-4deg] hover:rotate-0 transition-transform duration-500 block"
-            >
-              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-3">Compare car insurance</div>
-              <div className="font-sans font-extrabold text-2xl tracking-tight">What to put side by side</div>
-              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                Cover types, excess, agreed value vs market value — the things that actually move the price.
-              </p>
-              <div className="mt-4 inline-flex items-center gap-1 text-sm text-primary">
-                Read the comparison guide <ArrowRight size={14} />
-              </div>
-            </Link>
-            <Link
-              to="/reviews/aami-vs-nrma/"
-              className="absolute top-44 right-0 w-72 rounded-xl bg-ink text-ink-foreground p-5 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.4)] rotate-[3deg] hover:rotate-0 transition-transform duration-500 block"
-            >
-              <div className="text-xs uppercase tracking-[0.18em] text-ink-foreground/60 mb-3">Head-to-head</div>
-              <div className="font-sans font-extrabold text-2xl tracking-tight">AAMI vs NRMA</div>
-              <p className="text-sm text-ink-foreground/70 mt-2 leading-relaxed">
-                Two of Australia's most recognisable car insurance brands compared side by side.
-              </p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-sm text-primary">Read the comparison</span>
-                <ArrowUpRight className="text-primary" />
-              </div>
-            </Link>
-            <div className="absolute bottom-0 right-32 w-60 rounded-xl bg-card border border-border p-4 shadow-[0_20px_60px_-20px_hsl(160_30%_10%/0.15)] rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Shield className="text-primary" size={18} />
-                </div>
-                <div>
-                  <div className="text-sm font-medium">100% free to use</div>
-                  <div className="text-xs text-muted-foreground">No sign-up required</div>
-                </div>
+        <div className="mt-4 text-[13.5px] text-muted-foreground">
+          Or try the{" "}
+          <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[5px] hover:decoration-brand-blue">
+            3-step comparison tool
+          </Link>{" "}
+          to narrow your options first.
+        </div>
+
+        <div className="mt-12 inline-flex items-center gap-2.5 text-[12.5px] text-muted-foreground bg-secondary/60 border border-border rounded-full px-4 py-2">
+          <Sparkles size={14} className="text-brand-blue" />
+          Plain-English guides covering 16 Australian car insurers and 10 head-to-head comparisons
+        </div>
+      </section>
+
+      {/* 3-UP EDITORIAL CARDS (content from original hero card stack — restructured into a clean row) */}
+      <section className="container pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link
+            to="/car-insurance/compare/"
+            className="group bg-card border border-border rounded-3xl p-7 hover:-translate-y-0.5 hover:shadow-[0_1px_2px_hsl(0_0%_0%/0.04),0_18px_50px_hsl(0_0%_0%/0.10)] transition flex flex-col gap-3 min-h-[260px]"
+          >
+            <div className={eyebrow}>Compare car insurance</div>
+            <div className="font-sans font-semibold text-[26px] tracking-[-0.025em] leading-[1.1] mt-1">
+              What to put side by side
+            </div>
+            <p className="text-[14px] text-muted-foreground leading-relaxed flex-1">
+              Cover types, excess, agreed value vs market value — the things that actually move the price.
+            </p>
+            <div className="inline-flex items-center gap-1 text-[13.5px] font-medium text-foreground group-hover:gap-2 transition-all">
+              Read the comparison guide <ArrowRight size={14} />
+            </div>
+          </Link>
+
+          <Link
+            to="/reviews/aami-vs-nrma/"
+            className="group bg-foreground text-background rounded-3xl p-7 hover:-translate-y-0.5 hover:shadow-[0_1px_2px_hsl(0_0%_0%/0.04),0_18px_50px_hsl(0_0%_0%/0.20)] transition flex flex-col gap-3 min-h-[260px]"
+          >
+            <div className="text-[11.5px] uppercase tracking-[0.08em] font-semibold text-background/55">Head-to-head</div>
+            <div className="font-sans font-semibold text-[26px] tracking-[-0.025em] leading-[1.1] mt-1">
+              AAMI vs NRMA
+            </div>
+            <p className="text-[14px] text-background/70 leading-relaxed flex-1">
+              Two of Australia's most recognisable car insurance brands compared side by side.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-[13.5px] font-medium">Read the comparison</span>
+              <ArrowUpRight size={16} />
+            </div>
+          </Link>
+
+          <div className="bg-secondary border border-border rounded-3xl p-7 flex flex-col gap-3 min-h-[260px]">
+            <div className={eyebrow}>Why CoverScout</div>
+            <div className="font-sans font-semibold text-[26px] tracking-[-0.025em] leading-[1.1] mt-1">
+              100% free to use
+            </div>
+            <p className="text-[14px] text-muted-foreground leading-relaxed flex-1">
+              No sign-up required.
+            </p>
+            <div className="inline-flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-2xl bg-[hsl(var(--brand-blue)/0.10)] border border-[hsl(var(--brand-blue)/0.20)] flex items-center justify-center">
+                <Shield size={18} strokeWidth={1.75} className="text-brand-blue" />
               </div>
             </div>
           </div>
@@ -238,8 +179,8 @@ const Index = () => {
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-secondary border-y border-border">
-        <div className="container py-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-muted-foreground text-center">
+      <section className="bg-secondary/60 border-y border-border">
+        <div className="container py-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[13px] text-muted-foreground text-center">
           <span>General advice only — we don't recommend specific policies</span>
           <span className="text-border">·</span>
           <span>We may earn a commission from providers</span>
@@ -248,10 +189,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PROVIDER DIRECTORY (compact) — moved up to sit right under the hero */}
-      <section className="container py-16 md:py-20">
-        <div className="mb-8">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Provider directory</p>
+      {/* PROVIDER DIRECTORY (compact) */}
+      <section className="container py-24">
+        <div className="mb-10">
+          <p className={eyebrow + " mb-3"}>Provider directory</p>
         </div>
         <ProviderDirectory
           compact
@@ -261,19 +202,17 @@ const Index = () => {
         />
       </section>
 
-      {/* POPULAR TOPICS */}
-      <section className="bg-secondary/40 border-y border-border">
-        <div className="container py-20">
-          <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
+      {/* POPULAR TOPICS — feature-row treatment */}
+      <section className="bg-foreground text-background">
+        <div className="container py-24">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Start here</p>
-              <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
-                Popular car insurance topics
-              </h2>
+              <p className="text-[11.5px] uppercase tracking-[0.08em] font-semibold text-background/55 mb-3">Start here</p>
+              <h2 className={sectionH2}>Popular car insurance topics</h2>
             </div>
             <Link
               to="/car-insurance/"
-              className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+              className="inline-flex items-center gap-1 text-[13.5px] text-background/70 hover:text-background hover:gap-2 transition-all whitespace-nowrap"
             >
               All car insurance pages <ArrowRight size={14} />
             </Link>
@@ -283,13 +222,13 @@ const Index = () => {
               <Link
                 key={t.to}
                 to={t.to}
-                className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+                className="group bg-[hsl(0_0%_12%)] border border-white/[0.08] rounded-3xl p-7 hover:-translate-y-0.5 hover:bg-[hsl(0_0%_14%)] transition flex flex-col"
               >
-                <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">{t.tag}</div>
-                <div className="font-sans font-extrabold text-lg leading-snug tracking-tight group-hover:text-primary transition-colors">
+                <div className="text-[11.5px] uppercase tracking-[0.08em] font-semibold text-background/55 mb-5">{t.tag}</div>
+                <div className="font-sans font-semibold text-[20px] leading-snug tracking-[-0.02em] mb-10">
                   {t.title}
                 </div>
-                <div className="mt-6 inline-flex items-center gap-1 text-sm text-muted-foreground group-hover:text-primary group-hover:gap-2 transition-all">
+                <div className="inline-flex items-center gap-1 text-[13px] text-background/55 group-hover:text-background group-hover:gap-2 transition-all mt-auto">
                   Read guide <ArrowRight size={14} />
                 </div>
               </Link>
@@ -298,58 +237,70 @@ const Index = () => {
         </div>
       </section>
 
-      {/* COMPARING TWO PROVIDERS */}
-      <section className="container py-20">
-        <div className="flex items-end justify-between mb-10 border-b border-border pb-6">
+      {/* COMPARING TWO PROVIDERS — provider-name-led cards */}
+      <section className="container py-24">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">Side-by-side</p>
-            <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">
-              Comparing two providers?
-            </h2>
+            <p className={eyebrow + " mb-3"}>Side-by-side</p>
+            <h2 className={sectionH2}>Comparing two providers?</h2>
           </div>
           <Link
             to="/reviews/"
-            className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+            className="inline-flex items-center gap-1 text-[13.5px] text-muted-foreground hover:text-foreground hover:gap-2 transition-all whitespace-nowrap"
           >
             All comparisons <ArrowRight size={14} />
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {featuredComparisons.map((c) => (
-            <Link
-              key={c.to}
-              to={c.to}
-              className="group flex items-center justify-between bg-card border border-border rounded-lg px-5 py-4 hover:border-primary hover:-translate-y-0.5 transition-all duration-300"
-            >
-              <span className="font-sans font-extrabold text-base tracking-tight group-hover:text-primary transition-colors">
-                {c.label}
-              </span>
-              <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition" />
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {featuredComparisons.map((c) => {
+            const [a, b] = c.label.split(" vs ");
+            return (
+              <Link
+                key={c.to}
+                to={c.to}
+                className="group bg-card border border-border rounded-3xl p-7 hover:-translate-y-0.5 hover:shadow-[0_1px_2px_hsl(0_0%_0%/0.04),0_16px_40px_hsl(0_0%_0%/0.08)] transition flex flex-col gap-4 min-h-[180px]"
+              >
+                <div className={eyebrow}>Side-by-side</div>
+                <div className="font-sans font-semibold text-[28px] tracking-[-0.03em] leading-[1.05] flex items-baseline gap-2 flex-wrap">
+                  <span>{a}</span>
+                  <span className="text-muted-foreground text-[18px] font-medium">vs</span>
+                  <span>{b}</span>
+                </div>
+                <div className="mt-auto inline-flex items-center gap-1 text-[13px] text-muted-foreground group-hover:text-foreground group-hover:gap-2 transition-all">
+                  Read comparison <ArrowRight size={14} />
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
-      {/* CATEGORY GRID */}
+      {/* CATEGORY GRID — big tiles with numbered eyebrow */}
       <section className="bg-secondary/40 border-y border-border">
-        <div className="container py-20">
-          <div className="flex items-end justify-between mb-10">
-            <h2 className="font-sans font-extrabold text-3xl md:text-4xl tracking-tight">Browse by category</h2>
+        <div className="container py-24">
+          <div className="mb-14">
+            <p className={eyebrow + " mb-3"}>Categories</p>
+            <h2 className={sectionH2}>Browse by category</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {categories.map((c) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {categories.map((c, i) => {
               const Icon = c.icon;
               return (
                 <Link
                   key={c.name}
                   to={c.to}
-                  className="group bg-card border border-border rounded-lg p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+                  className="group bg-card border border-border rounded-3xl p-8 hover:-translate-y-0.5 hover:shadow-[0_1px_2px_hsl(0_0%_0%/0.04),0_16px_40px_hsl(0_0%_0%/0.08)] transition flex flex-col gap-3 min-h-[200px]"
                 >
-                  <Icon className="text-primary mb-6" size={24} strokeWidth={1.75} />
-                  <div className="font-sans font-extrabold text-lg leading-tight mb-1 tracking-tight group-hover:text-primary transition-colors">
+                  <div className="flex items-start justify-between">
+                    <Icon className="text-foreground" size={28} strokeWidth={1.75} />
+                    <div className="font-mono text-[12px] text-brand-blue tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
+                  </div>
+                  <div className="font-sans font-semibold text-[24px] leading-[1.1] tracking-[-0.025em] mt-5">
                     {c.name}
                   </div>
-                  <div className="text-sm text-muted-foreground">{c.blurb}</div>
+                  <div className="text-[14px] text-muted-foreground leading-relaxed">{c.blurb}</div>
                 </Link>
               );
             })}
@@ -357,42 +308,45 @@ const Index = () => {
         </div>
       </section>
 
-      {/* GUIDES */}
-      <section className="container py-24">
-        <div className="flex items-end justify-between mb-12 border-b border-border pb-6">
-          <h2 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight">
-            Guides & <span className="italic">explainers</span>
+      {/* GUIDES — large feature cards */}
+      <section className="container py-28">
+        <div className="mb-16 max-w-[820px]">
+          <h2 className="font-sans font-semibold text-[44px] md:text-[68px] tracking-[-0.04em] leading-[1.0]">
+            Guides &amp; explainers
           </h2>
-          <Link
-            to="/car-insurance/"
-            className="hidden md:inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
-          >
-            All car insurance guides <ArrowRight size={14} />
-          </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {guides.map((g, i) => (
             <Link
               key={g.title}
               to={g.to}
-              className="group bg-card border border-border rounded-lg p-7 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+              className="group bg-card border border-border rounded-3xl p-8 hover:-translate-y-0.5 hover:shadow-[0_1px_2px_hsl(0_0%_0%/0.04),0_16px_40px_hsl(0_0%_0%/0.08)] transition flex flex-col min-h-[340px]"
             >
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-xs uppercase tracking-[0.2em] text-primary">{g.tag}</div>
-                <div className="font-sans font-extrabold text-sm text-muted-foreground tabular-nums tracking-tight">{String(i + 1).padStart(2, "0")}</div>
+              <div className="flex items-center justify-between mb-8">
+                <div className={eyebrow}>{g.tag}</div>
+                <div className="font-mono text-[13px] text-brand-blue tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
               </div>
-              <h3 className="font-sans font-extrabold text-2xl leading-snug mb-10 group-hover:text-primary transition-colors tracking-tight">
+              <h3 className="font-sans font-semibold text-[26px] leading-[1.15] tracking-[-0.025em]">
                 {g.title}
               </h3>
-              <div className="flex items-center justify-between text-sm text-muted-foreground">
+              <div className="flex items-center justify-between text-[13px] text-muted-foreground mt-auto pt-10">
                 <span className="flex items-center gap-2"><Clock size={14} /> {g.read}</span>
-                <ArrowUpRight size={16} className="group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition" />
+                <ArrowUpRight size={16} className="group-hover:text-foreground group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition" />
               </div>
             </Link>
           ))}
         </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/car-insurance/"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-muted-foreground hover:text-foreground hover:gap-3 transition-all"
+          >
+            All car insurance guides <ArrowRight size={16} />
+          </Link>
+        </div>
       </section>
-
     </>
   );
 };
