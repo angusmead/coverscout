@@ -57,7 +57,7 @@ const Privacy = () => {
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Cloudflare Web Analytics does not use cookies, does not fingerprint individual visitors,
-          and does not track you across other websites. The data is aggregated and anonymous —
+          and does not track you across other websites. The data is aggregated and anonymous,
           we cannot identify you personally from it.
         </p>
         <p className="text-base leading-relaxed mb-10">
@@ -82,7 +82,7 @@ const Privacy = () => {
         <p className="text-base leading-relaxed mb-10">
           The site uses only essential cookies set by Cloudflare for security and performance
           (for example, to detect bots and serve cached content). We don't set any tracking,
-          advertising, or analytics cookies. You can block all cookies in your browser settings —
+          advertising, or analytics cookies. You can block all cookies in your browser settings,
           the site will still work normally.
         </p>
 
@@ -160,8 +160,8 @@ const Privacy = () => {
           Changes to this policy
         </h2>
         <p className="text-base leading-relaxed mb-10">
-          If we change how we handle information — for example when we launch affiliate
-          partnerships, add a contact form, or introduce a different analytics tool — we'll
+          If we change how we handle information, for example when we launch affiliate
+          partnerships, add a contact form, or introduce a different analytics tool, we'll
           update this page and the effective date at the top.
         </p>
 

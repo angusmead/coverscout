@@ -36,7 +36,7 @@ const About = () => {
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           We write plain-English guides, neutral provider overviews, and head-to-head comparisons
-          covering Australian insurance. The current focus is car insurance — including 15
+          covering Australian insurance. The current focus is car insurance, including 15
           provider reviews and 10 head-to-head comparisons across mainstream, budget and
           specialist insurers. Other categories (home, life, health, travel, business) are next on
           the roadmap.
@@ -85,7 +85,7 @@ const About = () => {
           </li>
           <li>
             <strong>Compliance words matter.</strong> We use "may suit", "worth comparing" and
-            "depending on your needs" — never "best", "cheapest" or "guaranteed".
+            "depending on your needs", never "best", "cheapest" or "guaranteed".
           </li>
           <li>
             <strong>Affiliate links are disclosed.</strong> See{" "}

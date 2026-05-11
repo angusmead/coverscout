@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "Do comparison sites show every car insurer in Australia?",
     answer:
-      "No. Most comparison services only display insurers they have a commercial arrangement with, which means some brands — including several large ones — may not appear. It's worth checking who is and isn't included before treating any list as the full market.",
+      "No. Most comparison services only display insurers they have a commercial arrangement with, which means some brands, including several large ones, may not appear. It's worth checking who is and isn't included before treating any list as the full market.",
   },
   {
     question: "Is the cheapest comprehensive policy always the best value?",
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "How often should I compare car insurance?",
     answer:
-      "Many people compare around renewal each year, since premiums often shift with your driving record, address, and the insurer's pricing model. Reviewing every 12 months — or whenever your circumstances change — can help you check whether your current policy still suits your needs.",
+      "Many people compare around renewal each year, since premiums often shift with your driving record, address, and the insurer's pricing model. Reviewing every 12 months, or whenever your circumstances change, can help you check whether your current policy still suits your needs.",
   },
   {
     question: "Will switching car insurers affect my no-claim discount?",
@@ -63,7 +63,7 @@ const CarInsuranceCompare = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to comparing car insurance policies in Australia — what to put side by side,
+          A practical guide to comparing car insurance policies in Australia, what to put side by side,
           which features actually move the needle, and how to read past a tempting headline price. Useful
           for anyone shopping new cover, weighing a renewal, or wondering whether to switch.
         </p>
@@ -90,8 +90,8 @@ const CarInsuranceCompare = () => {
           What does "comparing car insurance" actually mean?
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          At its simplest, comparing car insurance means lining up two or more policies — for the same
-          car, drivers, and circumstances — and looking at how they differ. Done well, it's not just a
+          At its simplest, comparing car insurance means lining up two or more policies, for the same
+          car, drivers, and circumstances, and looking at how they differ. Done well, it's not just a
           price exercise. It's a check on whether each policy includes the things you care about, with
           excesses and exclusions you can live with.
         </p>
@@ -101,7 +101,7 @@ const CarInsuranceCompare = () => {
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>It gives you matched quotes that use the same inputs.</li>
           <li>
-            It surfaces the meaningful differences — features, excesses, exclusions — not just the
+            It surfaces the meaningful differences, features, excesses, exclusions, not just the
             premium.
           </li>
           <li>It points you back to the underlying PDS and TMD for the policies you're shortlisting.</li>
@@ -112,16 +112,16 @@ const CarInsuranceCompare = () => {
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A handful of features are responsible for most of the real-world differences between car
-          insurance policies. Knowing what each one is — and how the insurers tend to vary on it — makes
+          insurance policies. Knowing what each one is, and how the insurers tend to vary on it, makes
           a comparison much faster.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Premium</strong> — the headline price. Worth checking whether it's quoted monthly or
+            <strong>Premium</strong>, the headline price. Worth checking whether it's quoted monthly or
             annually, and whether paying upfront earns a discount.
           </li>
           <li>
-            <strong>Excess</strong> — the amount you pay toward each claim. Some policies layer extra
+            <strong>Excess</strong>, the amount you pay toward each claim. Some policies layer extra
             excesses on top (age-based, inexperienced driver, claim type). Our explainer on{" "}
             <Link to="/guides/insurance-excess-explained/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               how insurance excess works
@@ -129,7 +129,7 @@ const CarInsuranceCompare = () => {
             walks through the common patterns.
           </li>
           <li>
-            <strong>Agreed vs market value</strong> — agreed value locks in a payout figure at policy
+            <strong>Agreed vs market value</strong>, agreed value locks in a payout figure at policy
             start; market value is calculated at the time of the claim. We unpack the trade-offs in our{" "}
             <Link to="/guides/market-value-vs-agreed-value/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               market value vs agreed value
@@ -137,19 +137,19 @@ const CarInsuranceCompare = () => {
             guide.
           </li>
           <li>
-            <strong>Hire car cover</strong> — whether the policy provides a replacement vehicle while
+            <strong>Hire car cover</strong>, whether the policy provides a replacement vehicle while
             yours is being repaired or while a not-at-fault claim is sorted out, and for how long.
           </li>
           <li>
-            <strong>Windscreen and glass cover</strong> — some policies include a free windscreen claim
+            <strong>Windscreen and glass cover</strong>, some policies include a free windscreen claim
             per year; others charge an excess.
           </li>
           <li>
-            <strong>Choice of repairer</strong> — whether you can choose your own repairer or are
+            <strong>Choice of repairer</strong>, whether you can choose your own repairer or are
             limited to the insurer's network. This often matters more than people expect.
           </li>
           <li>
-            <strong>Exclusions</strong> — situations the policy won't cover. Common examples include
+            <strong>Exclusions</strong>, situations the policy won't cover. Common examples include
             unlicensed drivers, undeclared modifications, or driving under the influence.
           </li>
         </ul>
@@ -164,7 +164,7 @@ const CarInsuranceCompare = () => {
         <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Decide on cover type first.</strong> Comprehensive, third party fire and theft,
-            third party property, or CTP-only — that decision frames everything else. The{" "}
+            third party property, or CTP-only, that decision frames everything else. The{" "}
             <Link to="/car-insurance/comprehensive/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               comprehensive car insurance
             </Link>{" "}
@@ -221,7 +221,7 @@ const CarInsuranceCompare = () => {
             another uses $1,500, you're comparing different products.
           </li>
           <li>
-            <strong>Assuming every comparison covers the whole market.</strong> Most don't — including
+            <strong>Assuming every comparison covers the whole market.</strong> Most don't, including
             ours. It pays to spot-check the major insurers separately.
           </li>
           <li>
@@ -263,7 +263,7 @@ const CarInsuranceCompare = () => {
           </li>
           <li>
             <strong>Where you live.</strong> Postcode-level claim history is a major driver of premium
-            differences. Our state pages — including{" "}
+            differences. Our state pages, including{" "}
             <Link to="/car-insurance/nsw/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               NSW
             </Link>
@@ -275,7 +275,7 @@ const CarInsuranceCompare = () => {
             <Link to="/car-insurance/qld/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Queensland
             </Link>{" "}
-            — cover the local nuances.
+           , cover the local nuances.
           </li>
           <li>
             <strong>Optional extras.</strong> Hire car, choice of repairer, and no-claim discount

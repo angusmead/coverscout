@@ -13,12 +13,12 @@ const faqs = [
   {
     question: "Is car insurance more expensive in Queensland than other states?",
     answer:
-      "Queensland sits broadly in the middle of the national pack, but premiums vary widely within the state — South East Queensland (Brisbane, Gold Coast, Sunshine Coast) typically prices higher than regional and far-north postcodes because of vehicle density, claim frequency and severe weather exposure. Cyclone-prone northern postcodes can also see higher premiums for storm-related cover.",
+      "Queensland sits broadly in the middle of the national pack, but premiums vary widely within the state, South East Queensland (Brisbane, Gold Coast, Sunshine Coast) typically prices higher than regional and far-north postcodes because of vehicle density, claim frequency and severe weather exposure. Cyclone-prone northern postcodes can also see higher premiums for storm-related cover.",
   },
   {
     question: "How does CTP work in Queensland?",
     answer:
-      "Compulsory Third Party (CTP) in Queensland is bundled into your vehicle registration — you don't buy a separate green slip like in NSW. You can choose your CTP insurer at registration time from a small panel licensed by the Motor Accident Insurance Commission (MAIC). Comprehensive, third party fire and theft, and third party property are all separate optional policies you arrange independently.",
+      "Compulsory Third Party (CTP) in Queensland is bundled into your vehicle registration, you don't buy a separate green slip like in NSW. You can choose your CTP insurer at registration time from a small panel licensed by the Motor Accident Insurance Commission (MAIC). Comprehensive, third party fire and theft, and third party property are all separate optional policies you arrange independently.",
   },
   {
     question: "Which insurers operate in Queensland?",
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "How do I compare car insurance in Queensland properly?",
     answer:
-      "Set your cover type, excess and optional extras consistently before quoting, then quote three to five insurers using identical inputs. Include RACQ on the list — it's often missing from comparison panels. Check storm, hail and flood inclusions explicitly, especially for South East Queensland and northern postcodes. CTP is bundled into rego, so don't double-count it.",
+      "Set your cover type, excess and optional extras consistently before quoting, then quote three to five insurers using identical inputs. Include RACQ on the list, it's often missing from comparison panels. Check storm, hail and flood inclusions explicitly, especially for South East Queensland and northern postcodes. CTP is bundled into rego, so don't double-count it.",
   },
   {
     question: "Does RACQ offer car insurance to non-members in Queensland?",
@@ -62,7 +62,7 @@ const CarInsuranceCompareQLD = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A Queensland-specific guide to comparing car insurance — the role of RACQ, how CTP fits
+          A Queensland-specific guide to comparing car insurance, the role of RACQ, how CTP fits
           into vehicle registration, why far-north postcodes price differently, and a routine for
           building a shortlist that holds up.
         </p>
@@ -76,7 +76,7 @@ const CarInsuranceCompareQLD = () => {
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>CTP is bundled into vehicle registration.</strong> Unlike NSW, you don't buy a
-            separate green slip — the CTP component is part of your rego, with the choice of CTP
+            separate green slip, the CTP component is part of your rego, with the choice of CTP
             insurer made at registration time from a panel licensed by MAIC.
           </li>
           <li>
@@ -104,17 +104,17 @@ const CarInsuranceCompareQLD = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>QLD-rooted brands</strong> — RACQ, Suncorp (headquartered in Brisbane)
+            <strong>QLD-rooted brands</strong>, RACQ, Suncorp (headquartered in Brisbane)
           </li>
           <li>
-            <strong>Mainstream insurers</strong> — AAMI, Allianz, GIO, NRMA Insurance, QBE
+            <strong>Mainstream insurers</strong>, AAMI, Allianz, GIO, NRMA Insurance, QBE
           </li>
           <li>
-            <strong>Budget-direct brands</strong> — Bingle, Budget Direct, Youi (also
+            <strong>Budget-direct brands</strong>, Bingle, Budget Direct, Youi (also
             QLD-headquartered)
           </li>
           <li>
-            <strong>Retail-branded</strong> — Coles Car Insurance, Woolworths Car Insurance
+            <strong>Retail-branded</strong>, Coles Car Insurance, Woolworths Car Insurance
             (underwritten by partner insurers, disclosed in the PDS)
           </li>
         </ul>
@@ -130,7 +130,7 @@ const CarInsuranceCompareQLD = () => {
           CTP in Queensland: bundled, but you choose the insurer
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Queensland CTP only covers personal injury claims to other people in an accident — it
+          Queensland CTP only covers personal injury claims to other people in an accident, it
           doesn't cover any damage to vehicles or property. The cost is folded into your annual
           registration, but the choice of CTP insurer is yours from a small panel licensed by the
           Motor Accident Insurance Commission. The price difference between licensed CTP insurers
@@ -149,17 +149,17 @@ const CarInsuranceCompareQLD = () => {
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Postcode</strong> — South East Queensland tends to price higher than regional
+            <strong>Postcode</strong>, South East Queensland tends to price higher than regional
             QLD, but cyclone-exposed northern postcodes can also see meaningfully different premiums
             for the same vehicle.
           </li>
           <li>
-            <strong>Storm, hail and flood exposure</strong> — Brisbane and the Gold Coast see
+            <strong>Storm, hail and flood exposure</strong>, Brisbane and the Gold Coast see
             regular severe storms and hail; far-north Queensland sees cyclones. Insurers price both
             into the premium.
           </li>
           <li>
-            <strong>Vehicle theft profile</strong> — claim history for specific makes/models in QLD
+            <strong>Vehicle theft profile</strong>, claim history for specific makes/models in QLD
             postcodes feeds into the rating, and certain models see materially higher premiums.
           </li>
         </ol>
@@ -186,12 +186,12 @@ const CarInsuranceCompareQLD = () => {
             if you're undecided.
           </li>
           <li>
-            Quote three to five insurers using identical inputs. Include RACQ — it's often missing
+            Quote three to five insurers using identical inputs. Include RACQ, it's often missing
             from comparison panels but is a major QLD player.
           </li>
           <li>
             Check storm, hail, flood and (for northern QLD) cyclone inclusions explicitly in each
-            PDS — coverage varies more than headline price would suggest.
+            PDS, coverage varies more than headline price would suggest.
           </li>
           <li>
             For RACQ, factor membership cost into the comparison if you're not already a member.
@@ -214,7 +214,7 @@ const CarInsuranceCompareQLD = () => {
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            Assuming flood and storm cover is automatic — it isn't always, especially for older
+            Assuming flood and storm cover is automatic, it isn't always, especially for older
             policies or restricted regions
           </li>
           <li>
@@ -225,7 +225,7 @@ const CarInsuranceCompareQLD = () => {
             and different exclusions
           </li>
           <li>
-            Counting the CTP component twice — it's already bundled into your QLD registration
+            Counting the CTP component twice, it's already bundled into your QLD registration
           </li>
         </ul>
 
@@ -236,8 +236,8 @@ const CarInsuranceCompareQLD = () => {
             Build your QLD shortlist
           </h2>
           <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
-            Browse plain-English overviews of sixteen Australian car insurers — including RACQ,
-            Suncorp, Youi and other QLD players — then quote a handful direct using identical
+            Browse plain-English overviews of sixteen Australian car insurers, including RACQ,
+            Suncorp, Youi and other QLD players, then quote a handful direct using identical
             inputs.
           </p>
           <div className="flex flex-wrap gap-3">

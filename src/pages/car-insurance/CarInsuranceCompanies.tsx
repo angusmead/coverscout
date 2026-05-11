@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "What's the difference between an insurer and an insurance brand?",
     answer:
-      "An insurer is the licensed entity that takes on the underwriting risk and pays claims. A brand is the customer-facing name on the product. Several Australian car insurance brands (Coles, Woolworths, Bingle, ING) are underwritten by partner insurers — the actual insurer is disclosed in the PDS. The brand handles marketing and the customer experience; the insurer carries the risk.",
+      "An insurer is the licensed entity that takes on the underwriting risk and pays claims. A brand is the customer-facing name on the product. Several Australian car insurance brands (Coles, Woolworths, Bingle, ING) are underwritten by partner insurers, the actual insurer is disclosed in the PDS. The brand handles marketing and the customer experience; the insurer carries the risk.",
   },
   {
     question: "Which is the largest car insurance company in Australia?",
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Should I choose a big company or a smaller insurer?",
     answer:
-      "Both can be solid choices — APRA's prudential regime applies equally, so financial soundness isn't really the issue. Larger insurers tend to have broader feature sets, established branch networks and longer claims-handling histories. Smaller or budget-direct brands often price more sharply with leaner online-only servicing. The right choice depends on what you weigh most: price, features, channel, or claim experience.",
+      "Both can be solid choices, APRA's prudential regime applies equally, so financial soundness isn't really the issue. Larger insurers tend to have broader feature sets, established branch networks and longer claims-handling histories. Smaller or budget-direct brands often price more sharply with leaner online-only servicing. The right choice depends on what you weigh most: price, features, channel, or claim experience.",
   },
   {
     question: "How do I check who actually underwrites a car insurance brand?",
@@ -62,7 +62,7 @@ const CarInsuranceCompanies = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A guide to who actually sells car insurance in Australia — the major underwriting groups,
+          A guide to who actually sells car insurance in Australia, the major underwriting groups,
           the brands that sit underneath them, the difference between an insurer and a brand, and
           how to figure out who's really carrying the risk on the policy you're considering.
         </p>
@@ -74,7 +74,7 @@ const CarInsuranceCompanies = () => {
           Roughly 15–20 well-known car insurance brands operate in Australia, but they sit under a
           much smaller number of underwriting groups. Most of the brands you'll see advertised are
           owned by, or underwritten through, one of six or seven larger entities. Knowing the
-          structure helps when you're comparing — two brands that look like rivals can quietly be
+          structure helps when you're comparing, two brands that look like rivals can quietly be
           underwritten by the same insurer.
         </p>
 
@@ -154,7 +154,7 @@ const CarInsuranceCompanies = () => {
           The brand on the front of the policy isn't always the insurer carrying the risk. Several
           well-known Australian car insurance brands are underwritten by partner insurers under a
           distribution arrangement. Coles Car Insurance, Woolworths Car Insurance, ING and Virgin
-          Money car insurance are common examples — the actual issuer is named in the PDS.
+          Money car insurance are common examples, the actual issuer is named in the PDS.
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           This isn't a problem in itself; it's standard practice. But it's worth knowing if:
@@ -176,7 +176,7 @@ const CarInsuranceCompanies = () => {
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           We've grouped the sixteen Australian car insurance brands we cover into three editorial
-          buckets — not rankings, but groupings that reflect how each insurer publicly positions:
+          buckets, not rankings, but groupings that reflect how each insurer publicly positions:
         </p>
         <div className="grid gap-4 md:grid-cols-3 mb-8">
           <div className="border border-border rounded-lg p-5 bg-card">
@@ -221,14 +221,14 @@ const CarInsuranceCompanies = () => {
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Does the price suit your profile?</strong> Different insurers price the same
-            risk very differently — quote three to five before deciding
+            risk very differently, quote three to five before deciding
           </li>
           <li>
             <strong>Do the features match your situation?</strong> Choice of repairer, hire car,
             agreed value, no-claim bonus protection
           </li>
           <li>
-            <strong>How does the claims process work?</strong> Online-only, phone, branch — and
+            <strong>How does the claims process work?</strong> Online-only, phone, branch, and
             whether that suits how you'd want to claim
           </li>
           <li>
@@ -237,7 +237,7 @@ const CarInsuranceCompanies = () => {
           </li>
           <li>
             <strong>Are the exclusions a fit?</strong> Storm, flood, hail, business use,
-            unlisted-driver — read the PDS
+            unlisted-driver, read the PDS
           </li>
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
@@ -255,7 +255,7 @@ const CarInsuranceCompanies = () => {
             Browse the directory
           </h2>
           <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
-            Plain-English overviews of sixteen Australian car insurance brands — neutral, evergreen,
+            Plain-English overviews of sixteen Australian car insurance brands, neutral, evergreen,
             no fake star ratings, with the underwriter for each disclosed where relevant.
           </p>
           <div className="flex flex-wrap gap-3">

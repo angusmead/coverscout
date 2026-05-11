@@ -17,7 +17,7 @@ type CategoryCopy = {
   metaDescription: string;
   h1: string;
   lead: string;
-  /** What this group has in common — sets visitor expectation honestly. */
+  /** What this group has in common, sets visitor expectation honestly. */
   whatTheyShare: string;
   /** Link to the matching long-form education article. */
   relatedArticle: { label: string; to: string };
@@ -26,11 +26,11 @@ type CategoryCopy = {
 const COPY: Record<CategoryBucket, CategoryCopy> = {
   "budget-friendly": {
     metaTitle: "Budget-Friendly Australian Car Insurance Providers",
-    metaDescription: "Six Australian car insurers that publicly position around price — including pay-as-you-drive options. Plain-English overviews, key facts and links to each review.",
+    metaDescription: "Six Australian car insurers that publicly position around price, including pay-as-you-drive options. Plain-English overviews, key facts and links to each review.",
     h1: "Budget-friendly car insurance providers",
-    lead: "Six Australian car insurers grouped here because they publicly position themselves around price — through low-cost direct distribution, no-frills product design, retail-distribution, or pay-as-you-drive pricing for low-mileage drivers.",
+    lead: "Six Australian car insurers grouped here because they publicly position themselves around price, through low-cost direct distribution, no-frills product design, retail-distribution, or pay-as-you-drive pricing for low-mileage drivers.",
     whatTheyShare:
-      "These insurers tend to compete on headline premium and lean toward streamlined product menus. None of this means they're the cheapest for your specific profile — every insurer rates risk against its own model. Worth getting matched quotes from a couple of these alongside at least one mainstream brand to see the spread.",
+      "These insurers tend to compete on headline premium and lean toward streamlined product menus. None of this means they're the cheapest for your specific profile, every insurer rates risk against its own model. Worth getting matched quotes from a couple of these alongside at least one mainstream brand to see the spread.",
     relatedArticle: {
       label: "Read: how to think about cheap car insurance",
       to: "/car-insurance/cheap/",
@@ -38,9 +38,9 @@ const COPY: Record<CategoryBucket, CategoryCopy> = {
   },
   balanced: {
     metaTitle: "Balanced Australian Car Insurance Providers",
-    metaDescription: "Five mid-market Australian car insurers without specific budget or specialist tilt — plain-English overviews and key facts for shoppers wanting a balance of price and features.",
+    metaDescription: "Five mid-market Australian car insurers without specific budget or specialist tilt, plain-English overviews and key facts for shoppers wanting a balance of price and features.",
     h1: "Balanced car insurance providers",
-    lead: "Five Australian car insurers grouped here because they sit in the mid-market — broad mainstream brands and motoring-club insurers offering balanced cover without specific budget or specialist focus.",
+    lead: "Five Australian car insurers grouped here because they sit in the mid-market, broad mainstream brands and motoring-club insurers offering balanced cover without specific budget or specialist focus.",
     whatTheyShare:
       "These insurers tend to compete on a mix of price, features and service rather than positioning at either end. Most offer the standard cover ladder (comprehensive, third party fire and theft, third party property) with a moderate optional-extras menu. Worth comparing a couple of these against at least one budget-positioned and one broader-cover brand.",
     relatedArticle: {
@@ -50,13 +50,13 @@ const COPY: Record<CategoryBucket, CategoryCopy> = {
   },
   "broader-cover": {
     metaTitle: "Broader Cover Australian Car Insurance Providers",
-    metaDescription: "Five Australian car insurers offering broader feature sets, branch networks, partner channels or specialist features — plain-English overviews and key facts.",
+    metaDescription: "Five Australian car insurers offering broader feature sets, branch networks, partner channels or specialist features, plain-English overviews and key facts.",
     h1: "Broader cover car insurance providers",
-    lead: "Five Australian car insurers grouped here because they tend to offer broader feature sets — through global insurer breadth, branch networks, broker access, tailored quoting, or specialist features-as-default.",
+    lead: "Five Australian car insurers grouped here because they tend to offer broader feature sets, through global insurer breadth, branch networks, broker access, tailored quoting, or specialist features-as-default.",
     whatTheyShare:
       "These insurers position themselves on breadth of cover, channel options or features rather than headline price. Premiums for the equivalent comprehensive policy can sit higher than budget-positioned brands, but the optional-extras menu and service breadth often run wider. Worth comparing a couple of these alongside the comparison page on car insurance.",
     relatedArticle: {
-      label: "Read: comprehensive car insurance — what's included",
+      label: "Read: comprehensive car insurance, what's included",
       to: "/car-insurance/comprehensive/",
     },
   },
@@ -128,14 +128,14 @@ const ProviderCategoryPage = ({ category }: Props) => {
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-3 max-w-3xl">
           We've organised the 16 Australian car insurance brands we cover into three editorial
-          groups — budget-friendly, balanced and broader cover — based on each insurer's public
+          groups, budget-friendly, balanced and broader cover, based on each insurer's public
           brand positioning. The categorisation reflects how each brand markets itself, not a
           quality judgement.
         </p>
         <p className="text-base leading-relaxed mb-10 max-w-3xl">
           Most large insurers actually offer products across the spectrum. AAMI, NRMA, Allianz and
           others all sell both budget tiers and feature-rich tiers under the same brand. Treat
-          these groups as a starting point for which brands to compare alongside each other — not
+          these groups as a starting point for which brands to compare alongside each other, not
           as a recommendation.
         </p>
 

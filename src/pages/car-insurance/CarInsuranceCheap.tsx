@@ -19,12 +19,12 @@ const faqs = [
   {
     question: "How can I lower my car insurance premium without compromising cover?",
     answer:
-      "Common levers include lifting your excess (within reason), reviewing optional extras you may not actually use, paying annually rather than monthly, and shopping around at renewal. None of these change the underlying cover quality — they're tweaks to the price you pay for it.",
+      "Common levers include lifting your excess (within reason), reviewing optional extras you may not actually use, paying annually rather than monthly, and shopping around at renewal. None of these change the underlying cover quality, they're tweaks to the price you pay for it.",
   },
   {
     question: "Are direct insurers cheaper than going through a broker?",
     answer:
-      "Direct insurers can be cheaper for simpler policies because there's no broker commission baked in. Brokers can be useful when your situation is more complex — modified vehicles, business use, or higher-risk profiles — where their access to specialist insurers may produce a better outcome. It depends on the situation.",
+      "Direct insurers can be cheaper for simpler policies because there's no broker commission baked in. Brokers can be useful when your situation is more complex, modified vehicles, business use, or higher-risk profiles, where their access to specialist insurers may produce a better outcome. It depends on the situation.",
   },
   {
     question: "Will increasing my excess always reduce my premium?",
@@ -92,14 +92,14 @@ const CarInsuranceCheap = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Genuinely competitive pricing</strong> — same level of cover, lower premium.
+            <strong>Genuinely competitive pricing</strong>, same level of cover, lower premium.
           </li>
           <li>
-            <strong>Lower cover, lower price</strong> — a policy that's cheaper because it includes
+            <strong>Lower cover, lower price</strong>, a policy that's cheaper because it includes
             less, excludes more, or carries a higher excess.
           </li>
           <li>
-            <strong>A different product entirely</strong> — third party property instead of
+            <strong>A different product entirely</strong>, third party property instead of
             comprehensive, for example. Much cheaper, but covering a different set of risks.
           </li>
         </ul>
@@ -130,7 +130,7 @@ const CarInsuranceCheap = () => {
           </li>
           <li>
             <strong>Exclusions matter more than inclusions.</strong> Most policies look very similar in
-            their inclusions section. The differences usually live in the exclusions — see{" "}
+            their inclusions section. The differences usually live in the exclusions, see{" "}
             <Link to="/guides/common-insurance-exclusions/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               common insurance exclusions
             </Link>{" "}
@@ -138,7 +138,7 @@ const CarInsuranceCheap = () => {
           </li>
           <li>
             <strong>Annual price drift is normal.</strong> Insurers re-rate every year. The cheapest
-            insurer this year may not be the cheapest next year — comparing at renewal is the closest
+            insurer this year may not be the cheapest next year, comparing at renewal is the closest
             thing to a free saving in this market.
           </li>
           <li>
@@ -164,7 +164,7 @@ const CarInsuranceCheap = () => {
             page covers how to do it methodically.
           </li>
           <li>
-            <strong>Get matched quotes</strong> from at least three insurers — same vehicle, same
+            <strong>Get matched quotes</strong> from at least three insurers, same vehicle, same
             drivers, same excess. The{" "}
             <Link to="/car-insurance/quotes/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               car insurance quotes
@@ -181,7 +181,7 @@ const CarInsuranceCheap = () => {
           </li>
           <li>
             <strong>Pay annually if you can.</strong> Many insurers add a small surcharge for monthly
-            payments — usually a few percent.
+            payments, usually a few percent.
           </li>
           <li>
             <strong>Bundle thoughtfully.</strong> Multi-policy discounts (home + car, for example) can
@@ -198,7 +198,7 @@ const CarInsuranceCheap = () => {
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Under-disclosing to lower the premium.</strong> Tweaking annual kilometres,
-            omitting a regular driver, or hiding a recent claim can produce a cheaper quote — and a
+            omitting a regular driver, or hiding a recent claim can produce a cheaper quote, and a
             denied claim down the track.
           </li>
           <li>
@@ -228,7 +228,7 @@ const CarInsuranceCheap = () => {
           </li>
           <li>
             <strong>Forgetting to recheck after a circumstance change.</strong> Moving house, changing
-            jobs, or adding a new driver can either raise or lower your premium — telling the insurer
+            jobs, or adding a new driver can either raise or lower your premium, telling the insurer
             keeps everything aboveboard.
           </li>
         </ul>
@@ -258,7 +258,7 @@ const CarInsuranceCheap = () => {
             A cheaper-to-insure car is sometimes the biggest available saving.
           </li>
           <li>
-            <strong>Annual kilometres and use.</strong> Lower mileage typically means a lower premium —
+            <strong>Annual kilometres and use.</strong> Lower mileage typically means a lower premium,
             so long as the figure is accurate.
           </li>
           <li>
@@ -283,7 +283,7 @@ const CarInsuranceCheap = () => {
           </h2>
           <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             The most reliable way to lower your premium is to compare regularly with matched inputs.
-            The pages below cover both — and our guides go deeper on the patterns to watch for.
+            The pages below cover both, and our guides go deeper on the patterns to watch for.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

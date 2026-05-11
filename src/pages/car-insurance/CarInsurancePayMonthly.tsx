@@ -11,7 +11,7 @@ import { getRouteMeta } from "@/lib/routes-meta";
 const PATH = "/car-insurance/pay-monthly/";
 
 const faqs = [
-  { question: "Does paying car insurance monthly cost more than paying annually in Australia?", answer: "It often does. Many insurers add a small surcharge for monthly payments — commonly a few percent of the annual premium. Some insurers offer monthly at the same total price as annual, but it isn't the norm." },
+  { question: "Does paying car insurance monthly cost more than paying annually in Australia?", answer: "It often does. Many insurers add a small surcharge for monthly payments, commonly a few percent of the annual premium. Some insurers offer monthly at the same total price as annual, but it isn't the norm." },
   { question: "Is there a credit check for paying car insurance monthly?", answer: "Some insurers carry out an identity or credit check before approving monthly payments. Others don't. The application form or PDS will indicate what applies. The check itself is generally a soft check and doesn't typically affect your credit score." },
   { question: "What happens if I miss a monthly car insurance payment?", answer: "Most insurers allow a short grace period before treating the policy as in default. Repeated missed payments can lead to the policy being cancelled, leaving you uninsured. Cancellation can also affect your record with that insurer in future." },
   { question: "Are there car insurers in Australia that don't charge extra for monthly payments?", answer: "A small number of insurers offer monthly payments at no extra cost compared to annual. They tend to be the exception rather than the rule, and the underlying premium still varies between insurers. Worth comparing both pricing structures." },
@@ -27,13 +27,13 @@ const CarInsurancePayMonthly = () => {
       <article className="container py-14 md:py-20 max-w-[820px]">
         <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
         <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">Pay monthly car insurance in Australia: pros, cons and what to watch</h1>
-        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">A practical guide to paying car insurance monthly in Australia — how it works, what it typically costs compared to paying annually, and the things worth checking before signing up.</p>
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">A practical guide to paying car insurance monthly in Australia, how it works, what it typically costs compared to paying annually, and the things worth checking before signing up.</p>
 
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">Paying car insurance monthly spreads the cost into smaller, more predictable chunks. For many people that's the easier choice. The trade-off is usually a slightly higher total cost over the year, plus a few mechanics worth understanding before you commit.</p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">If you're working out whether monthly suits you alongside other ways to lower the price, see our <Link to="/car-insurance/lower-premiums/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">how to lower your car insurance</Link> guide.</p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">What is "pay monthly" car insurance?</h2>
-        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">"Pay monthly" simply means paying your premium in twelve equal monthly instalments rather than a single annual payment. The cover itself is the same — same insurer, same policy, same PDS — but the cash-flow shape is different and the total cost can be slightly different too.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">"Pay monthly" simply means paying your premium in twelve equal monthly instalments rather than a single annual payment. The cover itself is the same, same insurer, same policy, same PDS, but the cash-flow shape is different and the total cost can be slightly different too.</p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">Key things to understand</h2>
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
@@ -67,7 +67,7 @@ const CarInsurancePayMonthly = () => {
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">What affects whether monthly may suit you</h2>
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Cash-flow comfort.</strong> Predictable smaller bills vs one larger one is partly a behavioural choice.</li>
-          <li><strong>Surcharge size.</strong> Small surcharge — monthly is roughly neutral. Larger surcharge — annual generally wins on total cost.</li>
+          <li><strong>Surcharge size.</strong> Small surcharge, monthly is roughly neutral. Larger surcharge, annual generally wins on total cost.</li>
           <li><strong>Reliability of payments.</strong> Stable income with autopay capability favours monthly without much risk.</li>
           <li><strong>Whether the insurer offers a no-surcharge monthly option.</strong> Worth checking specifically.</li>
           <li><strong>Tendency to switch insurers mid-year.</strong> Annual policies may have a different refund pattern.</li>
@@ -79,7 +79,7 @@ const CarInsurancePayMonthly = () => {
 
         <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
           <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">Compare your options</h2>
-          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">Quoting the same policy on both monthly and annual bases — and comparing across insurers — is the cleanest way to see which suits.</p>
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">Quoting the same policy on both monthly and annual bases, and comparing across insurers, is the cleanest way to see which suits.</p>
           <div className="flex flex-wrap gap-3">
             <Link to="/car-insurance/compare/" className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition">Compare car insurance<ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></Link>
             <Link to="/car-insurance/quotes/" className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition">Get car insurance quotes</Link>

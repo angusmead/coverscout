@@ -29,9 +29,9 @@ const h2 = "font-sans font-semibold text-[26px] md:text-[32px] tracking-[-0.025e
 const body = "text-[16px] leading-[1.65] text-foreground/85 mb-5";
 const inlineLink = "text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue";
 const italicAccent: React.CSSProperties = {
-  fontFamily: '"Instrument Serif", "Geist", serif',
+  fontFamily: '"EB Garamond", "Fraunces", serif',
   fontStyle: "italic",
-  fontWeight: 400,
+  fontWeight: 700,
   letterSpacing: "-0.01em",
 };
 
@@ -217,7 +217,7 @@ export const ProviderVsPage = ({ path }: Props) => {
           </table>
         </div>
         <p className="text-[13.5px] text-muted-foreground italic mb-10">
-          This summary is for shopping orientation only — it doesn't declare a winner. The right
+          This summary is for shopping orientation only, it doesn't declare a winner. The right
           fit depends on your vehicle, location, driving profile and what you value in an insurer.
         </p>
 
@@ -265,12 +265,12 @@ export const ProviderVsPage = ({ path }: Props) => {
           <ul className="list-disc pl-6 space-y-2 text-[16px] leading-[1.65] text-foreground/85">
             <li>
               <Link to="/car-insurance/" className={inlineLink}>
-                Car insurance hub — fundamentals
+                Car insurance hub, fundamentals
               </Link>
             </li>
             <li>
               <Link to="/car-insurance/compare/" className={inlineLink}>
-                Compare car insurance — what to look for
+                Compare car insurance, what to look for
               </Link>
             </li>
             <li>
@@ -289,7 +289,7 @@ export const ProviderVsPage = ({ path }: Props) => {
           </h2>
           <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             The cleanest way to test {a.name} against {b.name} for your situation is to quote them
-            both — plus at least one other insurer — using identical inputs. The pages below cover
+            both, plus at least one other insurer, using identical inputs. The pages below cover
             the comparison framework and the quote process.
           </p>
           <div className="flex flex-wrap gap-3">

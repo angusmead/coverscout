@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Who has the best comprehensive car insurance in Australia?",
     answer:
-      "There's no single 'best' comprehensive insurer for everyone — it depends on your vehicle, your address, your driving history, and what features matter most to you. NRMA, AAMI, Allianz, Suncorp, RACQ, RACV and APIA are widely shortlisted because they tend to offer broader feature sets and well-established claims handling. The right pick is usually the one whose feature set, exclusions and price all line up against your specific needs.",
+      "There's no single 'best' comprehensive insurer for everyone, it depends on your vehicle, your address, your driving history, and what features matter most to you. NRMA, AAMI, Allianz, Suncorp, RACQ, RACV and APIA are widely shortlisted because they tend to offer broader feature sets and well-established claims handling. The right pick is usually the one whose feature set, exclusions and price all line up against your specific needs.",
   },
   {
     question: "What does comprehensive car insurance actually include?",
@@ -29,17 +29,17 @@ const faqs = [
   {
     question: "What's the difference between comprehensive policies?",
     answer:
-      "More than people expect. Two policies at the same price can differ in agreed value vs market value sum insured, choice of repairer, hire car cover, new-for-old replacement conditions, no-claim bonus protection, at-fault excess structure, and exclusions for storm, flood or specific use cases. The PDS for each spells these out — worth reading the sections that matter to you, not just the headline price.",
+      "More than people expect. Two policies at the same price can differ in agreed value vs market value sum insured, choice of repairer, hire car cover, new-for-old replacement conditions, no-claim bonus protection, at-fault excess structure, and exclusions for storm, flood or specific use cases. The PDS for each spells these out, worth reading the sections that matter to you, not just the headline price.",
   },
   {
     question: "Is comprehensive worth it on an older car?",
     answer:
-      "Sometimes — depends on the car's market value, your savings buffer, and whether you'd realistically replace it after a write-off. Once a car drops below roughly $5,000 market value, the maths often favours third party fire and theft instead, since you'd typically be claiming on the at-fault excess on a full payout that's only marginally above that excess. Worth running both numbers.",
+      "Sometimes, depends on the car's market value, your savings buffer, and whether you'd realistically replace it after a write-off. Once a car drops below roughly $5,000 market value, the maths often favours third party fire and theft instead, since you'd typically be claiming on the at-fault excess on a full payout that's only marginally above that excess. Worth running both numbers.",
   },
   {
     question: "Does comprehensive cover hail and flood?",
     answer:
-      "Most comprehensive policies in Australia cover hail and flood as standard, but not all — and exclusions can apply in specific regions, for older cars, or for new policies during severe-weather events. Flood definitions vary too: 'rising water' versus 'storm runoff' can be treated differently. Always check the PDS, especially if you're in a flood-exposed or hail-prone region.",
+      "Most comprehensive policies in Australia cover hail and flood as standard, but not all, and exclusions can apply in specific regions, for older cars, or for new policies during severe-weather events. Flood definitions vary too: 'rising water' versus 'storm runoff' can be treated differently. Always check the PDS, especially if you're in a flood-exposed or hail-prone region.",
   },
 ];
 
@@ -63,7 +63,7 @@ const CarInsuranceBestComprehensive = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to choosing comprehensive car insurance in Australia — which insurers
+          A practical guide to choosing comprehensive car insurance in Australia, which insurers
           offer broader feature sets, what to look for beyond the headline premium, and how to
           shortlist the policy that may suit you most.
         </p>
@@ -156,7 +156,7 @@ const CarInsuranceBestComprehensive = () => {
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               State motoring clubs (Queensland and Victoria) with member benefits and integrated
-              roadside assistance — strong fits for in-state members.
+              roadside assistance, strong fits for in-state members.
             </p>
             <Link to="/reviews/racq/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the RACQ overview →
@@ -169,7 +169,7 @@ const CarInsuranceBestComprehensive = () => {
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               Specialist insurer for over-50s with comprehensive features tailored to that segment
-              — worth comparing if you qualify on age.
+             , worth comparing if you qualify on age.
             </p>
             <Link to="/reviews/apia/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the APIA overview →
@@ -177,8 +177,8 @@ const CarInsuranceBestComprehensive = () => {
           </div>
         </div>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          The full broader-cover bucket — five insurers with broader feature sets and partner
-          networks — is on our{" "}
+          The full broader-cover bucket, five insurers with broader feature sets and partner
+          networks, is on our{" "}
           <Link to="/reviews/broader-cover/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             broader cover insurers
           </Link>{" "}
@@ -193,24 +193,24 @@ const CarInsuranceBestComprehensive = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Sum insured basis</strong> — agreed value (you and the insurer agree the figure
+            <strong>Sum insured basis</strong>, agreed value (you and the insurer agree the figure
             up front) versus market value (set at claim time). Agreed gives certainty; market
             usually quotes lower.
           </li>
           <li>
-            <strong>New-for-old replacement</strong> — most insurers offer this on new cars within a
+            <strong>New-for-old replacement</strong>, most insurers offer this on new cars within a
             specified period or kilometre limit. Conditions vary; read the PDS.
           </li>
           <li>
-            <strong>Choice of repairer</strong> — included as standard, an optional extra, or not
+            <strong>Choice of repairer</strong>, included as standard, an optional extra, or not
             available depending on the insurer
           </li>
           <li>
-            <strong>Hire car after non-fault claims</strong> — included or paid extra, with daily
+            <strong>Hire car after non-fault claims</strong>, included or paid extra, with daily
             limits and duration caps
           </li>
           <li>
-            <strong>Excess structure</strong> — basic excess plus age-based, inexperienced-driver
+            <strong>Excess structure</strong>, basic excess plus age-based, inexperienced-driver
             and at-fault excesses can stack. See our{" "}
             <Link to="/car-insurance/excess/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               excess explainer
@@ -218,18 +218,18 @@ const CarInsuranceBestComprehensive = () => {
             .
           </li>
           <li>
-            <strong>No-claim bonus protection</strong> — see our{" "}
+            <strong>No-claim bonus protection</strong>, see our{" "}
             <Link to="/car-insurance/no-claim-bonus/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               no-claim bonus
             </Link>{" "}
             page
           </li>
           <li>
-            <strong>Hail, flood and storm coverage</strong> — usually included as standard but worth
+            <strong>Hail, flood and storm coverage</strong>, usually included as standard but worth
             checking explicitly, especially in exposed regions
           </li>
           <li>
-            <strong>Listed-driver vs any-driver</strong> — narrower driver lists usually price lower
+            <strong>Listed-driver vs any-driver</strong>, narrower driver lists usually price lower
             but exclude anyone not named
           </li>
         </ul>
@@ -263,7 +263,7 @@ const CarInsuranceBestComprehensive = () => {
           </li>
           <li>
             Compare features, not just price. Choice of repairer, hire car, new-for-old replacement
-            — note where each insurer lands.
+           , note where each insurer lands.
           </li>
           <li>
             Read the PDS for the two or three you're most likely to choose. Focus on excess

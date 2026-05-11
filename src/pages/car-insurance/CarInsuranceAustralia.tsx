@@ -18,12 +18,12 @@ const faqs = [
   {
     question: "Do I need car insurance to drive a car in Australia?",
     answer:
-      "Compulsory Third Party (CTP) — sometimes called a 'green slip' in NSW — is the only mandatory cover. It's required to register a vehicle in every state and territory, and it covers injury claims to other people. Every other cover type is optional, including damage to your own car.",
+      "Compulsory Third Party (CTP), sometimes called a 'green slip' in NSW, is the only mandatory cover. It's required to register a vehicle in every state and territory, and it covers injury claims to other people. Every other cover type is optional, including damage to your own car.",
   },
   {
     question: "What's the difference between CTP and other car insurance?",
     answer:
-      "CTP only covers personal injury claims to other people involved in an accident — it doesn't cover any damage to vehicles or property. Third party property covers damage your car causes to other people's property. Third party fire and theft adds limited cover for your own car if it's stolen or burnt. Comprehensive covers your own car for a wider range of events.",
+      "CTP only covers personal injury claims to other people involved in an accident, it doesn't cover any damage to vehicles or property. Third party property covers damage your car causes to other people's property. Third party fire and theft adds limited cover for your own car if it's stolen or burnt. Comprehensive covers your own car for a wider range of events.",
   },
   {
     question: "Are all Australian car insurers part of the same group?",
@@ -33,12 +33,12 @@ const faqs = [
   {
     question: "What happens if I disagree with an insurer's claim decision?",
     answer:
-      "Start with the insurer's internal dispute resolution process — every Australian insurer has one. If you're not satisfied, you can escalate at no cost to the Australian Financial Complaints Authority (AFCA) at afca.org.au. AFCA's decisions are binding on the insurer up to specified compensation limits.",
+      "Start with the insurer's internal dispute resolution process, every Australian insurer has one. If you're not satisfied, you can escalate at no cost to the Australian Financial Complaints Authority (AFCA) at afca.org.au. AFCA's decisions are binding on the insurer up to specified compensation limits.",
   },
   {
     question: "How often should I review my car insurance?",
     answer:
-      "At least once a year, typically around renewal — premiums shift between insurers and your circumstances (vehicle, address, kilometres, driving history) change too. Also worth re-checking after big life events: moving address, buying or selling a vehicle, adding a new driver, or any at-fault claim.",
+      "At least once a year, typically around renewal, premiums shift between insurers and your circumstances (vehicle, address, kilometres, driving history) change too. Also worth re-checking after big life events: moving address, buying or selling a vehicle, adding a new driver, or any at-fault claim.",
   },
 ];
 
@@ -62,7 +62,7 @@ const CarInsuranceAustralia = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A complete shopper's overview of the Australian car insurance market — the cover types,
+          A complete shopper's overview of the Australian car insurance market, the cover types,
           the brands worth knowing, what shapes prices, how the regulatory framework protects you,
           and where to start comparing if you're new to all of this.
         </p>
@@ -76,19 +76,19 @@ const CarInsuranceAustralia = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Mainstream direct insurers</strong> — long-established national brands like
+            <strong>Mainstream direct insurers</strong>, long-established national brands like
             AAMI, NRMA Insurance, Allianz, GIO and Suncorp
           </li>
           <li>
-            <strong>Budget direct insurers</strong> — Budget Direct, Bingle, and similar players
+            <strong>Budget direct insurers</strong>, Budget Direct, Bingle, and similar players
             positioned around price
           </li>
           <li>
-            <strong>State-affiliated motoring clubs</strong> — RACQ in Queensland, RACV in
+            <strong>State-affiliated motoring clubs</strong>, RACQ in Queensland, RACV in
             Victoria, NRMA in NSW
           </li>
           <li>
-            <strong>Retail-branded and partner-distributed</strong> — Coles, Woolworths, Qantas,
+            <strong>Retail-branded and partner-distributed</strong>, Coles, Woolworths, Qantas,
             Kogan and others, underwritten by partner insurers
           </li>
         </ul>
@@ -102,7 +102,7 @@ const CarInsuranceAustralia = () => {
         </p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
-          The four cover types — quick reference
+          The four cover types, quick reference
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Australian motor insurance has settled around four standard cover types. The first is
@@ -111,7 +111,7 @@ const CarInsuranceAustralia = () => {
         <div className="space-y-4 mb-6">
           <div className="bg-card border border-border rounded-2xl p-6">
             <div className="font-sans font-semibold text-[16px] tracking-tight mb-1">
-              Compulsory Third Party (CTP) — mandatory
+              Compulsory Third Party (CTP), mandatory
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
               Required to register a vehicle. Covers injury claims to other people. Doesn't cover
@@ -121,16 +121,16 @@ const CarInsuranceAustralia = () => {
           </div>
           <div className="bg-card border border-border rounded-2xl p-6">
             <div className="font-sans font-semibold text-[16px] tracking-tight mb-1">
-              Third party property — entry level
+              Third party property, entry level
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
-              Covers damage your car causes to other people's property — including their vehicle.
+              Covers damage your car causes to other people's property, including their vehicle.
               Doesn't cover damage to your own car. Cheapest of the optional cover types.
             </p>
           </div>
           <div className="bg-card border border-border rounded-2xl p-6">
             <div className="font-sans font-semibold text-[16px] tracking-tight mb-1">
-              Third party fire and theft — middle ground
+              Third party fire and theft, middle ground
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
               Adds limited cover for your own car if it's stolen or burnt, on top of third party
@@ -139,7 +139,7 @@ const CarInsuranceAustralia = () => {
           </div>
           <div className="bg-card border border-border rounded-2xl p-6">
             <div className="font-sans font-semibold text-[16px] tracking-tight mb-1">
-              Comprehensive — broadest standard cover
+              Comprehensive, broadest standard cover
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
               Covers damage to your own car (accident, theft, fire, certain weather events) plus
@@ -162,7 +162,7 @@ const CarInsuranceAustralia = () => {
           packages all of that into a single figure.
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Two drivers at the same address can quote very different premiums — driving history,
+          Two drivers at the same address can quote very different premiums, driving history,
           age, the specific make and model, annual kilometres, chosen excess and any optional
           extras all factor in. For deeper coverage of the cost side, see{" "}
           <Link
@@ -175,31 +175,31 @@ const CarInsuranceAustralia = () => {
         </p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
-          The regulatory framework — light touch but real
+          The regulatory framework, light touch but real
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A few protections are worth knowing about as a shopper:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>APRA</strong> — prudentially regulates general insurers, including capital
+            <strong>APRA</strong>, prudentially regulates general insurers, including capital
             requirements that ensure the insurer can actually pay claims
           </li>
           <li>
-            <strong>ASIC and the DDO regime</strong> — every product must have a Target Market
+            <strong>ASIC and the DDO regime</strong>, every product must have a Target Market
             Determination (TMD) that defines who the product is designed for, and insurers must
             distribute consistently with it
           </li>
           <li>
-            <strong>The PDS</strong> — Product Disclosure Statement; the binding document that
+            <strong>The PDS</strong>, Product Disclosure Statement; the binding document that
             spells out what's covered, what's excluded, and how claims work
           </li>
           <li>
-            <strong>Cooling-off period</strong> — most policies include a window (commonly 14–21
+            <strong>Cooling-off period</strong>, most policies include a window (commonly 14–21
             days) where you can cancel for a full refund, provided you haven't claimed
           </li>
           <li>
-            <strong>AFCA</strong> — the Australian Financial Complaints Authority handles disputes
+            <strong>AFCA</strong>, the Australian Financial Complaints Authority handles disputes
             you can't resolve directly with the insurer
           </li>
         </ul>
@@ -212,24 +212,24 @@ const CarInsuranceAustralia = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Vehicle value</strong> — comprehensive may suit if your car's worth more than
+            <strong>Vehicle value</strong>, comprehensive may suit if your car's worth more than
             you'd want to lose. Third party property may suit if it's older and you'd self-insure
             the loss.
           </li>
           <li>
-            <strong>Risk tolerance</strong> — how comfortable are you wearing the cost of repairing
+            <strong>Risk tolerance</strong>, how comfortable are you wearing the cost of repairing
             or replacing your own car if something goes wrong?
           </li>
           <li>
-            <strong>How you'll use the car</strong> — daily commuting, occasional weekends, business
+            <strong>How you'll use the car</strong>, daily commuting, occasional weekends, business
             use? Each maps differently to risk.
           </li>
           <li>
-            <strong>Where you live and park</strong> — postcode-level claim history is a major
+            <strong>Where you live and park</strong>, postcode-level claim history is a major
             input. High-theft or high-storm areas push premiums up.
           </li>
           <li>
-            <strong>Your driving history</strong> — recent at-fault claims and demerits affect
+            <strong>Your driving history</strong>, recent at-fault claims and demerits affect
             available pricing.
           </li>
         </ul>
@@ -252,8 +252,8 @@ const CarInsuranceAustralia = () => {
           <li>Decide which cover type may suit your situation first</li>
           <li>Get quotes from at least three insurers using identical inputs</li>
           <li>Compare features (hire car, choice of repairer, agreed vs market value), not just headline price</li>
-          <li>Check excesses — including age-based and claim-type excesses</li>
-          <li>Read the PDS and TMD — especially the exclusions section</li>
+          <li>Check excesses, including age-based and claim-type excesses</li>
+          <li>Read the PDS and TMD, especially the exclusions section</li>
         </ol>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Our{" "}
@@ -286,7 +286,7 @@ const CarInsuranceAustralia = () => {
           </li>
           <li>
             <strong>Picking the lowest excess by default.</strong> A very low excess raises your
-            premium — sometimes by more than you'd ever save in a typical claim cycle.
+            premium, sometimes by more than you'd ever save in a typical claim cycle.
           </li>
           <li>
             <strong>Forgetting to update the insurer when things change.</strong> A new address,

@@ -18,22 +18,22 @@ const faqs = [
   {
     question: "Why is car insurance so expensive for young drivers?",
     answer:
-      "Australian crash data consistently shows higher claim frequency and severity for drivers under 25. Insurers price for that pattern, which is why young-driver premiums and at-fault excesses can be a multiple of those for older drivers — even with a clean record. The good news is that pricing usually drops noticeably once you've held an open licence for a few years claim-free.",
+      "Australian crash data consistently shows higher claim frequency and severity for drivers under 25. Insurers price for that pattern, which is why young-driver premiums and at-fault excesses can be a multiple of those for older drivers, even with a clean record. The good news is that pricing usually drops noticeably once you've held an open licence for a few years claim-free.",
   },
   {
     question: "Is it cheaper to be a listed driver on a parent's policy?",
     answer:
-      "Often, yes — being added as a listed driver on a parent's comprehensive policy (rather than holding your own) can be cheaper, but the parent's premium will rise to reflect the added risk. The car must genuinely be theirs and they must be the main driver. Misrepresenting who the main driver is can void cover, so it's worth being honest about it from the start.",
+      "Often, yes, being added as a listed driver on a parent's comprehensive policy (rather than holding your own) can be cheaper, but the parent's premium will rise to reflect the added risk. The car must genuinely be theirs and they must be the main driver. Misrepresenting who the main driver is can void cover, so it's worth being honest about it from the start.",
   },
   {
     question: "What's the cheapest car insurance for young drivers in Australia?",
     answer:
-      "There isn't one cheapest insurer for all young drivers — pricing varies sharply by car, address, history and which insurers actively target younger demographics. Bingle and Budget Direct often quote competitively for young drivers, and Youi sometimes prices well depending on how you answer their questions. Always quote at least three to five insurers using identical inputs.",
+      "There isn't one cheapest insurer for all young drivers, pricing varies sharply by car, address, history and which insurers actively target younger demographics. Bingle and Budget Direct often quote competitively for young drivers, and Youi sometimes prices well depending on how you answer their questions. Always quote at least three to five insurers using identical inputs.",
   },
   {
     question: "Can a young driver get comprehensive cover?",
     answer:
-      "Yes — most major Australian insurers offer comprehensive cover to young drivers, but the premium and at-fault excess will be higher. Some insurers add an additional age-based excess (often $500–$1,500) on top of the basic excess if a driver under 25 is at fault. It's worth comparing both the premium and the total at-fault excess across insurers, not just the headline price.",
+      "Yes, most major Australian insurers offer comprehensive cover to young drivers, but the premium and at-fault excess will be higher. Some insurers add an additional age-based excess (often $500–$1,500) on top of the basic excess if a driver under 25 is at fault. It's worth comparing both the premium and the total at-fault excess across insurers, not just the headline price.",
   },
   {
     question: "Do telematics or 'pay-as-you-drive' policies help young drivers?",
@@ -62,7 +62,7 @@ const CarInsuranceBestForYoungDrivers = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to comparing car insurance as a young driver in Australia — what
+          A practical guide to comparing car insurance as a young driver in Australia, what
           insurers actually price for, the levers that move premiums, and which features may suit
           drivers under 25 most.
         </p>
@@ -71,7 +71,7 @@ const CarInsuranceBestForYoungDrivers = () => {
           What "best" actually means for a young driver
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          There's no single "best" car insurance for young drivers — what suits you depends on your
+          There's no single "best" car insurance for young drivers, what suits you depends on your
           car, your address, your driving history and how you answer each insurer's questions.
           What's reliably true is that the insurers that price well for young drivers tend to be
           either budget-direct brands with simple online quoting (Bingle, Budget Direct) or
@@ -94,19 +94,19 @@ const CarInsuranceBestForYoungDrivers = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Claim frequency</strong> — drivers under 25 are statistically more likely to
+            <strong>Claim frequency</strong>, drivers under 25 are statistically more likely to
             have an at-fault claim
           </li>
           <li>
-            <strong>Claim severity</strong> — when claims happen, they tend to cost more
+            <strong>Claim severity</strong>, when claims happen, they tend to cost more
           </li>
           <li>
-            <strong>Inexperience</strong> — even safe young drivers carry less time-on-road, which
+            <strong>Inexperience</strong>, even safe young drivers carry less time-on-road, which
             insurers treat as a separate factor
           </li>
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          The premium loading is real but not permanent — pricing typically drops noticeably once
+          The premium loading is real but not permanent, pricing typically drops noticeably once
           you've held an open licence for a few years claim-free.
         </p>
 
@@ -154,7 +154,7 @@ const CarInsuranceBestForYoungDrivers = () => {
           <div className="border border-border rounded-lg p-5 bg-card">
             <h3 className="font-sans font-bold text-lg mb-2">Listed-driver on a parent policy</h3>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
-              Often cheaper than a young driver holding their own policy — provided the parent is
+              Often cheaper than a young driver holding their own policy, provided the parent is
               genuinely the main driver of the vehicle.
             </p>
           </div>
@@ -169,20 +169,20 @@ const CarInsuranceBestForYoungDrivers = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>At-fault excess structure</strong> — many insurers add an age-based excess
+            <strong>At-fault excess structure</strong>, many insurers add an age-based excess
             ($500–$1,500 typically) on top of the basic excess if a driver under 25 is at fault.
-            Read it carefully — the headline premium can hide a much bigger excess at claim time.
+            Read it carefully, the headline premium can hide a much bigger excess at claim time.
           </li>
           <li>
-            <strong>Choice of repairer</strong> — included as standard for some insurers, optional
+            <strong>Choice of repairer</strong>, included as standard for some insurers, optional
             extra for others
           </li>
           <li>
-            <strong>Restricted-driver policies</strong> — listing only specific drivers can cut the
+            <strong>Restricted-driver policies</strong>, listing only specific drivers can cut the
             premium meaningfully if no-one else needs to drive the car
           </li>
           <li>
-            <strong>No-claim bonus rules</strong> — see our explainer on the{" "}
+            <strong>No-claim bonus rules</strong>, see our explainer on the{" "}
             <Link to="/car-insurance/no-claim-bonus/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               no-claim bonus
             </Link>
@@ -199,7 +199,7 @@ const CarInsuranceBestForYoungDrivers = () => {
           </li>
           <li>
             <strong>Be honest about kilometres.</strong> If your annual km is genuinely low, set it
-            accurately — insurers price it.
+            accurately, insurers price it.
           </li>
           <li>
             <strong>Restrict the driver list.</strong> If you're the only one driving the car, list

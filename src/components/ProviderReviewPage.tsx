@@ -24,9 +24,9 @@ const h2 = "font-sans font-semibold text-[26px] md:text-[32px] tracking-[-0.025e
 const body = "text-[16px] leading-[1.65] text-foreground/85 mb-5";
 const inlineLink = "text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue";
 const italicAccent: React.CSSProperties = {
-  fontFamily: '"Instrument Serif", "Geist", serif',
+  fontFamily: '"EB Garamond", "Fraunces", serif',
   fontStyle: "italic",
-  fontWeight: 400,
+  fontWeight: 700,
   letterSpacing: "-0.01em",
 };
 
@@ -200,12 +200,12 @@ export const ProviderReviewPage = ({ slug }: Props) => {
               ))}
               <li>
                 <Link to="/car-insurance/" className={inlineLink}>
-                  Car insurance hub — fundamentals
+                  Car insurance hub, fundamentals
                 </Link>
               </li>
               <li>
                 <Link to="/car-insurance/compare/" className={inlineLink}>
-                  Compare car insurance — what to look for
+                  Compare car insurance, what to look for
                 </Link>
               </li>
             </ul>

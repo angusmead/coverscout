@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Do I need a green slip and car insurance separately in NSW?",
     answer:
-      "Yes. NSW is one of the few states where Compulsory Third Party (CTP) is sold as a separate 'green slip' through licensed CTP insurers — it's mandatory for registration and only covers personal injury claims. Comprehensive, third party fire and theft, and third party property are all separate optional policies that cover damage to vehicles and property.",
+      "Yes. NSW is one of the few states where Compulsory Third Party (CTP) is sold as a separate 'green slip' through licensed CTP insurers, it's mandatory for registration and only covers personal injury claims. Comprehensive, third party fire and theft, and third party property are all separate optional policies that cover damage to vehicles and property.",
   },
   {
     question: "Which insurers operate in NSW?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Can I keep my no-claim bonus if I move to NSW from another state?",
     answer:
-      "Generally yes — Australian insurers will recognise no-claim bonus history from other states when you provide your prior insurer details or renewal notice. Some insurers do their own checks against industry databases too. Worth confirming the rating they apply at quote time, since the structure varies by insurer.",
+      "Generally yes, Australian insurers will recognise no-claim bonus history from other states when you provide your prior insurer details or renewal notice. Some insurers do their own checks against industry databases too. Worth confirming the rating they apply at quote time, since the structure varies by insurer.",
   },
 ];
 
@@ -62,7 +62,7 @@ const CarInsuranceCompareNSW = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A NSW-specific guide to comparing car insurance — what makes the state different (green
+          A NSW-specific guide to comparing car insurance, what makes the state different (green
           slips, postcode pricing, the NRMA factor), which insurers are worth shortlisting, and how
           to set up a comparison that's actually apples-to-apples.
         </p>
@@ -80,8 +80,8 @@ const CarInsuranceCompareNSW = () => {
             buy it from a licensed CTP insurer when you register or renew.
           </li>
           <li>
-            <strong>Sydney metro pricing is its own beast.</strong> A handful of postcodes — inner
-            west, eastern suburbs, parts of western Sydney — sit at the high end nationally because
+            <strong>Sydney metro pricing is its own beast.</strong> A handful of postcodes, inner
+            west, eastern suburbs, parts of western Sydney, sit at the high end nationally because
             of theft, density and claim frequency.
           </li>
           <li>
@@ -99,21 +99,21 @@ const CarInsuranceCompareNSW = () => {
           Insurers commonly compared in NSW
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          The NSW car insurance market is well-served — most major Australian insurers operate
+          The NSW car insurance market is well-served, most major Australian insurers operate
           here. A reasonable shortlist usually includes a mix of:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>NSW-rooted brands</strong> — NRMA Insurance
+            <strong>NSW-rooted brands</strong>, NRMA Insurance
           </li>
           <li>
-            <strong>Mainstream insurers</strong> — AAMI, Allianz, GIO, QBE, Suncorp
+            <strong>Mainstream insurers</strong>, AAMI, Allianz, GIO, QBE, Suncorp
           </li>
           <li>
-            <strong>Budget-direct brands</strong> — Bingle, Budget Direct, Youi
+            <strong>Budget-direct brands</strong>, Bingle, Budget Direct, Youi
           </li>
           <li>
-            <strong>Retail-branded</strong> — Coles Car Insurance, Woolworths Car Insurance
+            <strong>Retail-branded</strong>, Coles Car Insurance, Woolworths Car Insurance
             (underwritten by partner insurers, disclosed in the PDS)
           </li>
         </ul>
@@ -129,7 +129,7 @@ const CarInsuranceCompareNSW = () => {
           Green slips: the NSW-only piece
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          A green slip — Compulsory Third Party (CTP) — is required to register a vehicle in NSW
+          A green slip, Compulsory Third Party (CTP), is required to register a vehicle in NSW
           and only covers personal injury claims to other people. It's purchased separately through
           a small panel of licensed CTP insurers. The State Insurance Regulatory Authority (SIRA)
           publishes a free comparison tool for CTP at <em>greenslips.nsw.gov.au</em>.
@@ -149,16 +149,16 @@ const CarInsuranceCompareNSW = () => {
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Postcode</strong> — the difference between a high-claim Sydney postcode and a
+            <strong>Postcode</strong>, the difference between a high-claim Sydney postcode and a
             quiet regional postcode can be hundreds of dollars a year for the same driver and
             vehicle.
           </li>
           <li>
-            <strong>Where the car is parked overnight</strong> — secure off-street parking versus on
+            <strong>Where the car is parked overnight</strong>, secure off-street parking versus on
             the street can move the premium even within the same postcode.
           </li>
           <li>
-            <strong>Driver age and history</strong> — NSW has comparatively strict licensing rules,
+            <strong>Driver age and history</strong>, NSW has comparatively strict licensing rules,
             and insurers price younger and less experienced drivers accordingly. The{" "}
             <Link to="/car-insurance/young-drivers/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               young drivers page
@@ -189,7 +189,7 @@ const CarInsuranceCompareNSW = () => {
             if you're undecided.
           </li>
           <li>
-            Quote three to five insurers using identical inputs. Include NRMA on the list — it's
+            Quote three to five insurers using identical inputs. Include NRMA on the list, it's
             often missing from comparison panels.
           </li>
           <li>
@@ -197,7 +197,7 @@ const CarInsuranceCompareNSW = () => {
             two figures together.
           </li>
           <li>
-            Check exclusions for hail, storm and flood — material in many NSW regions and not always
+            Check exclusions for hail, storm and flood, material in many NSW regions and not always
             included by default.
           </li>
           <li>
@@ -240,8 +240,8 @@ const CarInsuranceCompareNSW = () => {
             Build your NSW shortlist
           </h2>
           <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
-            Browse plain-English overviews of sixteen Australian car insurers — including NRMA and
-            other off-panel brands — then quote a handful direct using identical inputs.
+            Browse plain-English overviews of sixteen Australian car insurers, including NRMA and
+            other off-panel brands, then quote a handful direct using identical inputs.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

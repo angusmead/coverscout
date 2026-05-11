@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Who decides what the 'best' car insurance is?",
     answer:
-      "There's no single authority. Industry awards, consumer review sites, government data, and individual reviewers each apply their own criteria — price, claims experience, app quality, financial strength, and so on. The closest thing to a useful answer is the policy that's best for your particular situation, not best in the abstract.",
+      "There's no single authority. Industry awards, consumer review sites, government data, and individual reviewers each apply their own criteria, price, claims experience, app quality, financial strength, and so on. The closest thing to a useful answer is the policy that's best for your particular situation, not best in the abstract.",
   },
   {
     question: "Are insurance awards and star ratings reliable?",
@@ -24,12 +24,12 @@ const faqs = [
   {
     question: "Is the most expensive car insurance policy always the best?",
     answer:
-      "No. A higher premium often reflects broader inclusions, lower excesses, or stronger optional extras — but it can also reflect pricing decisions that don't translate into more value for your situation. The best test is whether the extra spend buys things you'd actually use.",
+      "No. A higher premium often reflects broader inclusions, lower excesses, or stronger optional extras, but it can also reflect pricing decisions that don't translate into more value for your situation. The best test is whether the extra spend buys things you'd actually use.",
   },
   {
     question: "Should I just stay with my current insurer if I've never claimed?",
     answer:
-      "A claim-free relationship is worth something, but loyalty isn't always rewarded with the most competitive renewal price. Comparing at renewal — even if you decide to stay — is one of the most reliable ways to keep the price honest.",
+      "A claim-free relationship is worth something, but loyalty isn't always rewarded with the most competitive renewal price. Comparing at renewal, even if you decide to stay, is one of the most reliable ways to keep the price honest.",
   },
   {
     question: "How can I judge how an insurer handles claims?",
@@ -62,14 +62,14 @@ const CarInsuranceBest = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to thinking about "best" in car insurance — what the word actually means,
+          A practical guide to thinking about "best" in car insurance, what the word actually means,
           who gets to decide, and how to identify a policy that may suit your specific situation.
           Useful for anyone tired of generic "top 10" lists and wanting a clearer way to choose.
         </p>
 
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Search for the best car insurance in Australia and you'll find dozens of lists, each ranking
-          insurers slightly differently. That's not a coincidence. There's no objective "best" — what
+          insurers slightly differently. That's not a coincidence. There's no objective "best", what
           looks like the best policy for one person can look like a poor fit for the next, even with
           the same car and the same postcode.
         </p>
@@ -89,27 +89,27 @@ const CarInsuranceBest = () => {
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           When people talk about the best car insurance, they usually mean one of a few different
-          things — and the differences matter.
+          things, and the differences matter.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Best value</strong> — the policy that delivers the most useful cover for what
+            <strong>Best value</strong>, the policy that delivers the most useful cover for what
             you're paying.
           </li>
           <li>
-            <strong>Most popular</strong> — the policies a lot of Australians choose. Popularity is a
+            <strong>Most popular</strong>, the policies a lot of Australians choose. Popularity is a
             signal, not a guarantee of fit.
           </li>
           <li>
-            <strong>Highest rated</strong> — top-scoring policies under a particular review framework.
+            <strong>Highest rated</strong>, top-scoring policies under a particular review framework.
             The framework is doing a lot of the work.
           </li>
           <li>
-            <strong>Best for a specific need</strong> — the policy that may suit a young driver, a
+            <strong>Best for a specific need</strong>, the policy that may suit a young driver, a
             family with two cars, or someone who only drives on weekends.
           </li>
           <li>
-            <strong>Strongest claims experience</strong> — the policy whose claims handling, response
+            <strong>Strongest claims experience</strong>, the policy whose claims handling, response
             times, and customer experience tend to score well in independent data.
           </li>
         </ul>
@@ -132,7 +132,7 @@ const CarInsuranceBest = () => {
           </li>
           <li>
             <strong>Methodology shapes the result.</strong> A list weighted toward price will look
-            different from one weighted toward features — even with the same insurers.
+            different from one weighted toward features, even with the same insurers.
           </li>
           <li>
             <strong>Best for one driver isn't best for another.</strong> A policy that suits a
@@ -163,7 +163,7 @@ const CarInsuranceBest = () => {
         <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Be honest about what matters most to you.</strong> Lowest premium, broadest cover,
-            simplest app, fastest claims, choice of repairer — pick your top two. Trying to optimise
+            simplest app, fastest claims, choice of repairer, pick your top two. Trying to optimise
             for everything usually means optimising for nothing.
           </li>
           <li>
@@ -221,7 +221,7 @@ const CarInsuranceBest = () => {
             <Link to="/car-insurance/cheap/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               cheap car insurance
             </Link>{" "}
-            page — worth reading if you're tempted by the lowest quote.
+            page, worth reading if you're tempted by the lowest quote.
           </li>
           <li>
             <strong>Ignoring claims data.</strong> The whole point of insurance is the claim. An
@@ -239,7 +239,7 @@ const CarInsuranceBest = () => {
           </li>
           <li>
             <strong>Forgetting to re-evaluate.</strong> The best policy for you in 2024 may not be the
-            best one in 2025 — pricing models, life circumstances, and the vehicle itself all change.
+            best one in 2025, pricing models, life circumstances, and the vehicle itself all change.
           </li>
         </ul>
 
@@ -268,7 +268,7 @@ const CarInsuranceBest = () => {
           </li>
           <li>
             <strong>What you value in a claim.</strong> Speed, choice of repairer, hire car
-            availability, or just minimal excess — different insurers prioritise these differently.
+            availability, or just minimal excess, different insurers prioritise these differently.
           </li>
           <li>
             <strong>Budget tolerance.</strong> Some people prefer a higher premium and lower excess

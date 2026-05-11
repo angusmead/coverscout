@@ -33,12 +33,12 @@ const faqs = [
   {
     question: "Does a higher excess always mean a lower premium?",
     answer:
-      "Almost always — but the size of the saving varies by insurer. It's worth modelling out: if raising your excess by $500 only saves $80 a year, the maths only works in your favour if you'd go more than six or so years between claims.",
+      "Almost always, but the size of the saving varies by insurer. It's worth modelling out: if raising your excess by $500 only saves $80 a year, the maths only works in your favour if you'd go more than six or so years between claims.",
   },
   {
     question: "Are monthly payments more expensive than annual?",
     answer:
-      "Often slightly. Many Australian insurers add a small loading for monthly payments to cover the extra processing. The exact gap is in each insurer's PDS — our pay monthly page has more on the trade-off.",
+      "Often slightly. Many Australian insurers add a small loading for monthly payments to cover the extra processing. The exact gap is in each insurer's PDS, our pay monthly page has more on the trade-off.",
   },
 ];
 
@@ -63,19 +63,19 @@ const CarInsuranceHowMuch = () => {
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A useful answer to a deceptively simple question. Car insurance in Australia varies more
-          widely than most people expect — which is why a single "average" figure rarely tells you
+          widely than most people expect, which is why a single "average" figure rarely tells you
           much. This page breaks down what actually shapes the price, the ranges most drivers see,
           and the practical levers for landing closer to the lower end.
         </p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
-          There's no single price — and that's the honest answer
+          There's no single price, and that's the honest answer
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Most "average car insurance" figures you'll see online are old, narrowly sourced, or
           cherry-picked from a single insurer. Premiums vary so much by driver profile, vehicle,
           postcode and excess that quoting one number is rarely useful. The more useful framing is
-          understanding the components — and which of them you can move.
+          understanding the components, and which of them you can move.
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           For background on how the cover types themselves work, the{" "}
@@ -93,20 +93,20 @@ const CarInsuranceHowMuch = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Risk-based pricing</strong> — the insurer's estimate of how likely you are to
+            <strong>Risk-based pricing</strong>, the insurer's estimate of how likely you are to
             claim and how much that claim might cost
           </li>
           <li>
-            <strong>Operational costs and margin</strong> — running the insurer, paying assessors,
+            <strong>Operational costs and margin</strong>, running the insurer, paying assessors,
             building reserves
           </li>
           <li>
-            <strong>Government charges</strong> — GST, stamp duty, and (in some states) emergency
+            <strong>Government charges</strong>, GST, stamp duty, and (in some states) emergency
             services or fire services levies
           </li>
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          The risk-based portion is the largest part of most quotes — and the part that moves most
+          The risk-based portion is the largest part of most quotes, and the part that moves most
           when your circumstances change.
         </p>
 
@@ -114,7 +114,7 @@ const CarInsuranceHowMuch = () => {
           Typical ranges most drivers see
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Comprehensive car insurance for a private vehicle typically falls within a wide band —
+          Comprehensive car insurance for a private vehicle typically falls within a wide band,
           consumer-comparison sources commonly cite ranges from roughly $700 a year at the lower
           end to $2,500+ at the higher end. Third party fire and theft generally sits below that,
           third party property below that again, and CTP is a separate state-set figure.
@@ -137,32 +137,32 @@ const CarInsuranceHowMuch = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Driver age and experience</strong> — younger and less experienced drivers
+            <strong>Driver age and experience</strong>, younger and less experienced drivers
             typically pay more because the statistical claim probability is higher
           </li>
           <li>
-            <strong>Vehicle make, model and year</strong> — repair cost, parts availability, and
+            <strong>Vehicle make, model and year</strong>, repair cost, parts availability, and
             theft frequency for the model
           </li>
           <li>
-            <strong>Where you live and where the car is parked overnight</strong> — postcode-level
+            <strong>Where you live and where the car is parked overnight</strong>, postcode-level
             claim history feeds in
           </li>
           <li>
-            <strong>Annual kilometres</strong> — more time on the road means more exposure to risk
+            <strong>Annual kilometres</strong>, more time on the road means more exposure to risk
           </li>
           <li>
-            <strong>Excess</strong> — see our explainer on{" "}
+            <strong>Excess</strong>, see our explainer on{" "}
             <Link to="/car-insurance/excess/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               how excess works
             </Link>
           </li>
           <li>
-            <strong>Claim and driving history</strong> — at-fault claims and demerits push premiums
+            <strong>Claim and driving history</strong>, at-fault claims and demerits push premiums
             up
           </li>
           <li>
-            <strong>Optional extras</strong> — hire car cover, choice of repairer and similar each
+            <strong>Optional extras</strong>, hire car cover, choice of repairer and similar each
             carry a small premium
           </li>
         </ul>
@@ -175,14 +175,14 @@ const CarInsuranceHowMuch = () => {
         </p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
-          Comprehensive vs third party — what the gap looks like
+          Comprehensive vs third party, what the gap looks like
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           As a general rule, the broader the cover, the higher the premium. But the gap between{" "}
           <Link to="/car-insurance/comprehensive/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             comprehensive
           </Link>{" "}
-          and third party isn't always huge — especially for lower-risk drivers, where comprehensive
+          and third party isn't always huge, especially for lower-risk drivers, where comprehensive
           can be surprisingly competitive once you factor in what you'd otherwise pay out of pocket
           for damage to your own car.
         </p>
@@ -203,19 +203,19 @@ const CarInsuranceHowMuch = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>CTP / green slip</strong> — separately priced in NSW and the ACT, generally
+            <strong>CTP / green slip</strong>, separately priced in NSW and the ACT, generally
             bundled into vehicle registration in QLD, VIC, WA, SA and TAS
           </li>
           <li>
-            <strong>Postcode-level claim history</strong> — claim frequency varies by region, and
+            <strong>Postcode-level claim history</strong>, claim frequency varies by region, and
             insurers price for it
           </li>
           <li>
-            <strong>State stamp duty and levies</strong> — small, but real, line-item differences
+            <strong>State stamp duty and levies</strong>, small, but real, line-item differences
           </li>
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          The other components — risk pricing, operational costs, GST — apply everywhere.
+          The other components, risk pricing, operational costs, GST, apply everywhere.
         </p>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
@@ -239,7 +239,7 @@ const CarInsuranceHowMuch = () => {
           </li>
           <li>
             <strong>Bundle if you genuinely will.</strong> Multi-policy discounts apply at most
-            insurers — but only worth it if both policies are individually competitive.
+            insurers, but only worth it if both policies are individually competitive.
           </li>
           <li>
             <strong>Skip optional extras you wouldn't actually use.</strong> Each add-on carries a
@@ -253,7 +253,7 @@ const CarInsuranceHowMuch = () => {
             .
           </li>
           <li>
-            <strong>Tactics in detail</strong> — see{" "}
+            <strong>Tactics in detail</strong>, see{" "}
             <Link to="/car-insurance/cheap/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               cheap car insurance
             </Link>{" "}

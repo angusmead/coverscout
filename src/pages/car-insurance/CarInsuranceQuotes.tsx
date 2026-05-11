@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Is the quoted premium the price I'll actually pay?",
     answer:
-      "Usually yes, provided the information you supplied is accurate and you buy within the quote's validity window. If anything you disclosed turns out to be incorrect — like annual kilometres or who drives the car — the insurer can adjust the premium or, in some cases, decline a claim later.",
+      "Usually yes, provided the information you supplied is accurate and you buy within the quote's validity window. If anything you disclosed turns out to be incorrect, like annual kilometres or who drives the car, the insurer can adjust the premium or, in some cases, decline a claim later.",
   },
   {
     question: "How long is a car insurance quote valid?",
@@ -62,14 +62,14 @@ const CarInsuranceQuotes = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to getting and reading car insurance quotes in Australia — what insurers
+          A practical guide to getting and reading car insurance quotes in Australia, what insurers
           ask, why two quotes for the same car can look so different, and how to set yourself up for an
           apples-to-apples comparison. Useful whether you're shopping fresh cover or sense-checking a
           renewal.
         </p>
 
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Getting a car insurance quote sounds simple — punch in some details, see a number. But the
+          Getting a car insurance quote sounds simple, punch in some details, see a number. But the
           number you see depends heavily on the questions you answer and how consistent you are across
           insurers. A small change in any one input can move the premium by hundreds of dollars, which
           is part of why quote-shopping has a reputation for being confusing.
@@ -94,7 +94,7 @@ const CarInsuranceQuotes = () => {
           Target Market Determination (TMD).
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          A quote is not the same as a policy. It's an offer based on your disclosures — buy it within
+          A quote is not the same as a policy. It's an offer based on your disclosures, buy it within
           the validity period and the price typically holds; let it lapse, or change a detail, and the
           insurer can re-quote.
         </p>
@@ -108,27 +108,27 @@ const CarInsuranceQuotes = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Vehicle details</strong> — registration, make, model, year, body type, transmission,
+            <strong>Vehicle details</strong>, registration, make, model, year, body type, transmission,
             and any factory or aftermarket modifications.
           </li>
           <li>
-            <strong>Where it lives</strong> — your address, where the car is parked overnight, and
+            <strong>Where it lives</strong>, your address, where the car is parked overnight, and
             whether it's garaged.
           </li>
           <li>
-            <strong>Who drives it</strong> — names, dates of birth, licence types and history for the
+            <strong>Who drives it</strong>, names, dates of birth, licence types and history for the
             main driver and any other regular drivers.
           </li>
           <li>
-            <strong>How it's used</strong> — annual kilometres, commuting distance, and whether the car
+            <strong>How it's used</strong>, annual kilometres, commuting distance, and whether the car
             is used for business.
           </li>
           <li>
-            <strong>Claims and incidents</strong> — at-fault and not-at-fault claims in the last few
+            <strong>Claims and incidents</strong>, at-fault and not-at-fault claims in the last few
             years, plus any traffic offences.
           </li>
           <li>
-            <strong>Cover preferences</strong> — cover type, excess level, sum insured (or
+            <strong>Cover preferences</strong>, cover type, excess level, sum insured (or
             agreed/market value preference), and any optional extras.
           </li>
         </ul>
@@ -142,7 +142,7 @@ const CarInsuranceQuotes = () => {
           How to compare car insurance quotes step by step
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          The goal is not to collect the most quotes — it's to collect quotes that are actually
+          The goal is not to collect the most quotes, it's to collect quotes that are actually
           comparable. The following sequence usually does the job in under an hour.
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">

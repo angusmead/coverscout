@@ -98,7 +98,7 @@ export const Footer = () => {
       <div className="border-t border-border">
         <div className="container py-6 text-[12.5px] text-muted-foreground leading-relaxed">
           CoverScout provides general information only and does not provide personal financial advice.
-          We may receive commissions from insurers — see{" "}
+          We may receive commissions from insurers, see{" "}
           <Link to="/how-we-make-money/" className="text-foreground hover:underline">
             how we make money
           </Link>

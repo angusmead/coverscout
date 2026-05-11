@@ -54,7 +54,7 @@ const Contact = () => {
           Before you email
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          A few common questions are answered better elsewhere — try these first:
+          A few common questions are answered better elsewhere, try these first:
         </p>
         <ul className="list-disc pl-6 mb-10 space-y-3 leading-relaxed">
           <li>
@@ -69,11 +69,11 @@ const Contact = () => {
             <Link to="/reviews/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               reviews hub
             </Link>{" "}
-            — we have head-to-head comparisons for the most-asked-about pairings.
+           , we have head-to-head comparisons for the most-asked-about pairings.
           </li>
           <li>
             <strong>Question about an existing policy?</strong> Your insurer's customer service
-            team is the right place — they have your policy details and can answer specifics. We
+            team is the right place, they have your policy details and can answer specifics. We
             can't access individual policies.
           </li>
           <li>
@@ -84,7 +84,7 @@ const Contact = () => {
             or email us directly with the subject "Privacy".
           </li>
           <li>
-            <strong>Want to suggest a topic, comparison, or correction?</strong> Email us — we
+            <strong>Want to suggest a topic, comparison, or correction?</strong> Email us, we
             read everything.
           </li>
         </ul>
@@ -93,7 +93,7 @@ const Contact = () => {
           What we can't help with
         </h2>
         <ul className="list-disc pl-6 mb-10 space-y-2 leading-relaxed">
-          <li>Personalised financial or insurance advice — we're an education site, not a broker</li>
+          <li>Personalised financial or insurance advice, we're an education site, not a broker</li>
           <li>Help with claims (contact your insurer)</li>
           <li>Help with complaints against an insurer (the{" "}
             <a
@@ -106,7 +106,7 @@ const Contact = () => {
             </a>{" "}
             handles these)
           </li>
-          <li>Guarantees of cheapest premiums or best policies — those don't exist universally</li>
+          <li>Guarantees of cheapest premiums or best policies, those don't exist universally</li>
         </ul>
 
         <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">

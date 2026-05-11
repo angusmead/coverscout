@@ -18,7 +18,7 @@ const ReviewsHub = () => {
     <>
       <SEO
         title="Australian Car Insurance Provider Reviews and Comparisons"
-        description="Plain-English overviews of 16 Australian car insurance providers and 10 head-to-head comparisons — neutral, evergreen, no fake ratings."
+        description="Plain-English overviews of 16 Australian car insurance providers and 10 head-to-head comparisons, neutral, evergreen, no fake ratings."
         canonicalPath="/reviews/"
         jsonLd={breadcrumbSchema(breadcrumbs)}
       />
@@ -30,7 +30,7 @@ const ReviewsHub = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          Neutral, plain-English overviews of {PROVIDERS.length} Australian car insurance brands —
+          Neutral, plain-English overviews of {PROVIDERS.length} Australian car insurance brands,
           what each offers, who it may suit, and how it compares. Use these alongside each insurer's
           PDS as a starting point for your own comparison.
         </p>
@@ -83,7 +83,7 @@ const ReviewsHub = () => {
         </h2>
         <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
           Side-by-side comparisons covering the most-asked-about pairings. None of these declare a
-          winner — the right fit depends on your vehicle, location and what you value in an insurer.
+          winner, the right fit depends on your vehicle, location and what you value in an insurer.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
           {COMPARISONS.map((c) => {

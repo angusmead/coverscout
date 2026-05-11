@@ -13,12 +13,12 @@ const faqs = [
   {
     question: "What is car insurance comparison and how does it work in Australia?",
     answer:
-      "Car insurance comparison is the process of putting two or more policies side by side using the same inputs — same vehicle, same driver, same address, same level of cover, same excess — so the prices and features are genuinely comparable. In Australia, you can do this through comparison websites, broker quotes, or by getting direct quotes from each insurer one at a time.",
+      "Car insurance comparison is the process of putting two or more policies side by side using the same inputs, same vehicle, same driver, same address, same level of cover, same excess, so the prices and features are genuinely comparable. In Australia, you can do this through comparison websites, broker quotes, or by getting direct quotes from each insurer one at a time.",
   },
   {
     question: "Are car insurance comparison sites accurate?",
     answer:
-      "They're useful as a starting point, but they don't show every Australian insurer — a number of large brands (Youi, Bingle, RACQ, RACV, NRMA and others) often aren't included on third-party comparison panels because they don't list there. Treat any comparison panel as a partial view and always sense-check against direct quotes from a couple of insurers you'd actually consider.",
+      "They're useful as a starting point, but they don't show every Australian insurer, a number of large brands (Youi, Bingle, RACQ, RACV, NRMA and others) often aren't included on third-party comparison panels because they don't list there. Treat any comparison panel as a partial view and always sense-check against direct quotes from a couple of insurers you'd actually consider.",
   },
   {
     question: "Why do two comparison results show different prices for the same car?",
@@ -28,17 +28,17 @@ const faqs = [
   {
     question: "What's the difference between comparison sites and a broker?",
     answer:
-      "A comparison site shows quotes from a panel of insurers it's connected to and earns a referral fee when you buy. A broker is licensed to advise on cover and arrange a policy on your behalf — they may have access to different insurers and can take instructions about specific needs. Both are commercial; the disclosures sit in the FSG and PDS for each.",
+      "A comparison site shows quotes from a panel of insurers it's connected to and earns a referral fee when you buy. A broker is licensed to advise on cover and arrange a policy on your behalf, they may have access to different insurers and can take instructions about specific needs. Both are commercial; the disclosures sit in the FSG and PDS for each.",
   },
   {
     question: "Does CoverScout have a comparison engine?",
     answer:
-      "Not yet. We're an editorial site — we publish neutral plain-English overviews of Australian car insurers and head-to-head comparisons so you can shortlist before going to insurers directly. We don't pull live prices or take applications. Always verify current pricing and PDS terms with the insurer before deciding.",
+      "Not yet. We're an editorial site, we publish neutral plain-English overviews of Australian car insurers and head-to-head comparisons so you can shortlist before going to insurers directly. We don't pull live prices or take applications. Always verify current pricing and PDS terms with the insurer before deciding.",
   },
   {
     question: "How many insurers should I compare?",
     answer:
-      "Three to five usually gives you enough signal without becoming a chore. Pick a mix — one mainstream insurer, one budget-direct brand, and either a motoring-club brand or a specialist that fits your circumstances. Going beyond five rarely changes the outcome much.",
+      "Three to five usually gives you enough signal without becoming a chore. Pick a mix, one mainstream insurer, one budget-direct brand, and either a motoring-club brand or a specialist that fits your circumstances. Going beyond five rarely changes the outcome much.",
   },
 ];
 
@@ -62,7 +62,7 @@ const CarInsuranceComparison = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to comparing car insurance properly — what counts as a fair comparison,
+          A practical guide to comparing car insurance properly, what counts as a fair comparison,
           where comparison sites help, where they fall short, and the framework we use at
           CoverScout to keep things genuinely apples-to-apples.
         </p>
@@ -72,8 +72,8 @@ const CarInsuranceComparison = () => {
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Strictly speaking, comparing two car insurance policies means putting them side by side
-          using identical inputs — same vehicle, same driver, same postcode, same cover level, same
-          excess, same optional extras — so any difference in price or features is real, not an
+          using identical inputs, same vehicle, same driver, same postcode, same cover level, same
+          excess, same optional extras, so any difference in price or features is real, not an
           artefact of mismatched assumptions.
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
@@ -117,13 +117,13 @@ const CarInsuranceComparison = () => {
           Why comparison-site results aren't the whole picture
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Comparison engines display panel insurers — the brands they have a commercial relationship
+          Comparison engines display panel insurers, the brands they have a commercial relationship
           with. Several of Australia's biggest car insurers (Youi, Bingle, the motoring-club brands,
           and others) often aren't on those panels. So the cheapest quote on a comparison site is
           the cheapest <em>on that panel</em>, not the cheapest in the market.
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          That doesn't make comparison sites useless — it just means they're a starting point. The
+          That doesn't make comparison sites useless, it just means they're a starting point. The
           right move is to take whatever a comparison site returns and sense-check it against direct
           quotes from one or two off-panel brands you'd actually consider. Our{" "}
           <Link to="/reviews/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
@@ -141,35 +141,35 @@ const CarInsuranceComparison = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Cover type</strong> — comprehensive, third party fire and theft, or third party
+            <strong>Cover type</strong>, comprehensive, third party fire and theft, or third party
             property only
           </li>
           <li>
-            <strong>Sum insured basis</strong> — agreed value vs market value
+            <strong>Sum insured basis</strong>, agreed value vs market value
           </li>
           <li>
-            <strong>Excess structure</strong> — basic excess plus any age, inexperienced-driver, or
+            <strong>Excess structure</strong>, basic excess plus any age, inexperienced-driver, or
             at-fault excesses
           </li>
           <li>
-            <strong>Choice of repairer</strong> — included, optional extra, or not available
+            <strong>Choice of repairer</strong>, included, optional extra, or not available
           </li>
           <li>
-            <strong>Hire car cover</strong> — included after non-fault claims, or only as a paid
+            <strong>Hire car cover</strong>, included after non-fault claims, or only as a paid
             extra
           </li>
           <li>
-            <strong>New-for-old replacement</strong> — and the conditions attached (vehicle age,
+            <strong>New-for-old replacement</strong>, and the conditions attached (vehicle age,
             time owned)
           </li>
           <li>
-            <strong>No-claim bonus protection</strong> — see our explainer on the{" "}
+            <strong>No-claim bonus protection</strong>, see our explainer on the{" "}
             <Link to="/car-insurance/no-claim-bonus/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               no-claim bonus
             </Link>
           </li>
           <li>
-            <strong>Exclusions</strong> — flood, hail, listed-driver restrictions, business use
+            <strong>Exclusions</strong>, flood, hail, listed-driver restrictions, business use
           </li>
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
@@ -194,7 +194,7 @@ const CarInsuranceComparison = () => {
           </li>
           <li>
             <strong>Optional extras toggled differently.</strong> Hire car, choice of repairer,
-            roadside — small ticks that move the price.
+            roadside, small ticks that move the price.
           </li>
           <li>
             <strong>Driver list mismatches.</strong> Comparing a "any driver" quote to a
@@ -226,7 +226,7 @@ const CarInsuranceComparison = () => {
             either a motoring-club or specialist brand.
           </li>
           <li>
-            Note the headline price and the things that aren't price — choice of repairer, hire car,
+            Note the headline price and the things that aren't price, choice of repairer, hire car,
             sum insured basis.
           </li>
           <li>

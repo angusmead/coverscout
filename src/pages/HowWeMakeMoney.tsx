@@ -36,7 +36,7 @@ const HowWeMakeMoney = () => {
           CoverScout is currently free to use and doesn't earn revenue from any source. There are
           no active affiliate partnerships, no paid placements, and no advertising on the site.
           You'll see references to "we may receive a commission" in disclosure blocks because
-          that's the planned model — but as of today, no commissions are being earned.
+          that's the planned model, but as of today, no commissions are being earned.
         </p>
         <p className="text-base leading-relaxed mb-10">
           Building the content and the audience comes first. Monetisation comes once we have
@@ -99,7 +99,7 @@ const HowWeMakeMoney = () => {
           What we don't do
         </h2>
         <ul className="list-disc pl-6 mb-10 space-y-2 leading-relaxed">
-          <li>We don't sell or share your personal information. (We don't collect any — see the{" "}
+          <li>We don't sell or share your personal information. (We don't collect any, see the{" "}
             <Link to="/privacy/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               privacy policy
             </Link>
@@ -115,7 +115,7 @@ const HowWeMakeMoney = () => {
         </h2>
         <p className="text-base leading-relaxed mb-10">
           The Australian comparison space has a poor reputation for hidden incentives. We'd
-          rather be upfront about how the model works — and isn't working yet — than have you
+          rather be upfront about how the model works, and isn't working yet, than have you
           wonder. If we ever change any of the above, this page will be updated.
         </p>
 

@@ -29,17 +29,17 @@ const faqs = [
   {
     question: "How can I get cheap car insurance without losing important cover?",
     answer:
-      "Compare three to five insurers using identical inputs, raise your basic excess if you can absorb it, list only the drivers who actually drive the car, drop optional extras you wouldn't use, and protect your no-claim bonus. Avoid stripping back essentials like flood, storm or choice of repairer just to hit a price — these can be expensive to be without.",
+      "Compare three to five insurers using identical inputs, raise your basic excess if you can absorb it, list only the drivers who actually drive the car, drop optional extras you wouldn't use, and protect your no-claim bonus. Avoid stripping back essentials like flood, storm or choice of repairer just to hit a price, these can be expensive to be without.",
   },
   {
     question: "Are budget-direct insurers reliable at claim time?",
     answer:
-      "Yes — all Australian general insurers are licensed and prudentially regulated by APRA, and conduct is overseen by ASIC. Budget-direct brands like Bingle and Budget Direct go through the same regulatory regime and the same Australian Financial Complaints Authority (AFCA) dispute process as any mainstream insurer. The trade-off tends to be in service model (online-first, fewer extras) rather than financial soundness.",
+      "Yes, all Australian general insurers are licensed and prudentially regulated by APRA, and conduct is overseen by ASIC. Budget-direct brands like Bingle and Budget Direct go through the same regulatory regime and the same Australian Financial Complaints Authority (AFCA) dispute process as any mainstream insurer. The trade-off tends to be in service model (online-first, fewer extras) rather than financial soundness.",
   },
   {
     question: "Does third party fire and theft work out cheaper than comprehensive?",
     answer:
-      "Often, yes — third party fire and theft typically prices well below comprehensive, with third party property cheaper again. But the gap isn't always huge for lower-risk drivers, and you lose cover for damage to your own vehicle. Worth quoting both for your specific profile rather than assuming third party is always the cheaper move.",
+      "Often, yes, third party fire and theft typically prices well below comprehensive, with third party property cheaper again. But the gap isn't always huge for lower-risk drivers, and you lose cover for damage to your own vehicle. Worth quoting both for your specific profile rather than assuming third party is always the cheaper move.",
   },
 ];
 
@@ -63,7 +63,7 @@ const CarInsuranceBestCheap = () => {
         </h1>
 
         <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
-          A practical guide to finding car insurance that's both cheap <em>and</em> worth taking —
+          A practical guide to finding car insurance that's both cheap <em>and</em> worth taking,
           which Australian insurers tend to price competitively, what cheap policies often strip
           back, and how to spot the difference between a real bargain and a quote that bites at
           claim time.
@@ -73,14 +73,14 @@ const CarInsuranceBestCheap = () => {
           What "best cheap" actually means
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Cheapest and best aren't the same — and "best cheap" is the overlap: a policy that's
+          Cheapest and best aren't the same, and "best cheap" is the overlap: a policy that's
           competitive on price for your specific profile while still covering the things you'd
           materially regret being without. The right "best cheap" choice for one driver looks
           completely different to another, because pricing models vary so much by insurer.
         </p>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          For background on cheap car insurance generally — including the traps that make a quote
-          look cheaper than it really is — see our{" "}
+          For background on cheap car insurance generally, including the traps that make a quote
+          look cheaper than it really is, see our{" "}
           <Link to="/car-insurance/cheap/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             cheap car insurance
           </Link>{" "}
@@ -155,7 +155,7 @@ const CarInsuranceBestCheap = () => {
             </div>
             <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               Digital-first pay-as-you-drive insurer (web and app) that prices comprehensive cover
-              off your kilometres — often the cheapest option for genuinely low-mileage drivers.
+              off your kilometres, often the cheapest option for genuinely low-mileage drivers.
             </p>
             <Link to="/reviews/rollin/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the Rollin' overview →
@@ -193,32 +193,32 @@ const CarInsuranceBestCheap = () => {
           What cheap policies often strip back
         </h2>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          Cheap doesn't always mean inferior — but the cost has to come from somewhere. The most
+          Cheap doesn't always mean inferior, but the cost has to come from somewhere. The most
           common ways insurers hit lower price points:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong>Higher excesses</strong> — both basic and at-fault excesses can be larger,
+            <strong>Higher excesses</strong>, both basic and at-fault excesses can be larger,
             sometimes much larger, than mainstream policies
           </li>
           <li>
-            <strong>No choice of repairer</strong> — repairs done at the insurer's network only
+            <strong>No choice of repairer</strong>, repairs done at the insurer's network only
           </li>
           <li>
-            <strong>No hire car after non-fault claims</strong> — or only as a paid optional extra
+            <strong>No hire car after non-fault claims</strong>, or only as a paid optional extra
           </li>
           <li>
-            <strong>Listed-driver only</strong> — anyone not listed isn't covered at all
+            <strong>Listed-driver only</strong>, anyone not listed isn't covered at all
           </li>
           <li>
-            <strong>Online-only servicing</strong> — limited or no phone support
+            <strong>Online-only servicing</strong>, limited or no phone support
           </li>
           <li>
-            <strong>Tighter exclusions</strong> — for storm, flood, hail or specific use cases
+            <strong>Tighter exclusions</strong>, for storm, flood, hail or specific use cases
           </li>
         </ul>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
-          None of these are bad in isolation — but it's worth knowing what you're trading away when
+          None of these are bad in isolation, but it's worth knowing what you're trading away when
           you take the cheaper quote.
         </p>
 
@@ -249,7 +249,7 @@ const CarInsuranceBestCheap = () => {
           </li>
           <li>
             <strong>Sense-check beyond the price.</strong> A budget-direct quote and a mainstream
-            quote can be the same number — usually the budget version trades features for price.
+            quote can be the same number, usually the budget version trades features for price.
           </li>
         </ol>
         <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
@@ -268,7 +268,7 @@ const CarInsuranceBestCheap = () => {
           Plenty of drivers are well-served by a budget-direct policy: experienced drivers with
           clean records, low annual kilometres, an older car, secure parking, and no specific
           requirements about repairer choice. For this profile, the cheaper quote often is the
-          better quote — and the trade-offs that come with it don't matter much in practice.
+          better quote, and the trade-offs that come with it don't matter much in practice.
         </p>
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
