@@ -25,6 +25,16 @@ const buildBreadcrumbs = (c: Comparison, aName: string, bName: string) => [
   { name: `${aName} vs ${bName}`, url: c.path },
 ];
 
+const h2 = "font-sans font-semibold text-[26px] md:text-[32px] tracking-[-0.025em] leading-[1.15] mt-16 mb-5";
+const body = "text-[16px] leading-[1.65] text-foreground/85 mb-5";
+const inlineLink = "text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue";
+const italicAccent: React.CSSProperties = {
+  fontFamily: '"EB Garamond", "Fraunces", serif',
+  fontStyle: "italic",
+  fontWeight: 700,
+  letterSpacing: "-0.01em",
+};
+
 export const ProviderVsPage = ({ path }: Props) => {
   const comparison = getComparisonByPath(path);
   if (!comparison) {
@@ -64,117 +74,107 @@ export const ProviderVsPage = ({ path }: Props) => {
         canonicalPath={comparison.path}
         jsonLd={jsonLd}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={breadcrumbs} className="mb-8" />
 
-        <div className="flex items-center gap-3 mb-6 flex-wrap">
+        <div className="flex items-center gap-4 mb-7 flex-wrap">
           <ProviderLogo slug={a.slug} name={a.name} size="lg" />
-          <span className="text-2xl font-sans font-extrabold text-muted-foreground">vs</span>
+          <span className="text-[28px] font-sans font-semibold text-muted-foreground" style={italicAccent}>
+            vs
+          </span>
           <ProviderLogo slug={b.slug} name={b.name} size="lg" />
         </div>
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
-          {a.name} vs {b.name} car insurance: how they compare
+        <h1 className="font-sans font-semibold text-[40px] md:text-[56px] tracking-[-0.035em] leading-[1.02] mb-7">
+          {a.name} <span className="text-brand-blue" style={italicAccent}>vs</span> {b.name} car insurance: how they compare
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           {comparison.lead}
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Overview
-        </h2>
+        <h2 className={h2}>Overview</h2>
         {comparison.context.map((para, i) => (
-          <p key={i} className="text-base leading-relaxed mb-5">{para}</p>
+          <p key={i} className={body}>{para}</p>
         ))}
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Key differences
-        </h2>
-        <div className="space-y-5 mb-8">
+        <h2 className={h2}>Key differences</h2>
+        <div className="space-y-3 mb-8">
           {comparison.differences.map((d) => (
-            <div key={d.heading} className="bg-card border border-border rounded-lg p-5">
-              <div className="font-sans font-extrabold text-base tracking-tight mb-2">
+            <div key={d.heading} className="bg-card border border-border rounded-2xl p-6">
+              <div className="font-sans font-semibold text-[16px] tracking-tight mb-2">
                 {d.heading}
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{d.body}</p>
+              <p className="text-[14.5px] text-muted-foreground leading-[1.6]">{d.body}</p>
             </div>
           ))}
         </div>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Who each may suit
-        </h2>
+        <h2 className={h2}>Who each may suit</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-8">
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="flex items-center gap-2 mb-3">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center gap-2.5 mb-4">
               <ProviderLogo slug={a.slug} name={a.name} size="sm" />
-              <div className="font-sans font-extrabold text-base tracking-tight">
+              <div className="font-sans font-semibold text-[15px] tracking-tight">
                 {a.name} may suit
               </div>
             </div>
-            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+            <ul className="list-disc pl-5 space-y-2.5 text-[14px] leading-[1.55] text-foreground/85">
               {comparison.whoSuitsA.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="flex items-center gap-2 mb-3">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center gap-2.5 mb-4">
               <ProviderLogo slug={b.slug} name={b.name} size="sm" />
-              <div className="font-sans font-extrabold text-base tracking-tight">
+              <div className="font-sans font-semibold text-[15px] tracking-tight">
                 {b.name} may suit
               </div>
             </div>
-            <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed">
+            <ul className="list-disc pl-5 space-y-2.5 text-[14px] leading-[1.55] text-foreground/85">
               {comparison.whoSuitsB.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
         </div>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Pros and cons
-        </h2>
+        <h2 className={h2}>Pros and cons</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-8">
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="flex items-center gap-2 mb-3">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center gap-2.5 mb-4">
               <ProviderLogo slug={a.slug} name={a.name} size="sm" />
-              <div className="font-sans font-extrabold text-base tracking-tight">
-                {a.name}
-              </div>
+              <div className="font-sans font-semibold text-[15px] tracking-tight">{a.name}</div>
             </div>
-            <ul className="space-y-2 mb-4">
+            <ul className="space-y-2.5 mb-4">
               {comparison.prosA.map((p) => (
-                <li key={p} className="flex gap-2 text-sm leading-relaxed">
-                  <Check size={16} className="text-primary shrink-0 mt-0.5" />
+                <li key={p} className="flex gap-2.5 text-[14px] leading-[1.55]">
+                  <Check size={16} className="text-brand-blue shrink-0 mt-0.5" />
                   <span>{p}</span>
                 </li>
               ))}
             </ul>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {comparison.consA.map((c) => (
-                <li key={c} className="flex gap-2 text-sm leading-relaxed">
+                <li key={c} className="flex gap-2.5 text-[14px] leading-[1.55]">
                   <XIcon size={16} className="text-muted-foreground shrink-0 mt-0.5" />
                   <span>{c}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="flex items-center gap-2 mb-3">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center gap-2.5 mb-4">
               <ProviderLogo slug={b.slug} name={b.name} size="sm" />
-              <div className="font-sans font-extrabold text-base tracking-tight">
-                {b.name}
-              </div>
+              <div className="font-sans font-semibold text-[15px] tracking-tight">{b.name}</div>
             </div>
-            <ul className="space-y-2 mb-4">
+            <ul className="space-y-2.5 mb-4">
               {comparison.prosB.map((p) => (
-                <li key={p} className="flex gap-2 text-sm leading-relaxed">
-                  <Check size={16} className="text-primary shrink-0 mt-0.5" />
+                <li key={p} className="flex gap-2.5 text-[14px] leading-[1.55]">
+                  <Check size={16} className="text-brand-blue shrink-0 mt-0.5" />
                   <span>{p}</span>
                 </li>
               ))}
             </ul>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {comparison.consB.map((c) => (
-                <li key={c} className="flex gap-2 text-sm leading-relaxed">
+                <li key={c} className="flex gap-2.5 text-[14px] leading-[1.55]">
                   <XIcon size={16} className="text-muted-foreground shrink-0 mt-0.5" />
                   <span>{c}</span>
                 </li>
@@ -183,34 +183,32 @@ export const ProviderVsPage = ({ path }: Props) => {
           </div>
         </div>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Side-by-side summary
-        </h2>
-        <div className="overflow-x-auto mb-8">
-          <table className="w-full border border-border rounded-lg text-sm">
+        <h2 className={h2}>Side-by-side summary</h2>
+        <div className="overflow-x-auto mb-4 rounded-2xl border border-border">
+          <table className="w-full text-[14px]">
             <thead>
-              <tr className="bg-muted/50 text-left">
-                <th className="p-3 font-sans font-extrabold tracking-tight border-b border-border w-1/3">
+              <tr className="bg-secondary/60 text-left">
+                <th className="p-4 font-sans font-semibold tracking-tight border-b border-border w-1/3">
                   &nbsp;
                 </th>
-                <th className="p-3 font-sans font-extrabold tracking-tight border-b border-border">
+                <th className="p-4 font-sans font-semibold tracking-tight border-b border-border">
                   {a.name}
                 </th>
-                <th className="p-3 font-sans font-extrabold tracking-tight border-b border-border">
+                <th className="p-4 font-sans font-semibold tracking-tight border-b border-border">
                   {b.name}
                 </th>
               </tr>
             </thead>
             <tbody>
-              {comparison.table.map((row, i) => (
-                <tr key={row.dimension} className={i % 2 === 0 ? "bg-background" : "bg-muted/20"}>
-                  <td className="p-3 align-top font-medium border-b border-border">
+              {comparison.table.map((row, i, arr) => (
+                <tr key={row.dimension} className={i % 2 === 0 ? "bg-background" : "bg-secondary/30"}>
+                  <td className={`p-4 align-top font-medium ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
                     {row.dimension}
                   </td>
-                  <td className="p-3 align-top text-muted-foreground border-b border-border">
+                  <td className={`p-4 align-top text-muted-foreground ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
                     {row.a}
                   </td>
-                  <td className="p-3 align-top text-muted-foreground border-b border-border">
+                  <td className={`p-4 align-top text-muted-foreground ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
                     {row.b}
                   </td>
                 </tr>
@@ -218,26 +216,24 @@ export const ProviderVsPage = ({ path }: Props) => {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-muted-foreground italic mb-8">
-          This summary is for shopping orientation only — it doesn't declare a winner. The right
+        <p className="text-[13.5px] text-muted-foreground italic mb-10">
+          This summary is for shopping orientation only, it doesn't declare a winner. The right
           fit depends on your vehicle, location, driving profile and what you value in an insurer.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          The bottom line
-        </h2>
-        <p className="text-base leading-relaxed mb-8">{comparison.closing}</p>
+        <h2 className={h2}>The bottom line</h2>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-10">{comparison.closing}</p>
 
-        <div className="mb-6">
-          <p className="text-base leading-relaxed mb-3">Read each provider in more depth:</p>
-          <ul className="list-disc pl-6 space-y-2 leading-relaxed">
+        <div className="mb-8">
+          <p className={body}>Read each provider in more depth:</p>
+          <ul className="list-disc pl-6 space-y-2 text-[16px] leading-[1.65] text-foreground/85">
             <li>
-              <Link to={a.path} className="text-primary hover:underline">
+              <Link to={a.path} className={inlineLink}>
                 {a.name} car insurance review
               </Link>
             </li>
             <li>
-              <Link to={b.path} className="text-primary hover:underline">
+              <Link to={b.path} className={inlineLink}>
                 {b.name} car insurance review
               </Link>
             </li>
@@ -245,16 +241,16 @@ export const ProviderVsPage = ({ path }: Props) => {
         </div>
 
         {related.length > 0 && (
-          <div className="mb-6">
-            <p className="text-base leading-relaxed mb-3">Related comparisons worth a look:</p>
-            <ul className="list-disc pl-6 space-y-2 leading-relaxed">
+          <div className="mb-8">
+            <p className={body}>Related comparisons worth a look:</p>
+            <ul className="list-disc pl-6 space-y-2 text-[16px] leading-[1.65] text-foreground/85">
               {related.map((rc) => {
                 const ra = getProvider(rc.slugA);
                 const rb = getProvider(rc.slugB);
                 if (!ra || !rb) return null;
                 return (
                   <li key={rc.path}>
-                    <Link to={rc.path} className="text-primary hover:underline">
+                    <Link to={rc.path} className={inlineLink}>
                       {ra.name} vs {rb.name} car insurance
                     </Link>
                   </li>
@@ -264,21 +260,21 @@ export const ProviderVsPage = ({ path }: Props) => {
           </div>
         )}
 
-        <div className="mb-6">
-          <p className="text-base leading-relaxed mb-3">Useful background reading:</p>
-          <ul className="list-disc pl-6 space-y-2 leading-relaxed">
+        <div className="mb-8">
+          <p className={body}>Useful background reading:</p>
+          <ul className="list-disc pl-6 space-y-2 text-[16px] leading-[1.65] text-foreground/85">
             <li>
-              <Link to="/car-insurance/" className="text-primary hover:underline">
-                Car insurance hub — fundamentals
+              <Link to="/car-insurance/" className={inlineLink}>
+                Car insurance hub, fundamentals
               </Link>
             </li>
             <li>
-              <Link to="/car-insurance/compare/" className="text-primary hover:underline">
-                Compare car insurance — what to look for
+              <Link to="/car-insurance/compare/" className={inlineLink}>
+                Compare car insurance, what to look for
               </Link>
             </li>
             <li>
-              <Link to="/reviews/" className="text-primary hover:underline">
+              <Link to="/reviews/" className={inlineLink}>
                 All provider reviews
               </Link>
             </li>
@@ -287,32 +283,32 @@ export const ProviderVsPage = ({ path }: Props) => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[26px] md:text-[32px] tracking-[-0.025em] leading-[1.15] mb-3">
             Compare your options
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             The cleanest way to test {a.name} against {b.name} for your situation is to quote them
-            both — plus at least one other insurer — using identical inputs. The pages below cover
+            both, plus at least one other insurer, using identical inputs. The pages below cover
             the comparison framework and the quote process.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/car-insurance/compare/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Compare car insurance
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/quotes/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Get car insurance quotes
             </Link>
             <Link
               to="/reviews/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               All provider reviews
             </Link>
@@ -320,7 +316,7 @@ export const ProviderVsPage = ({ path }: Props) => {
           <AffiliateDisclosure className="mt-6" />
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

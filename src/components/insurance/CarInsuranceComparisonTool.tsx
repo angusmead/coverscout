@@ -223,7 +223,7 @@ export const CarInsuranceComparisonTool = () => {
     >
       <ProgressIndicator step={step} />
 
-      {/* STEP 1 — Location + driver */}
+      {/* STEP 1, Location + driver */}
       {step === 1 && (
         <div key="step-1" className="animate-fade-in">
           <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-2">
@@ -295,14 +295,14 @@ export const CarInsuranceComparisonTool = () => {
         </div>
       )}
 
-      {/* STEP 2 — Cover preference */}
+      {/* STEP 2, Cover preference */}
       {step === 2 && (
         <div key="step-2" className="animate-fade-in">
           <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-2">
             What matters most to you?
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-xl">
-            Choose your priority — we'll point you to the cover types worth comparing.
+            Choose your priority, we'll point you to the cover types worth comparing.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -353,14 +353,14 @@ export const CarInsuranceComparisonTool = () => {
         </div>
       )}
 
-      {/* STEP 3 — Results */}
+      {/* STEP 3, Results */}
       {step === 3 && (
         <div key="step-3" className="animate-fade-in">
           <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-2">
             Your car insurance comparison directions
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-xl">
-            Based on your answers, these options may be worth comparing. General information only —
+            Based on your answers, these options may be worth comparing. General information only,
             not financial advice.
           </p>
 

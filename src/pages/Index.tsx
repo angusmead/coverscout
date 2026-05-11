@@ -10,11 +10,11 @@ import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/site";
 
 const popularTopics = [
-  { title: "Cheap car insurance — how to save without losing cover", to: "/car-insurance/cheap/", tag: "Pricing" },
+  { title: "Cheap car insurance, how to save without losing cover", to: "/car-insurance/cheap/", tag: "Pricing" },
   { title: "How to compare car insurance properly", to: "/car-insurance/compare/", tag: "Compare" },
-  { title: "Car insurance quotes — getting useful comparisons", to: "/car-insurance/quotes/", tag: "Quotes" },
+  { title: "Car insurance quotes, getting useful comparisons", to: "/car-insurance/quotes/", tag: "Quotes" },
   { title: "Car insurance for young drivers", to: "/car-insurance/young-drivers/", tag: "Young drivers" },
-  { title: "Comprehensive vs third party — what's the difference?", to: "/car-insurance/comprehensive/", tag: "Cover types" },
+  { title: "Comprehensive vs third party, what's the difference?", to: "/car-insurance/comprehensive/", tag: "Cover types" },
   { title: "How to lower your car insurance premium", to: "/car-insurance/lower-premiums/", tag: "Premiums" },
 ];
 
@@ -38,23 +38,28 @@ const featuredComparisons = [
 
 const categories: { name: string; icon: typeof Heart; to: string; blurb: string }[] = [
   { name: "Car insurance", icon: Car, to: "/car-insurance/", blurb: "Compare cover, providers, and reviews" },
-  { name: "Home insurance", icon: Home, to: "/home-insurance/", blurb: "Coming soon — building, contents, renters" },
-  { name: "Life insurance", icon: Shield, to: "/life-insurance/", blurb: "Coming soon — life, income protection" },
-  { name: "Health insurance", icon: Heart, to: "/health-insurance/", blurb: "Coming soon — hospital and extras" },
-  { name: "Travel insurance", icon: Plane, to: "/travel-insurance/", blurb: "Coming soon — domestic and international" },
-  { name: "Business insurance", icon: Briefcase, to: "/business-insurance/", blurb: "Coming soon — public liability and more" },
+  { name: "Home insurance", icon: Home, to: "/home-insurance/", blurb: "Coming soon, building, contents, renters" },
+  { name: "Life insurance", icon: Shield, to: "/life-insurance/", blurb: "Coming soon, life, income protection" },
+  { name: "Health insurance", icon: Heart, to: "/health-insurance/", blurb: "Coming soon, hospital and extras" },
+  { name: "Travel insurance", icon: Plane, to: "/travel-insurance/", blurb: "Coming soon, domestic and international" },
+  { name: "Business insurance", icon: Briefcase, to: "/business-insurance/", blurb: "Coming soon, public liability and more" },
 ];
 
 const insuranceOptions = ["Car insurance"];
 
 const guides = [
-  { tag: "Cover types",   title: "Comprehensive vs third party — what's the difference?",        to: "/car-insurance/comprehensive/",   read: "8 min read" },
+  { tag: "Cover types",   title: "Comprehensive vs third party, what's the difference?",        to: "/car-insurance/comprehensive/",   read: "8 min read" },
   { tag: "Pricing",       title: "How to lower your car insurance premium without losing cover", to: "/car-insurance/lower-premiums/",  read: "9 min read" },
-  { tag: "Young drivers", title: "Why young drivers pay more — and what may help",               to: "/car-insurance/young-drivers/",   read: "7 min read" },
+  { tag: "Young drivers", title: "Why young drivers pay more, and what may help",               to: "/car-insurance/young-drivers/",   read: "7 min read" },
 ];
 
 const eyebrow = "text-[11.5px] uppercase tracking-[0.08em] font-semibold text-muted-foreground/70";
-const sectionH2 = "font-sans font-semibold text-[42px] md:text-[60px] tracking-[-0.035em] leading-[1.02]";
+const sectionH2 = "text-[42px] md:text-[60px] tracking-[-0.025em] leading-[1.02]";
+const sectionH2Style: React.CSSProperties = {
+  fontFamily: '"EB Garamond", "Fraunces", serif',
+  fontStyle: "italic",
+  fontWeight: 700,
+};
 
 const Index = () => {
   const [selected, setSelected] = useState("Car insurance");
@@ -68,7 +73,7 @@ const Index = () => {
         jsonLd={[organizationSchema(), websiteSchema()]}
       />
 
-      {/* HERO — centered, oversized type */}
+      {/* HERO, centered, oversized type */}
       <section className="px-6 pt-24 md:pt-32 pb-16 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary text-[12.5px] font-medium text-muted-foreground mb-8">
           <Sparkles size={12} className="text-brand-blue" />
@@ -79,9 +84,9 @@ const Index = () => {
           <span
             className="text-brand-blue"
             style={{
-              fontFamily: '"Instrument Serif", "Geist", serif',
+              fontFamily: '"EB Garamond", "Fraunces", serif',
               fontStyle: "italic",
-              fontWeight: 400,
+              fontWeight: 700,
               letterSpacing: "-0.02em",
             }}
           >
@@ -89,7 +94,7 @@ const Index = () => {
           </span>
         </h1>
         <p className="mt-7 text-[18px] md:text-[20px] text-muted-foreground max-w-[600px] mx-auto leading-relaxed">
-          Compare policies from Australia's leading insurers. No jargon, no pressure — just clear information to help you decide.
+          Compare policies from Australia's leading insurers. No jargon, no pressure, just clear information to help you decide.
         </p>
 
         <div id="compare" className="mt-10 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
@@ -125,7 +130,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 3-UP EDITORIAL CARDS (content from original hero card stack — restructured into a clean row) */}
+      {/* 3-UP EDITORIAL CARDS (content from original hero card stack, restructured into a clean row) */}
       <section className="container pb-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
@@ -137,7 +142,7 @@ const Index = () => {
               What to put side by side
             </div>
             <p className="text-[14px] text-muted-foreground leading-relaxed flex-1">
-              Cover types, excess, agreed value vs market value — the things that actually move the price.
+              Cover types, excess, agreed value vs market value, the things that actually move the price.
             </p>
             <div className="inline-flex items-center gap-1 text-[13.5px] font-medium text-foreground group-hover:gap-2 transition-all">
               Read the comparison guide <ArrowRight size={14} />
@@ -181,7 +186,7 @@ const Index = () => {
       {/* TRUST BAR */}
       <section className="bg-secondary/60 border-y border-border">
         <div className="container py-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[13px] text-muted-foreground text-center">
-          <span>General advice only — we don't recommend specific policies</span>
+          <span>General advice only, we don't recommend specific policies</span>
           <span className="text-border">·</span>
           <span>We may earn a commission from providers</span>
           <span className="text-border">·</span>
@@ -202,13 +207,13 @@ const Index = () => {
         />
       </section>
 
-      {/* POPULAR TOPICS — feature-row treatment */}
+      {/* POPULAR TOPICS, feature-row treatment */}
       <section className="bg-foreground text-background">
         <div className="container py-24">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
               <p className="text-[11.5px] uppercase tracking-[0.08em] font-semibold text-background/55 mb-3">Start here</p>
-              <h2 className={sectionH2}>Popular car insurance topics</h2>
+              <h2 className={sectionH2} style={sectionH2Style}>Popular car insurance topics</h2>
             </div>
             <Link
               to="/car-insurance/"
@@ -237,12 +242,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* COMPARING TWO PROVIDERS — provider-name-led cards */}
+      {/* COMPARING TWO PROVIDERS, provider-name-led cards */}
       <section className="container py-24">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <p className={eyebrow + " mb-3"}>Side-by-side</p>
-            <h2 className={sectionH2}>Comparing two providers?</h2>
+            <h2 className={sectionH2} style={sectionH2Style}>Comparing two providers?</h2>
           </div>
           <Link
             to="/reviews/"
@@ -275,12 +280,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CATEGORY GRID — big tiles with numbered eyebrow */}
+      {/* CATEGORY GRID, big tiles with numbered eyebrow */}
       <section className="bg-secondary/40 border-y border-border">
         <div className="container py-24">
           <div className="mb-14">
             <p className={eyebrow + " mb-3"}>Categories</p>
-            <h2 className={sectionH2}>Browse by category</h2>
+            <h2 className={sectionH2} style={sectionH2Style}>Browse by category</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {categories.map((c, i) => {
@@ -308,10 +313,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* GUIDES — large feature cards */}
+      {/* GUIDES, large feature cards */}
       <section className="container py-28">
         <div className="mb-16 max-w-[820px]">
-          <h2 className="font-sans font-semibold text-[44px] md:text-[68px] tracking-[-0.04em] leading-[1.0]">
+          <h2 className="text-[44px] md:text-[68px] tracking-[-0.025em] leading-[1.0]" style={sectionH2Style}>
             Guides &amp; explainers
           </h2>
         </div>

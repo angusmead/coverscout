@@ -29,7 +29,7 @@ export type StateFocus = "national" | "eastern" | "QLD" | "VIC";
 /**
  * Editorial grouping for the comparison-tool result pages. Reflects each
  * insurer's *public brand positioning*, not a quality judgement. Most large
- * insurers actually offer products across the spectrum — every category page
+ * insurers actually offer products across the spectrum, every category page
  * spells this caveat out.
  */
 export type CategoryBucket = "budget-friendly" | "balanced" | "broader-cover";

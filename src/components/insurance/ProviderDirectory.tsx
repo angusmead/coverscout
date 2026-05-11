@@ -21,7 +21,7 @@ const track = (event: DirectoryEvent) => {
 };
 
 /**
- * Deterministic neutral palette for the initials avatar — six muted swatches
+ * Deterministic neutral palette for the initials avatar, six muted swatches
  * cycled by alphabetical position. Intentionally NOT brand-derived.
  */
 const AVATAR_PALETTE = [
@@ -79,7 +79,7 @@ const ROW_BY_SLUG = new Map(ROWS.map((r) => [r.slug, r]));
 type Props = {
   /** Compact mode: hides search, filters and methodology; adds "view all" footer CTA. */
   compact?: boolean;
-  /** Optional explicit slug list — shows only these, in given order. Implies compact view. */
+  /** Optional explicit slug list, shows only these, in given order. Implies compact view. */
   slugs?: string[];
   /** Optional max rows when not using `slugs`. */
   limit?: number;
@@ -147,7 +147,14 @@ export const ProviderDirectory = ({
       {/* Header + (full mode only) search */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-5">
         <div>
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight">
+          <h2
+            className="text-[20px] md:text-[24px] tracking-[-0.02em] leading-[1.15]"
+            style={{
+              fontFamily: '"EB Garamond", "Fraunces", serif',
+              fontStyle: "italic",
+              fontWeight: 700,
+            }}
+          >
             {heading ?? "Australian car insurance provider directory"}
           </h2>
           <p className="text-sm text-muted-foreground mt-1">
@@ -186,7 +193,7 @@ export const ProviderDirectory = ({
         )}
       </div>
 
-      {/* Brand-type chips — hidden in compact mode */}
+      {/* Brand-type chips, hidden in compact mode */}
       {!isCompact && (
         <div className="flex flex-wrap gap-2 mb-6">
           {ALL_BRAND_TYPES.map((b) => {
@@ -357,14 +364,14 @@ export const ProviderDirectory = ({
               <p>
                 We deliberately don't run a numerical scoring system on Australian car insurers.
                 Building a defensible score would require a published methodology, calibrated inputs
-                (claims data, customer satisfaction surveys, feature analysis) and ongoing research —
+                (claims data, customer satisfaction surveys, feature analysis) and ongoing research,
                 and even then, scores compress nuance into a single number that often hides the
                 trade-offs that matter.
               </p>
               <p>
                 Instead, every provider here gets a plain-English review and a categorical summary
                 based on facts you can verify. The trade-off you're weighing depends on your vehicle,
-                location and what you value in an insurer — that's the question the directory exists
+                location and what you value in an insurer, that's the question the directory exists
                 to support.
               </p>
               <p>

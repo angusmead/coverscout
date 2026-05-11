@@ -42,7 +42,7 @@ const TOPIC_GROUPS: { heading: string; items: { label: string; to: string }[] }[
     items: [
       { label: "Compare car insurance", to: "/car-insurance/compare/" },
       { label: "Get car insurance quotes", to: "/car-insurance/quotes/" },
-      { label: "Best car insurance — how to choose", to: "/car-insurance/best/" },
+      { label: "Best car insurance, how to choose", to: "/car-insurance/best/" },
       { label: "Car insurance claims process", to: "/car-insurance/claims/" },
     ],
   },
@@ -52,12 +52,12 @@ const faqs = [
   {
     question: "Is car insurance compulsory in Australia?",
     answer:
-      "Compulsory Third Party (CTP) insurance is required in every Australian state and territory before you can drive a registered vehicle. CTP covers injury claims to other people, not damage to your car or someone else's property. Other types of car insurance — like third party property, third party fire and theft, and comprehensive — are optional.",
+      "Compulsory Third Party (CTP) insurance is required in every Australian state and territory before you can drive a registered vehicle. CTP covers injury claims to other people, not damage to your car or someone else's property. Other types of car insurance, like third party property, third party fire and theft, and comprehensive, are optional.",
   },
   {
     question: "What's the difference between comprehensive and third party car insurance?",
     answer:
-      "Third party property insurance generally covers damage your vehicle causes to other people's property, but not damage to your own car. Comprehensive insurance typically covers both — damage to other people's property and damage to your own vehicle from things like accidents, theft, fire, or weather. Cover, exclusions, and limits vary between policies, so it's worth comparing the PDS.",
+      "Third party property insurance generally covers damage your vehicle causes to other people's property, but not damage to your own car. Comprehensive insurance typically covers both, damage to other people's property and damage to your own vehicle from things like accidents, theft, fire, or weather. Cover, exclusions, and limits vary between policies, so it's worth comparing the PDS.",
   },
   {
     question: "How is my car insurance premium calculated?",
@@ -72,12 +72,12 @@ const faqs = [
   {
     question: "Can I switch car insurers mid-policy?",
     answer:
-      "Yes — you can usually cancel a policy at any time. Most insurers will refund the unused portion of your premium, though some may charge an administration fee. Before switching, check that any new cover is in place from the day the old one ends, and review the new PDS so you understand what's included and excluded.",
+      "Yes, you can usually cancel a policy at any time. Most insurers will refund the unused portion of your premium, though some may charge an administration fee. Before switching, check that any new cover is in place from the day the old one ends, and review the new PDS so you understand what's included and excluded.",
   },
   {
     question: "What should I do after a car accident?",
     answer:
-      "Make sure everyone is safe and call emergency services if anyone is injured. Exchange names, contact details, registration numbers, and insurer details with other drivers involved. Take photos of the scene and any damage. Then contact your insurer as soon as practical — most have 24/7 claims lines and can guide you through the next steps.",
+      "Make sure everyone is safe and call emergency services if anyone is injured. Exchange names, contact details, registration numbers, and insurer details with other drivers involved. Take photos of the scene and any damage. Then contact your insurer as soon as practical, most have 24/7 claims lines and can guide you through the next steps.",
   },
 ];
 
@@ -85,9 +85,9 @@ const h2 = "font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025e
 const body = "text-[16px] leading-[1.65] text-foreground/85 mb-5";
 const inlineLink = "text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue";
 const italicAccent: React.CSSProperties = {
-  fontFamily: '"Instrument Serif", "Geist", serif',
+  fontFamily: '"EB Garamond", "Fraunces", serif',
   fontStyle: "italic",
-  fontWeight: 400,
+  fontWeight: 700,
   letterSpacing: "-0.01em",
 };
 
@@ -136,8 +136,8 @@ const CarInsuranceHub = () => {
 
         <h2 className={h2}>What is car insurance?</h2>
         <p className={body}>
-          Car insurance is a contract between you and an insurer. You pay a premium — usually monthly or
-          annually — and in return, the insurer agrees to cover certain costs if something goes wrong.
+          Car insurance is a contract between you and an insurer. You pay a premium, usually monthly or
+          annually, and in return, the insurer agrees to cover certain costs if something goes wrong.
           Exactly what those costs are depends on the type of policy and what's in the Product Disclosure
           Statement (PDS).
         </p>
@@ -146,20 +146,20 @@ const CarInsuranceHub = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong className="text-foreground">Compulsory Third Party (CTP)</strong> — also called a
+            <strong className="text-foreground">Compulsory Third Party (CTP)</strong>, also called a
             green slip in NSW. Required to register a vehicle. Covers injury claims to other people.
             Doesn't cover any vehicle damage.
           </li>
           <li>
-            <strong className="text-foreground">Third party property</strong> — covers damage your car
+            <strong className="text-foreground">Third party property</strong>, covers damage your car
             causes to other people's property, including their vehicle.
           </li>
           <li>
-            <strong className="text-foreground">Third party fire and theft</strong> — third party
+            <strong className="text-foreground">Third party fire and theft</strong>, third party
             property cover plus limited cover for your own car if it's stolen or damaged by fire.
           </li>
           <li>
-            <strong className="text-foreground">Comprehensive</strong> — the broadest common cover.
+            <strong className="text-foreground">Comprehensive</strong>, the broadest common cover.
             Typically includes damage to your car (including from accidents, theft, fire, and certain
             weather events) plus damage your car causes to others.
           </li>
@@ -177,11 +177,11 @@ const CarInsuranceHub = () => {
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
-            <strong className="text-foreground">Premium</strong> — the price you pay for the policy.
+            <strong className="text-foreground">Premium</strong>, the price you pay for the policy.
             Quoted as monthly or annual, but paying annually can sometimes work out cheaper.
           </li>
           <li>
-            <strong className="text-foreground">Excess</strong> — the amount you contribute toward a
+            <strong className="text-foreground">Excess</strong>, the amount you contribute toward a
             claim before the insurer pays the rest. We unpack this in our guide on{" "}
             <Link to="/car-insurance/excess/" className={inlineLink}>
               how car insurance excess works
@@ -189,7 +189,7 @@ const CarInsuranceHub = () => {
             .
           </li>
           <li>
-            <strong className="text-foreground">Sum insured</strong> — the maximum the insurer will pay
+            <strong className="text-foreground">Sum insured</strong>, the maximum the insurer will pay
             if your car is written off. This can be set as either an <em>agreed value</em> (a figure you
             and the insurer agree at the start) or a <em>market value</em> (calculated at the time of the
             claim). See our explainer on{" "}
@@ -199,12 +199,12 @@ const CarInsuranceHub = () => {
             .
           </li>
           <li>
-            <strong className="text-foreground">Inclusions and exclusions</strong> — what's covered and
+            <strong className="text-foreground">Inclusions and exclusions</strong>, what's covered and
             what isn't. Two policies that look identical at first glance can have very different
             exclusions buried in the fine print.
           </li>
           <li>
-            <strong className="text-foreground">PDS and TMD</strong> — the Product Disclosure Statement
+            <strong className="text-foreground">PDS and TMD</strong>, the Product Disclosure Statement
             spells out the full terms, and the Target Market Determination describes who the product is
             designed for. Both are worth reading. Our guide on{" "}
             <Link to="/guides/how-to-read-a-pds/" className={inlineLink}>
@@ -213,7 +213,7 @@ const CarInsuranceHub = () => {
             walks through the sections that matter most.
           </li>
           <li>
-            <strong className="text-foreground">Cooling-off period</strong> — most policies include a
+            <strong className="text-foreground">Cooling-off period</strong>, most policies include a
             window (commonly 14–21 days) where you can cancel for a full refund if you change your mind,
             provided you haven't claimed.
           </li>
@@ -282,7 +282,7 @@ const CarInsuranceHub = () => {
           </li>
           <li>
             <strong className="text-foreground">Picking the lowest excess by default.</strong> A low
-            excess raises your premium — sometimes by more than you'd ever save in a typical claim
+            excess raises your premium, sometimes by more than you'd ever save in a typical claim
             cycle.
           </li>
           <li>
@@ -375,7 +375,7 @@ const CarInsuranceHub = () => {
 
         <h2 className={h2}>Australian car insurance providers</h2>
         <p className={body}>
-          Plain-English overviews of {PROVIDERS.length} Australian car insurance brands — what each
+          Plain-English overviews of {PROVIDERS.length} Australian car insurance brands, what each
           offers, who it may suit, and how it compares.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3">
@@ -401,7 +401,7 @@ const CarInsuranceHub = () => {
 
         <h2 className={h2}>Head-to-head comparisons</h2>
         <p className={body}>
-          Side-by-side comparisons of the most-asked-about pairings. None declare a winner — the right
+          Side-by-side comparisons of the most-asked-about pairings. None declare a winner, the right
           fit depends on your vehicle, location and what you value in an insurer.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-14">
