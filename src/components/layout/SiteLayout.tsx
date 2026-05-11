@@ -12,8 +12,8 @@ export const SiteLayout = () => {
         <main className="flex-1">
           <Outlet />
         </main>
-        <div className="border-t border-border bg-secondary">
-          <div className="container py-3 text-center text-xs text-muted-foreground">
+        <div className="border-t border-border bg-secondary/60">
+          <div className="container py-3 text-center text-[12px] text-muted-foreground">
             {COMPLIANCE_STRIP}
           </div>
         </div>

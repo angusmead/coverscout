@@ -14,12 +14,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        sans: ['"Geist"', '"Inter"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+      },
+      maxWidth: {
+        content: "1240px",
       },
       colors: {
         ink: {
-          DEFAULT: "hsl(160 30% 10%)",
-          foreground: "hsl(40 30% 96%)",
+          DEFAULT: "hsl(0 0% 8%)",
+          foreground: "hsl(0 0% 100%)",
+        },
+        brand: {
+          blue: "hsl(var(--brand-blue))",
+          green: "hsl(var(--brand-green))",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

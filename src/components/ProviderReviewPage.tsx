@@ -20,6 +20,16 @@ const buildBreadcrumbs = (p: ProviderProfile) => [
   { name: `${p.name} car insurance`, url: p.path },
 ];
 
+const h2 = "font-sans font-semibold text-[26px] md:text-[32px] tracking-[-0.025em] leading-[1.15] mt-16 mb-5";
+const body = "text-[16px] leading-[1.65] text-foreground/85 mb-5";
+const inlineLink = "text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue";
+const italicAccent: React.CSSProperties = {
+  fontFamily: '"Instrument Serif", "Geist", serif',
+  fontStyle: "italic",
+  fontWeight: 400,
+  letterSpacing: "-0.01em",
+};
+
 export const ProviderReviewPage = ({ slug }: Props) => {
   const provider = getProvider(slug);
   if (!provider) {
@@ -45,110 +55,107 @@ export const ProviderReviewPage = ({ slug }: Props) => {
         canonicalPath={provider.path}
         jsonLd={breadcrumbSchema(breadcrumbs)}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={breadcrumbs} className="mb-8" />
 
-        <div className="flex items-center gap-4 mb-6">
+        <div className="mb-7">
           <ProviderLogo slug={provider.slug} name={provider.name} size="lg" />
-          <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight">
-            {provider.name} car insurance review: cover, features and how it compares
-          </h1>
         </div>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <h1 className="font-sans font-semibold text-[40px] md:text-[56px] tracking-[-0.035em] leading-[1.02] mb-7">
+          {provider.name} car insurance{" "}
+          <span className="text-brand-blue" style={italicAccent}>
+            review
+          </span>
+          : cover, features and how it compares
+        </h1>
+
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           {provider.lead}
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Overview
-        </h2>
+        <h2 className={h2}>Overview</h2>
         {provider.overview.map((para, i) => (
-          <p key={i} className="text-base leading-relaxed mb-5">{para}</p>
+          <p key={i} className={body}>{para}</p>
         ))}
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Who {provider.name} car insurance may suit
-        </h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <h2 className={h2}>Who {provider.name} car insurance may suit</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           {provider.maySuit.map((item) => <li key={item}>{item}</li>)}
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Who it may not suit
-        </h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <h2 className={h2}>Who it may not suit</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           {provider.mayNotSuit.map((item) => <li key={item}>{item}</li>)}
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Cover types offered
-        </h2>
-        <p className="text-base leading-relaxed mb-3">
+        <h2 className={h2}>Cover types offered</h2>
+        <p className={body}>
           {provider.name} typically offers the following cover types. Specific inclusions, exclusions and limits sit in the {provider.name} PDS for each product.
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           {provider.coverTypes.map((c) => <li key={c}>{c}</li>)}
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className={body}>
           For background on what each cover type means, see our explainers on{" "}
-          <Link to="/car-insurance/comprehensive/" className="text-primary hover:underline">
+          <Link to="/car-insurance/comprehensive/" className={inlineLink}>
             comprehensive car insurance
           </Link>{" "}
           and{" "}
-          <Link to="/car-insurance/third-party/" className="text-primary hover:underline">
+          <Link to="/car-insurance/third-party/" className={inlineLink}>
             third party car insurance
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Key features
-        </h2>
+        <h2 className={h2}>Key features</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           {provider.features.map((f) => (
-            <div key={f.heading} className="bg-card border border-border rounded-lg p-5">
-              <div className="font-sans font-extrabold text-base tracking-tight mb-2">{f.heading}</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{f.body}</p>
+            <div key={f.heading} className="bg-card border border-border rounded-2xl p-6">
+              <div className="font-sans font-semibold text-[16px] tracking-tight mb-2.5">{f.heading}</div>
+              <p className="text-[14px] text-muted-foreground leading-[1.6]">{f.body}</p>
             </div>
           ))}
         </div>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Pricing positioning
-        </h2>
-        <p className="text-base leading-relaxed mb-5">{provider.pricingPositioning}</p>
-        <p className="text-base leading-relaxed mb-5">
+        <h2 className={h2}>Pricing positioning</h2>
+        <p className={body}>{provider.pricingPositioning}</p>
+        <p className={body}>
           For more on what shapes premiums in general, see our pages on{" "}
-          <Link to="/car-insurance/cost/" className="text-primary hover:underline">
+          <Link to="/car-insurance/cost/" className={inlineLink}>
             car insurance cost
           </Link>{" "}
           and{" "}
-          <Link to="/car-insurance/lower-premiums/" className="text-primary hover:underline">
+          <Link to="/car-insurance/lower-premiums/" className={inlineLink}>
             lowering your premium
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          Pros and cons
-        </h2>
+        <h2 className={h2}>Pros and cons</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-8">
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="font-sans font-extrabold text-base tracking-tight mb-3">Pros</div>
-            <ul className="space-y-2">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="font-sans font-semibold text-[16px] tracking-tight">Pros</div>
+              <div className="text-[11.5px] uppercase tracking-[0.08em] font-semibold text-brand-blue">+</div>
+            </div>
+            <ul className="space-y-2.5">
               {provider.pros.map((p) => (
-                <li key={p} className="flex gap-2 text-sm leading-relaxed">
-                  <Check size={16} className="text-primary shrink-0 mt-0.5" />
+                <li key={p} className="flex gap-2.5 text-[14px] leading-[1.55]">
+                  <Check size={16} className="text-brand-blue shrink-0 mt-0.5" />
                   <span>{p}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="font-sans font-extrabold text-base tracking-tight mb-3">Cons</div>
-            <ul className="space-y-2">
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="font-sans font-semibold text-[16px] tracking-tight">Cons</div>
+              <div className="text-[11.5px] uppercase tracking-[0.08em] font-semibold text-muted-foreground/60">−</div>
+            </div>
+            <ul className="space-y-2.5">
               {provider.cons.map((c) => (
-                <li key={c} className="flex gap-2 text-sm leading-relaxed">
+                <li key={c} className="flex gap-2.5 text-[14px] leading-[1.55]">
                   <XIcon size={16} className="text-muted-foreground shrink-0 mt-0.5" />
                   <span>{c}</span>
                 </li>
@@ -157,23 +164,21 @@ export const ProviderReviewPage = ({ slug }: Props) => {
           </div>
         </div>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
-          How {provider.name} compares with other Australian insurers
-        </h2>
-        <p className="text-base leading-relaxed mb-5">{provider.comparison}</p>
+        <h2 className={h2}>How {provider.name} compares with other Australian insurers</h2>
+        <p className={body}>{provider.comparison}</p>
 
         {relatedProviders.length > 0 && (
-          <div className="mb-6">
-            <p className="text-base leading-relaxed mb-3">Related provider reviews worth comparing:</p>
+          <div className="mb-8">
+            <p className={body}>Related provider reviews worth comparing:</p>
             <div className="grid sm:grid-cols-2 gap-3">
               {relatedProviders.map((rp) => (
                 <Link
                   key={rp.slug}
                   to={rp.path}
-                  className="group flex items-center gap-3 bg-card border border-border rounded-lg p-3 hover:border-primary transition"
+                  className="group flex items-center gap-3 bg-card border border-border rounded-2xl p-3.5 hover:-translate-y-0.5 hover:shadow-[0_1px_2px_hsl(0_0%_0%/0.04),0_12px_30px_hsl(0_0%_0%/0.06)] transition"
                 >
                   <ProviderLogo slug={rp.slug} name={rp.name} size="sm" />
-                  <span className="text-sm font-medium text-foreground group-hover:text-primary">
+                  <span className="text-[14px] font-medium text-foreground group-hover:text-brand-blue transition-colors">
                     {rp.name} car insurance review
                   </span>
                 </Link>
@@ -183,23 +188,23 @@ export const ProviderReviewPage = ({ slug }: Props) => {
         )}
 
         {provider.longTailLinks.length > 0 && (
-          <div className="mb-6">
-            <p className="text-base leading-relaxed mb-3">Useful background reading:</p>
-            <ul className="list-disc pl-6 space-y-2 leading-relaxed">
+          <div className="mb-8">
+            <p className={body}>Useful background reading:</p>
+            <ul className="list-disc pl-6 space-y-2 text-[16px] leading-[1.65] text-foreground/85">
               {provider.longTailLinks.map((link) => (
                 <li key={link.url}>
-                  <Link to={link.url} className="text-primary hover:underline">
+                  <Link to={link.url} className={inlineLink}>
                     {link.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link to="/car-insurance/" className="text-primary hover:underline">
+                <Link to="/car-insurance/" className={inlineLink}>
                   Car insurance hub — fundamentals
                 </Link>
               </li>
               <li>
-                <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+                <Link to="/car-insurance/compare/" className={inlineLink}>
                   Compare car insurance — what to look for
                 </Link>
               </li>
@@ -209,11 +214,11 @@ export const ProviderReviewPage = ({ slug }: Props) => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[26px] md:text-[32px] tracking-[-0.025em] leading-[1.15] mb-3">
             Compare your options
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             The cleanest way to test whether {provider.name} is competitive for you is to quote it
             alongside a couple of other insurers using identical inputs. The pages below cover both
             the comparison framework and the quote process.
@@ -221,20 +226,20 @@ export const ProviderReviewPage = ({ slug }: Props) => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/car-insurance/compare/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Compare car insurance
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/quotes/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Get car insurance quotes
             </Link>
             <Link
               to="/reviews/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               All provider reviews
             </Link>
@@ -242,7 +247,7 @@ export const ProviderReviewPage = ({ slug }: Props) => {
           <AffiliateDisclosure className="mt-6" />
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );
