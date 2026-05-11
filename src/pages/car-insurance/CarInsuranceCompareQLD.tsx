@@ -54,26 +54,26 @@ const CarInsuranceCompareQLD = () => {
         canonicalPath={PATH}
         jsonLd={[breadcrumbSchema(meta.breadcrumbs), faqSchema(faqItems)]}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Compare car insurance in Queensland
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A Queensland-specific guide to comparing car insurance — the role of RACQ, how CTP fits
           into vehicle registration, why far-north postcodes price differently, and a routine for
           building a shortlist that holds up.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What makes Queensland different
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Queensland has a few features worth understanding before you start comparing:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>CTP is bundled into vehicle registration.</strong> Unlike NSW, you don't buy a
             separate green slip — the CTP component is part of your rego, with the choice of CTP
@@ -96,13 +96,13 @@ const CarInsuranceCompareQLD = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Insurers commonly compared in QLD
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Queensland's car insurance market is well-served. A reasonable shortlist usually mixes:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>QLD-rooted brands</strong> — RACQ, Suncorp (headquartered in Brisbane)
           </li>
@@ -118,36 +118,36 @@ const CarInsuranceCompareQLD = () => {
             (underwritten by partner insurers, disclosed in the PDS)
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Plain-English overviews of each are in our{" "}
-          <Link to="/reviews/" className="text-primary hover:underline">
+          <Link to="/reviews/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             provider directory
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           CTP in Queensland: bundled, but you choose the insurer
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Queensland CTP only covers personal injury claims to other people in an accident — it
           doesn't cover any damage to vehicles or property. The cost is folded into your annual
           registration, but the choice of CTP insurer is yours from a small panel licensed by the
           Motor Accident Insurance Commission. The price difference between licensed CTP insurers
           in QLD is usually small.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Comprehensive, third party fire and theft, and third party property are all separate
           policies on top of CTP, and the comparison work below relates to those.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What shapes your QLD premium
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Beyond standard rating factors, three things tend to swing Queensland quotes the most:
         </p>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Postcode</strong> — South East Queensland tends to price higher than regional
             QLD, but cyclone-exposed northern postcodes can also see meaningfully different premiums
@@ -163,24 +163,24 @@ const CarInsuranceCompareQLD = () => {
             postcodes feeds into the rating, and certain models see materially higher premiums.
           </li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           For the broader picture of what shapes any quote, see{" "}
           <Link
             to="/car-insurance/how-much-is-car-insurance/"
-            className="text-primary hover:underline"
+            className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue"
           >
             how much car insurance costs in Australia
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           A QLD comparison routine
         </h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Decide your cover type and excess up front. Use the{" "}
-            <Link to="/car-insurance/excess/" className="text-primary hover:underline">
+            <Link to="/car-insurance/excess/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               excess explainer
             </Link>{" "}
             if you're undecided.
@@ -201,18 +201,18 @@ const CarInsuranceCompareQLD = () => {
             structure, choice of repairer and any age/at-fault excesses.
           </li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The general framework lives on our{" "}
-          <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+          <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             comparing car insurance
           </Link>{" "}
           page.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Common QLD pitfalls
         </h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Assuming flood and storm cover is automatic — it isn't always, especially for older
             policies or restricted regions
@@ -231,11 +231,11 @@ const CarInsuranceCompareQLD = () => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">
             Build your QLD shortlist
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             Browse plain-English overviews of sixteen Australian car insurers — including RACQ,
             Suncorp, Youi and other QLD players — then quote a handful direct using identical
             inputs.
@@ -243,27 +243,27 @@ const CarInsuranceCompareQLD = () => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/reviews/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Browse provider reviews
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/compare/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Comparison framework
             </Link>
             <Link
               to="/car-insurance/quotes/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               How quotes work
             </Link>
           </div>
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

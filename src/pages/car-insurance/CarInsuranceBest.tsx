@@ -54,44 +54,44 @@ const CarInsuranceBest = () => {
         canonicalPath={PATH}
         jsonLd={breadcrumbSchema(meta.breadcrumbs)}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Best car insurance in Australia: how to choose what's right for you
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A practical guide to thinking about "best" in car insurance — what the word actually means,
           who gets to decide, and how to identify a policy that may suit your specific situation.
           Useful for anyone tired of generic "top 10" lists and wanting a clearer way to choose.
         </p>
 
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Search for the best car insurance in Australia and you'll find dozens of lists, each ranking
           insurers slightly differently. That's not a coincidence. There's no objective "best" — what
           looks like the best policy for one person can look like a poor fit for the next, even with
           the same car and the same postcode.
         </p>
 
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           This guide takes the opposite approach: instead of declaring winners, it walks through what
           "best" can reasonably mean in different situations, what to weigh, and how to land on a
           shortlist you actually trust. If you're starting from zero, the{" "}
-          <Link to="/car-insurance/" className="text-primary hover:underline">
+          <Link to="/car-insurance/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             car insurance hub
           </Link>{" "}
           covers the fundamentals first.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What does "best car insurance" actually mean?
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           When people talk about the best car insurance, they usually mean one of a few different
           things — and the differences matter.
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Best value</strong> — the policy that delivers the most useful cover for what
             you're paying.
@@ -113,19 +113,19 @@ const CarInsuranceBest = () => {
             times, and customer experience tend to score well in independent data.
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A policy can be excellent on one axis and ordinary on another. Naming "the" best one in
           isolation usually means quietly choosing which axis to privilege.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Key things to understand
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A handful of points come up over and over when sifting "best of" lists for car insurance.
           Worth keeping in mind before you treat any ranking as gospel.
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Most lists don't cover the whole market.</strong> They cover the insurers in the
             ranking provider's panel or dataset. Brands you'd recognise are often missing.
@@ -146,21 +146,21 @@ const CarInsuranceBest = () => {
             <strong>The PDS and TMD beat any "best of" list.</strong> The product disclosure
             statement spells out what's actually covered; the target market determination tells you
             who the product is designed for. Our{" "}
-            <Link to="/guides/how-to-read-a-pds/" className="text-primary hover:underline">
+            <Link to="/guides/how-to-read-a-pds/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               how to read a PDS
             </Link>{" "}
             guide is a useful primer.
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           How to choose what may be best for you
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A repeatable approach beats trusting any single ranking. The steps below scale from a quick
           renewal review to a full re-evaluation.
         </p>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Be honest about what matters most to you.</strong> Lowest premium, broadest cover,
             simplest app, fastest claims, choice of repairer — pick your top two. Trying to optimise
@@ -168,7 +168,7 @@ const CarInsuranceBest = () => {
           </li>
           <li>
             <strong>Decide on cover type before shortlisting.</strong> The{" "}
-            <Link to="/car-insurance/comprehensive/" className="text-primary hover:underline">
+            <Link to="/car-insurance/comprehensive/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               comprehensive car insurance
             </Link>{" "}
             page covers what that level typically includes; third party options are covered separately.
@@ -176,7 +176,7 @@ const CarInsuranceBest = () => {
           <li>
             <strong>Get matched quotes</strong> from at least three insurers using the same inputs.
             See the{" "}
-            <Link to="/car-insurance/quotes/" className="text-primary hover:underline">
+            <Link to="/car-insurance/quotes/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               car insurance quotes
             </Link>{" "}
             page for the inputs that need to stay constant.
@@ -185,7 +185,7 @@ const CarInsuranceBest = () => {
             <strong>Compare features, not just headlines.</strong> Hire car cover, choice of repairer,
             agreed vs market value, excess structure, and key exclusions are the usual differentiators.
             Our{" "}
-            <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+            <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               compare car insurance
             </Link>{" "}
             page walks through how.
@@ -200,14 +200,14 @@ const CarInsuranceBest = () => {
           </li>
         </ol>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Common mistakes to avoid when choosing
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The "best policy" mistakes mostly come down to outsourcing the decision to a list, or
           weighting the wrong factor too heavily.
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Treating "highest rated" as universally best.</strong> A four-star average across
             10,000 policies doesn't tell you about your specific situation.
@@ -218,7 +218,7 @@ const CarInsuranceBest = () => {
           </li>
           <li>
             <strong>Picking on price alone.</strong> Covered separately on our{" "}
-            <Link to="/car-insurance/cheap/" className="text-primary hover:underline">
+            <Link to="/car-insurance/cheap/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               cheap car insurance
             </Link>{" "}
             page — worth reading if you're tempted by the lowest quote.
@@ -231,7 +231,7 @@ const CarInsuranceBest = () => {
             <strong>Not asking the right questions up front.</strong> Our{" "}
             <Link
               to="/guides/questions-to-ask-before-buying-insurance/"
-              className="text-primary hover:underline"
+              className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue"
             >
               questions to ask before buying insurance
             </Link>{" "}
@@ -243,17 +243,17 @@ const CarInsuranceBest = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What affects which policy may be best for you
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The right answer depends on the situation. The factors below tend to do most of the work.
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Driver profile.</strong> Age, experience, claims history, and licence type all
             shift which insurers may price competitively for you. Our{" "}
-            <Link to="/car-insurance/young-drivers/" className="text-primary hover:underline">
+            <Link to="/car-insurance/young-drivers/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               young drivers
             </Link>{" "}
             page covers that bracket specifically.
@@ -279,9 +279,9 @@ const CarInsuranceBest = () => {
             usually come with longer PDS documents and more conditions to track.
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           For a deeper look at what drives the price specifically, see the{" "}
-          <Link to="/car-insurance/cost/" className="text-primary hover:underline">
+          <Link to="/car-insurance/cost/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             car insurance cost
           </Link>{" "}
           page.
@@ -289,11 +289,11 @@ const CarInsuranceBest = () => {
 
         <FAQAccordion items={faqs} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">
             Compare your options
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             Once you've decided what "best" means in your situation, comparing matched quotes is the
             fastest way to put it to the test. The pages below walk through both sides of the
             decision.
@@ -301,20 +301,20 @@ const CarInsuranceBest = () => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/car-insurance/compare/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Compare car insurance
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/quotes/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Get car insurance quotes
             </Link>
             <Link
               to="/guides/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Read our guides
             </Link>
@@ -322,7 +322,7 @@ const CarInsuranceBest = () => {
           <AffiliateDisclosure className="mt-6" />
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

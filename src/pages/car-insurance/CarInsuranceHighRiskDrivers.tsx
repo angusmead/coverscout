@@ -24,27 +24,27 @@ const CarInsuranceHighRiskDrivers = () => {
   return (
     <>
       <SEO title={meta.title} description={meta.description} canonicalPath={PATH} jsonLd={breadcrumbSchema(meta.breadcrumbs)} />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">Car insurance for high-risk drivers in Australia</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">A practical guide to car insurance if you've been classed as high-risk in Australia — what insurers mean by the term, where to look for cover, and how to compare your options without giving up cover quality.</p>
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">Car insurance for high-risk drivers in Australia</h1>
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">A practical guide to car insurance if you've been classed as high-risk in Australia — what insurers mean by the term, where to look for cover, and how to compare your options without giving up cover quality.</p>
 
-        <p className="text-base leading-relaxed mb-5">Being told you're "high-risk" by an insurer isn't a permanent label. It's a snapshot based on a particular insurer's view of your record at a particular point in time. Different insurers see the same record differently, which is why comparing matters more — not less — when you're in this position.</p>
-        <p className="text-base leading-relaxed mb-5">If you're newer to the topic generally, the <Link to="/car-insurance/" className="text-primary hover:underline">car insurance hub</Link> covers the surrounding fundamentals.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">Being told you're "high-risk" by an insurer isn't a permanent label. It's a snapshot based on a particular insurer's view of your record at a particular point in time. Different insurers see the same record differently, which is why comparing matters more — not less — when you're in this position.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">If you're newer to the topic generally, the <Link to="/car-insurance/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">car insurance hub</Link> covers the surrounding fundamentals.</p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">What is a "high-risk driver" in Australian car insurance?</h2>
-        <p className="text-base leading-relaxed mb-5">There's no single regulated definition. In practice, insurers tend to use the term informally for drivers whose claims and conviction history puts them outside their standard pricing model. That can include any combination of:</p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">What is a "high-risk driver" in Australian car insurance?</h2>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">There's no single regulated definition. In practice, insurers tend to use the term informally for drivers whose claims and conviction history puts them outside their standard pricing model. That can include any combination of:</p>
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>Multiple at-fault claims in the past few years</li>
           <li>Serious driving convictions (drink driving, drug driving, dangerous driving)</li>
           <li>A history of licence suspensions or demerit-point accumulations</li>
           <li>Past policy cancellations by another insurer</li>
-          <li>Very young or recently licensed drivers — also covered on our <Link to="/car-insurance/young-drivers/" className="text-primary hover:underline">young drivers</Link> page</li>
+          <li>Very young or recently licensed drivers — also covered on our <Link to="/car-insurance/young-drivers/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">young drivers</Link> page</li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">The result is usually higher premiums, more conditions, or — in some cases — being declined by an insurer's automated quote engine altogether.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">The result is usually higher premiums, more conditions, or — in some cases — being declined by an insurer's automated quote engine altogether.</p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">Key things to understand</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">Key things to understand</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Decline by one insurer doesn't mean decline by all.</strong> Different insurers underwrite differently.</li>
           <li><strong>Brokers can be useful.</strong> They have access to specialist insurers that aren't always available direct.</li>
           <li><strong>Disclosure is critical.</strong> Failing to disclose claims, demerits or convictions can void cover.</li>
@@ -53,8 +53,8 @@ const CarInsuranceHighRiskDrivers = () => {
           <li><strong>The PDS and TMD remain the source of truth</strong> — particularly important when the policy is unusual.</li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">How to compare car insurance as a high-risk driver</h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">How to compare car insurance as a high-risk driver</h2>
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Disclose everything accurately.</strong> The cover is only useful if a claim isn't refused later.</li>
           <li><strong>Get matched quotes</strong> from a broader-than-usual mix — mainstream insurers, challenger brands, and at least one specialist or broker.</li>
           <li><strong>Compare cover, not just price.</strong> Specialist policies sometimes carry tighter exclusions or higher excesses.</li>
@@ -62,10 +62,10 @@ const CarInsuranceHighRiskDrivers = () => {
           <li><strong>Re-quote as your record clears.</strong> An incident from three years ago may not affect your quote the same way it did last year.</li>
           <li><strong>Keep records.</strong> Notes of when offences and claims occurred make accurate disclosure easier in future.</li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">Our <Link to="/car-insurance/compare/" className="text-primary hover:underline">compare car insurance</Link> page covers the broader comparison framework.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">Our <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">compare car insurance</Link> page covers the broader comparison framework.</p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">Common mistakes to avoid</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">Common mistakes to avoid</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Under-disclosing on the quote form.</strong> The fastest way to a refused claim down the track.</li>
           <li><strong>Stopping after one decline.</strong> Other insurers and brokers may still be willing.</li>
           <li><strong>Driving uninsured because cover seems hard to find.</strong> Even costly third party cover usually beats no cover at all.</li>
@@ -73,8 +73,8 @@ const CarInsuranceHighRiskDrivers = () => {
           <li><strong>Not re-quoting as time passes.</strong> Premiums often drop meaningfully as incidents age.</li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">What affects what high-risk drivers pay</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">What affects what high-risk drivers pay</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Type and recency of incidents.</strong> A recent at-fault claim weighs more than one from four years ago.</li>
           <li><strong>Severity of convictions.</strong> Major offences carry more weight than minor infringements.</li>
           <li><strong>Time since the most recent incident.</strong> Each year of clean driving generally helps.</li>
@@ -82,22 +82,22 @@ const CarInsuranceHighRiskDrivers = () => {
           <li><strong>Excess level.</strong> Higher excesses can buy down the premium materially.</li>
           <li><strong>Insurer choice.</strong> Specialist insurers price for risk profiles that mainstream brands won't touch.</li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">For broader pricing factors, see <Link to="/car-insurance/cost/" className="text-primary hover:underline">car insurance cost</Link>.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">For broader pricing factors, see <Link to="/car-insurance/cost/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">car insurance cost</Link>.</p>
 
         <FAQAccordion items={faqs} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">Compare your options</h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">Comparison shopping matters more, not less, when you've been classed as high-risk. Different insurers will price your situation very differently.</p>
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">Compare your options</h2>
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">Comparison shopping matters more, not less, when you've been classed as high-risk. Different insurers will price your situation very differently.</p>
           <div className="flex flex-wrap gap-3">
-            <Link to="/car-insurance/compare/" className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition">Compare car insurance<ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></Link>
-            <Link to="/car-insurance/quotes/" className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition">Get car insurance quotes</Link>
-            <Link to="/car-insurance/" className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition">Car insurance basics</Link>
+            <Link to="/car-insurance/compare/" className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition">Compare car insurance<ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></Link>
+            <Link to="/car-insurance/quotes/" className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition">Get car insurance quotes</Link>
+            <Link to="/car-insurance/" className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition">Car insurance basics</Link>
           </div>
           <AffiliateDisclosure className="mt-6" />
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

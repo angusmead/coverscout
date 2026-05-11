@@ -18,25 +18,25 @@ const Privacy = () => {
         canonicalPath={PATH}
         jsonLd={breadcrumbSchema(meta.breadcrumbs)}
       />
-      <article className="container py-12 md:py-16 max-w-3xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[760px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Privacy policy
         </h1>
 
         <p className="text-sm text-muted-foreground mb-10">Effective date: {EFFECTIVE_DATE}</p>
 
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           CoverScout (ABN 61 941 800 664) operates the website at{" "}
-          <Link to="/" className="text-primary hover:underline">coverscout.com.au</Link>. This
+          <Link to="/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">coverscout.com.au</Link>. This
           policy explains what information we collect, how we use it, and your rights under the
           Australian Privacy Principles (APPs) set out in the Privacy Act 1988 (Cth).
         </p>
 
         <p className="text-base leading-relaxed mb-10">
           We've tried to write this in plain English. If something isn't clear, email{" "}
-          <a href="mailto:hello@coverscout.com.au" className="text-primary hover:underline">
+          <a href="mailto:hello@coverscout.com.au" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             hello@coverscout.com.au
           </a>{" "}
           and we'll explain.
@@ -45,7 +45,7 @@ const Privacy = () => {
         <h2 className="font-sans font-extrabold text-2xl tracking-tight mt-12 mb-4">
           What we collect
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           We use <strong>Cloudflare Web Analytics</strong> to understand how the site is used.
           Cloudflare aggregates the following information at the network edge:
         </p>
@@ -55,7 +55,7 @@ const Privacy = () => {
           <li>Device type, browser, and operating system</li>
           <li>Referring website (where you came from)</li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Cloudflare Web Analytics does not use cookies, does not fingerprint individual visitors,
           and does not track you across other websites. The data is aggregated and anonymous —
           we cannot identify you personally from it.
@@ -89,7 +89,7 @@ const Privacy = () => {
         <h2 className="font-sans font-extrabold text-2xl tracking-tight mt-12 mb-4">
           Affiliate links
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           CoverScout plans to earn commissions through affiliate links to insurance providers in
           the future. We don't currently have any active affiliate partnerships, but when we do:
         </p>
@@ -102,7 +102,7 @@ const Privacy = () => {
           <li>
             Affiliate relationships never influence what we write or which insurers we cover.
             See{" "}
-            <Link to="/how-we-make-money/" className="text-primary hover:underline">
+            <Link to="/how-we-make-money/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               how we make money
             </Link>{" "}
             for more.
@@ -122,7 +122,7 @@ const Privacy = () => {
         <h2 className="font-sans font-extrabold text-2xl tracking-tight mt-12 mb-4">
           Your rights
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Under the Australian Privacy Principles, you have the right to:
         </p>
         <ul className="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
@@ -132,7 +132,7 @@ const Privacy = () => {
         </ul>
         <p className="text-base leading-relaxed mb-10">
           Email{" "}
-          <a href="mailto:hello@coverscout.com.au" className="text-primary hover:underline">
+          <a href="mailto:hello@coverscout.com.au" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             hello@coverscout.com.au
           </a>{" "}
           and we'll respond within 30 days. If you're not satisfied with our response, you can
@@ -141,7 +141,7 @@ const Privacy = () => {
             href="https://www.oaic.gov.au"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue"
           >
             oaic.gov.au
           </a>
@@ -171,7 +171,7 @@ const Privacy = () => {
         <p className="text-base leading-relaxed mb-10">
           CoverScout (ABN 61 941 800 664)<br />
           Email:{" "}
-          <a href="mailto:hello@coverscout.com.au" className="text-primary hover:underline">
+          <a href="mailto:hello@coverscout.com.au" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             hello@coverscout.com.au
           </a>
         </p>

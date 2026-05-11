@@ -55,42 +55,42 @@ const CarInsuranceBestComprehensive = () => {
         canonicalPath={PATH}
         jsonLd={[breadcrumbSchema(meta.breadcrumbs), faqSchema(faqItems)]}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Best comprehensive car insurance in Australia
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A practical guide to choosing comprehensive car insurance in Australia — which insurers
           offer broader feature sets, what to look for beyond the headline premium, and how to
           shortlist the policy that may suit you most.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What "best comprehensive" actually means
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Comprehensive is the broadest standard car insurance cover available in Australia, but
           "best" depends on what you weigh most. Cheapest is one definition; broadest feature set
           is another; smoothest claims handling is a third. The best policy for a city commuter
           with a new car looks different to the best policy for an older driver in a regional area
           with a paid-off vehicle.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           For the fundamentals of what comprehensive covers and how it differs from third party,
           see our{" "}
-          <Link to="/car-insurance/comprehensive/" className="text-primary hover:underline">
+          <Link to="/car-insurance/comprehensive/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             comprehensive car insurance
           </Link>{" "}
           page.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Insurers commonly shortlisted for comprehensive
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The insurers that consistently appear on shortlists for comprehensive cover tend to be
           those with broader feature sets, established branch or partner networks, or specialist
           features that suit specific demographics:
@@ -101,11 +101,11 @@ const CarInsuranceBestComprehensive = () => {
               <ProviderLogo slug="nrma" name="NRMA" size="md" />
               <h3 className="font-sans font-bold text-lg">NRMA Insurance</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               One of Australia's largest comprehensive insurers, with strong NSW and ACT presence
               and broad feature inclusions.
             </p>
-            <Link to="/reviews/nrma/" className="text-sm text-primary hover:underline">
+            <Link to="/reviews/nrma/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the NRMA overview →
             </Link>
           </div>
@@ -114,11 +114,11 @@ const CarInsuranceBestComprehensive = () => {
               <ProviderLogo slug="aami" name="AAMI" size="md" />
               <h3 className="font-sans font-bold text-lg">AAMI</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               National coverage with broad comprehensive features and a long-established claims
               process. Part of the Suncorp Group.
             </p>
-            <Link to="/reviews/aami/" className="text-sm text-primary hover:underline">
+            <Link to="/reviews/aami/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the AAMI overview →
             </Link>
           </div>
@@ -127,11 +127,11 @@ const CarInsuranceBestComprehensive = () => {
               <ProviderLogo slug="allianz" name="Allianz" size="md" />
               <h3 className="font-sans font-bold text-lg">Allianz</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               Global insurer with strong Australian presence, broader feature options and access
               to specialist cover types.
             </p>
-            <Link to="/reviews/allianz/" className="text-sm text-primary hover:underline">
+            <Link to="/reviews/allianz/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the Allianz overview →
             </Link>
           </div>
@@ -140,11 +140,11 @@ const CarInsuranceBestComprehensive = () => {
               <ProviderLogo slug="suncorp" name="Suncorp" size="md" />
               <h3 className="font-sans font-bold text-lg">Suncorp Insurance</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               Major Australian insurer (Brisbane-headquartered) with broad comprehensive features
               and a national branch and partner footprint.
             </p>
-            <Link to="/reviews/suncorp/" className="text-sm text-primary hover:underline">
+            <Link to="/reviews/suncorp/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the Suncorp overview →
             </Link>
           </div>
@@ -154,11 +154,11 @@ const CarInsuranceBestComprehensive = () => {
               <ProviderLogo slug="racv" name="RACV" size="md" />
               <h3 className="font-sans font-bold text-lg">RACQ / RACV</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               State motoring clubs (Queensland and Victoria) with member benefits and integrated
               roadside assistance — strong fits for in-state members.
             </p>
-            <Link to="/reviews/racq/" className="text-sm text-primary hover:underline">
+            <Link to="/reviews/racq/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the RACQ overview →
             </Link>
           </div>
@@ -167,31 +167,31 @@ const CarInsuranceBestComprehensive = () => {
               <ProviderLogo slug="apia" name="APIA" size="md" />
               <h3 className="font-sans font-bold text-lg">APIA</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6] mb-3">
               Specialist insurer for over-50s with comprehensive features tailored to that segment
               — worth comparing if you qualify on age.
             </p>
-            <Link to="/reviews/apia/" className="text-sm text-primary hover:underline">
+            <Link to="/reviews/apia/" className="text-sm text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               Read the APIA overview →
             </Link>
           </div>
         </div>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The full broader-cover bucket — five insurers with broader feature sets and partner
           networks — is on our{" "}
-          <Link to="/reviews/broader-cover/" className="text-primary hover:underline">
+          <Link to="/reviews/broader-cover/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             broader cover insurers
           </Link>{" "}
           page.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What to look for in a comprehensive policy
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Beyond the headline premium, the features most worth comparing on comprehensive:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Sum insured basis</strong> — agreed value (you and the insurer agree the figure
             up front) versus market value (set at claim time). Agreed gives certainty; market
@@ -212,14 +212,14 @@ const CarInsuranceBestComprehensive = () => {
           <li>
             <strong>Excess structure</strong> — basic excess plus age-based, inexperienced-driver
             and at-fault excesses can stack. See our{" "}
-            <Link to="/car-insurance/excess/" className="text-primary hover:underline">
+            <Link to="/car-insurance/excess/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               excess explainer
             </Link>
             .
           </li>
           <li>
             <strong>No-claim bonus protection</strong> — see our{" "}
-            <Link to="/car-insurance/no-claim-bonus/" className="text-primary hover:underline">
+            <Link to="/car-insurance/no-claim-bonus/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               no-claim bonus
             </Link>{" "}
             page
@@ -234,12 +234,12 @@ const CarInsuranceBestComprehensive = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Comprehensive vs cheaper cover types
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The trade-off against{" "}
-          <Link to="/car-insurance/third-party/" className="text-primary hover:underline">
+          <Link to="/car-insurance/third-party/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             third party property
           </Link>{" "}
           or third party fire and theft is real but not always large. For lower-risk drivers,
@@ -249,10 +249,10 @@ const CarInsuranceBestComprehensive = () => {
           Worth quoting both for your specific profile.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           A shortlisting routine for comprehensive
         </h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Decide your sum insured basis (agreed vs market) and excess up front. These two choices
             shape every quote that follows.
@@ -272,7 +272,7 @@ const CarInsuranceBestComprehensive = () => {
           <li>
             Pick the policy that's competitively priced <em>and</em> covers what matters to you. The
             general framework lives on our{" "}
-            <Link to="/car-insurance/comparison/" className="text-primary hover:underline">
+            <Link to="/car-insurance/comparison/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               comparison page
             </Link>
             .
@@ -281,38 +281,38 @@ const CarInsuranceBestComprehensive = () => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">
             Compare comprehensive insurers
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             Browse five insurers with broader feature sets and the full directory of sixteen
             Australian car insurers, then quote a handful direct using identical inputs.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/reviews/broader-cover/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Broader cover insurers
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/comprehensive/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Comprehensive fundamentals
             </Link>
             <Link
               to="/car-insurance/comparison/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Comparison framework
             </Link>
           </div>
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

@@ -54,92 +54,92 @@ const CarInsuranceComparison = () => {
         canonicalPath={PATH}
         jsonLd={[breadcrumbSchema(meta.breadcrumbs), faqSchema(faqItems)]}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Car insurance comparison in Australia
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A practical guide to comparing car insurance properly — what counts as a fair comparison,
           where comparison sites help, where they fall short, and the framework we use at
           CoverScout to keep things genuinely apples-to-apples.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What "car insurance comparison" actually means
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Strictly speaking, comparing two car insurance policies means putting them side by side
           using identical inputs — same vehicle, same driver, same postcode, same cover level, same
           excess, same optional extras — so any difference in price or features is real, not an
           artefact of mismatched assumptions.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The trouble is that most "comparison" people actually do is much looser than this:
           comparing last year's renewal price against a single new quote, or comparing two quotes
           with different excesses without realising it. A clean comparison takes ten extra minutes
           and almost always changes the answer.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           The three ways Australians compare car insurance
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Each of these has trade-offs. Most shoppers end up using more than one.
         </p>
         <div className="grid gap-4 md:grid-cols-3 mb-8">
           <div className="border border-border rounded-lg p-5 bg-card">
             <h3 className="font-sans font-bold text-lg mb-2">Comparison sites</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
               Fast, but show only insurers on their commercial panel. Several major Australian
               brands typically aren't included.
             </p>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
             <h3 className="font-sans font-bold text-lg mb-2">Direct quotes</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
               Slower, but covers any insurer you choose. Best for sense-checking what a comparison
               site returns and including off-panel brands.
             </p>
           </div>
           <div className="border border-border rounded-lg p-5 bg-card">
             <h3 className="font-sans font-bold text-lg mb-2">Brokers</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-[14.5px] text-muted-foreground leading-[1.6]">
               Licensed to advise and arrange. Useful for non-standard situations or where you'd like
               someone to do the leg-work for you.
             </p>
           </div>
         </div>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Why comparison-site results aren't the whole picture
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Comparison engines display panel insurers — the brands they have a commercial relationship
           with. Several of Australia's biggest car insurers (Youi, Bingle, the motoring-club brands,
           and others) often aren't on those panels. So the cheapest quote on a comparison site is
           the cheapest <em>on that panel</em>, not the cheapest in the market.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           That doesn't make comparison sites useless — it just means they're a starting point. The
           right move is to take whatever a comparison site returns and sense-check it against direct
           quotes from one or two off-panel brands you'd actually consider. Our{" "}
-          <Link to="/reviews/" className="text-primary hover:underline">
+          <Link to="/reviews/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             provider directory
           </Link>{" "}
           covers sixteen insurers including the ones panels typically miss.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What to actually compare (beyond the price)
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Two policies at the same price can be very different products. The features that most
           often matter:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Cover type</strong> — comprehensive, third party fire and theft, or third party
             property only
@@ -164,7 +164,7 @@ const CarInsuranceComparison = () => {
           </li>
           <li>
             <strong>No-claim bonus protection</strong> — see our explainer on the{" "}
-            <Link to="/car-insurance/no-claim-bonus/" className="text-primary hover:underline">
+            <Link to="/car-insurance/no-claim-bonus/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               no-claim bonus
             </Link>
           </li>
@@ -172,18 +172,18 @@ const CarInsuranceComparison = () => {
             <strong>Exclusions</strong> — flood, hail, listed-driver restrictions, business use
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The full framework lives on our{" "}
-          <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+          <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             comparing car insurance
           </Link>{" "}
           page.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Mistakes that quietly break a comparison
         </h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Different excesses across quotes.</strong> Raising the excess on one quote
             without realising makes it look cheaper than it is.
@@ -210,13 +210,13 @@ const CarInsuranceComparison = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           A simple comparison routine
         </h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Decide your cover type and excess up front, before quoting anyone. Use the{" "}
-            <Link to="/car-insurance/excess/" className="text-primary hover:underline">
+            <Link to="/car-insurance/excess/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               excess explainer
             </Link>{" "}
             if you're unsure.
@@ -239,26 +239,26 @@ const CarInsuranceComparison = () => {
           </li>
         </ol>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           How CoverScout fits in
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           CoverScout isn't a comparison engine and we don't pull live quotes. We publish neutral
           plain-English overviews of sixteen Australian car insurers and a small number of
           head-to-head comparisons, with the aim of helping you shortlist before going to insurers
           directly. There are no fake star ratings, no invented prices, and no insurer pays to
           appear.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           For background on what shapes the price you'll be quoted, see{" "}
           <Link
             to="/car-insurance/how-much-is-car-insurance/"
-            className="text-primary hover:underline"
+            className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue"
           >
             how much car insurance costs in Australia
           </Link>
           . For the foundations, the{" "}
-          <Link to="/car-insurance/" className="text-primary hover:underline">
+          <Link to="/car-insurance/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             car insurance hub
           </Link>{" "}
           covers cover types and what each one includes.
@@ -266,38 +266,38 @@ const CarInsuranceComparison = () => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">
             Start your shortlist
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             Browse plain-English overviews of sixteen Australian car insurers, or jump to the
             comparison framework to plan a side-by-side.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/reviews/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Browse provider reviews
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/compare/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Comparison framework
             </Link>
             <Link
               to="/car-insurance/quotes/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               How quotes work
             </Link>
           </div>
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

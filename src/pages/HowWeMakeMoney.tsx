@@ -18,21 +18,21 @@ const HowWeMakeMoney = () => {
         canonicalPath={PATH}
         jsonLd={breadcrumbSchema(meta.breadcrumbs)}
       />
-      <article className="container py-12 md:py-16 max-w-3xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[760px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           How we make money
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           The honest version, updated as the business changes.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Right now
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           CoverScout is currently free to use and doesn't earn revenue from any source. There are
           no active affiliate partnerships, no paid placements, and no advertising on the site.
           You'll see references to "we may receive a commission" in disclosure blocks because
@@ -43,10 +43,10 @@ const HowWeMakeMoney = () => {
           something genuinely useful for Australians comparing insurance.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           The planned model
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The intention is to earn commissions from affiliate partnerships with Australian
           insurance providers. When that's live:
         </p>
@@ -66,10 +66,10 @@ const HowWeMakeMoney = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What this doesn't change
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Affiliate income creates an obvious incentive to push readers toward partners. We're
           aware of that, and we've set the editorial side up to keep it in check:
         </p>
@@ -95,12 +95,12 @@ const HowWeMakeMoney = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What we don't do
         </h2>
         <ul className="list-disc pl-6 mb-10 space-y-2 leading-relaxed">
           <li>We don't sell or share your personal information. (We don't collect any — see the{" "}
-            <Link to="/privacy/" className="text-primary hover:underline">
+            <Link to="/privacy/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               privacy policy
             </Link>
             .)
@@ -110,7 +110,7 @@ const HowWeMakeMoney = () => {
           <li>We don't accept payment to remove negative information about a provider</li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Why disclose all this?
         </h2>
         <p className="text-base leading-relaxed mb-10">
@@ -119,25 +119,25 @@ const HowWeMakeMoney = () => {
           wonder. If we ever change any of the above, this page will be updated.
         </p>
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
           <h2 className="font-sans font-extrabold text-2xl tracking-tight mb-3">
             Got a question about this?
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             If anything's unclear or you'd like more detail on the commercial side, get in touch.
             We're happy to explain.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/contact/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Contact us
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/about/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               About CoverScout
             </Link>

@@ -24,20 +24,20 @@ const CarInsuranceNoClaimBonus = () => {
   return (
     <>
       <SEO title={meta.title} description={meta.description} canonicalPath={PATH} jsonLd={breadcrumbSchema(meta.breadcrumbs)} />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">Car insurance no-claim bonus in Australia: how it works</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">A clear guide to the no-claim bonus on Australian car insurance — how the discount builds, what triggers a reset, how protection works, and what to weigh when switching insurers.</p>
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">Car insurance no-claim bonus in Australia: how it works</h1>
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">A clear guide to the no-claim bonus on Australian car insurance — how the discount builds, what triggers a reset, how protection works, and what to weigh when switching insurers.</p>
 
-        <p className="text-base leading-relaxed mb-5">The no-claim bonus is one of the more valuable parts of an Australian car insurance policy — and one of the most misunderstood. The basic idea is simple: stay claim-free, pay less. The fine print is where the differences live.</p>
-        <p className="text-base leading-relaxed mb-5">If you're newer to car insurance generally, the <Link to="/car-insurance/" className="text-primary hover:underline">car insurance hub</Link> covers the fundamentals first.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">The no-claim bonus is one of the more valuable parts of an Australian car insurance policy — and one of the most misunderstood. The basic idea is simple: stay claim-free, pay less. The fine print is where the differences live.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">If you're newer to car insurance generally, the <Link to="/car-insurance/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">car insurance hub</Link> covers the fundamentals first.</p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">What is a no-claim bonus?</h2>
-        <p className="text-base leading-relaxed mb-5">A no-claim bonus is a discount applied to your premium based on how long you've gone without an at-fault claim. Most Australian insurers use a rating ladder: the more claim-free years you've accumulated, the lower your premium relative to a baseline.</p>
-        <p className="text-base leading-relaxed mb-5">There's no single industry standard. Insurers use different rating scales, different maximum levels, and different rules around what counts as a "claim" for bonus purposes. The PDS sets the rules for any specific insurer.</p>
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">What is a no-claim bonus?</h2>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">A no-claim bonus is a discount applied to your premium based on how long you've gone without an at-fault claim. Most Australian insurers use a rating ladder: the more claim-free years you've accumulated, the lower your premium relative to a baseline.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">There's no single industry standard. Insurers use different rating scales, different maximum levels, and different rules around what counts as a "claim" for bonus purposes. The PDS sets the rules for any specific insurer.</p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">Key things to understand</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">Key things to understand</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>It's tied to you, not the car.</strong> Switching cars usually keeps your rating intact (with the same insurer).</li>
           <li><strong>At-fault claims usually trigger a reset</strong> — sometimes back several rating steps, sometimes back to baseline. Different insurers treat this differently.</li>
           <li><strong>Not-at-fault claims often don't affect the bonus</strong> if the at-fault driver can be identified.</li>
@@ -46,8 +46,8 @@ const CarInsuranceNoClaimBonus = () => {
           <li><strong>The actual saving varies.</strong> A "maximum" no-claim discount on a low base premium can be less impactful than a smaller discount on a high one.</li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">How to make the no-claim bonus work for you</h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">How to make the no-claim bonus work for you</h2>
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Confirm your current rating.</strong> Your renewal documents will state it. If you're unsure, the insurer can confirm in writing.</li>
           <li><strong>Decide whether bonus protection is worth it.</strong> For drivers near the top of the ladder, it often is. For newer drivers still building, less so.</li>
           <li><strong>Think twice about lodging small at-fault claims.</strong> Sometimes paying for a minor repair out of pocket preserves a more valuable discount.</li>
@@ -55,10 +55,10 @@ const CarInsuranceNoClaimBonus = () => {
           <li><strong>Re-quote with and without bonus protection</strong> to see the price impact.</li>
           <li><strong>Read the PDS section on rating</strong> for any policy you're considering.</li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">For broader comparison framing, see our <Link to="/car-insurance/compare/" className="text-primary hover:underline">compare car insurance</Link> page.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">For broader comparison framing, see our <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">compare car insurance</Link> page.</p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">Common mistakes to avoid</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">Common mistakes to avoid</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Lodging a small claim that costs your no-claim bonus</strong> when you'd have paid less by absorbing the repair yourself.</li>
           <li><strong>Assuming the bonus transfers automatically.</strong> Sometimes it does, sometimes it requires evidence.</li>
           <li><strong>Treating bonus protection as an automatic must-buy.</strong> Worth modelling against the likely premium impact.</li>
@@ -66,8 +66,8 @@ const CarInsuranceNoClaimBonus = () => {
           <li><strong>Not asking the insurer about a borderline claim</strong> before lodging it.</li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">What affects the value of your no-claim bonus</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-3 leading-relaxed">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">What affects the value of your no-claim bonus</h2>
+        <ul className="list-disc pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li><strong>Years of claim-free history.</strong> The main input.</li>
           <li><strong>The base premium it's applied to.</strong> A 50% discount on a $2,000 premium is worth more than the same discount on $1,000.</li>
           <li><strong>How the insurer counts not-at-fault and uninsured-other-driver claims.</strong> Different rules can produce different outcomes for the same accident.</li>
@@ -75,22 +75,22 @@ const CarInsuranceNoClaimBonus = () => {
           <li><strong>How the insurer treats transferred ratings.</strong> Especially relevant when shopping around.</li>
           <li><strong>Recent driving history beyond claims.</strong> Demerits and infringements can affect overall pricing even if the bonus itself is intact.</li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">For a wider view of premium-shaping factors, see <Link to="/car-insurance/cost/" className="text-primary hover:underline">car insurance cost</Link>.</p>
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">For a wider view of premium-shaping factors, see <Link to="/car-insurance/cost/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">car insurance cost</Link>.</p>
 
         <FAQAccordion items={faqs} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">Compare your options</h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">Comparing matched quotes — with and without bonus protection — is the simplest way to see how each insurer values your existing rating.</p>
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">Compare your options</h2>
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">Comparing matched quotes — with and without bonus protection — is the simplest way to see how each insurer values your existing rating.</p>
           <div className="flex flex-wrap gap-3">
-            <Link to="/car-insurance/compare/" className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition">Compare car insurance<ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></Link>
-            <Link to="/car-insurance/quotes/" className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition">Get car insurance quotes</Link>
-            <Link to="/car-insurance/lower-premiums/" className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition">Lower your premium</Link>
+            <Link to="/car-insurance/compare/" className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition">Compare car insurance<ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></Link>
+            <Link to="/car-insurance/quotes/" className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition">Get car insurance quotes</Link>
+            <Link to="/car-insurance/lower-premiums/" className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition">Lower your premium</Link>
           </div>
           <AffiliateDisclosure className="mt-6" />
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

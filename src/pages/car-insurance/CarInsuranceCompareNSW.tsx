@@ -54,26 +54,26 @@ const CarInsuranceCompareNSW = () => {
         canonicalPath={PATH}
         jsonLd={[breadcrumbSchema(meta.breadcrumbs), faqSchema(faqItems)]}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Compare car insurance in NSW
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A NSW-specific guide to comparing car insurance — what makes the state different (green
           slips, postcode pricing, the NRMA factor), which insurers are worth shortlisting, and how
           to set up a comparison that's actually apples-to-apples.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What makes NSW different
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           NSW has a few quirks that change how a comparison shapes up versus other states:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Green slip (CTP) is separate.</strong> NSW and the ACT are the two jurisdictions
             where CTP is sold as a stand-alone green slip rather than bundled into registration. You
@@ -95,14 +95,14 @@ const CarInsuranceCompareNSW = () => {
           </li>
         </ul>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Insurers commonly compared in NSW
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The NSW car insurance market is well-served — most major Australian insurers operate
           here. A reasonable shortlist usually includes a mix of:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>NSW-rooted brands</strong> — NRMA Insurance
           </li>
@@ -117,37 +117,37 @@ const CarInsuranceCompareNSW = () => {
             (underwritten by partner insurers, disclosed in the PDS)
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Plain-English overviews of each are in our{" "}
-          <Link to="/reviews/" className="text-primary hover:underline">
+          <Link to="/reviews/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             provider directory
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Green slips: the NSW-only piece
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A green slip — Compulsory Third Party (CTP) — is required to register a vehicle in NSW
           and only covers personal injury claims to other people. It's purchased separately through
           a small panel of licensed CTP insurers. The State Insurance Regulatory Authority (SIRA)
           publishes a free comparison tool for CTP at <em>greenslips.nsw.gov.au</em>.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           When you compare comprehensive or third party policies, make sure you're not accidentally
           adding the CTP cost into the comparison or omitting it from one quote and including it in
           another. They're priced and bought separately.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What shapes your NSW premium
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Beyond the standard rating factors that apply nationally, three things tend to swing NSW
           quotes the most:
         </p>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Postcode</strong> — the difference between a high-claim Sydney postcode and a
             quiet regional postcode can be hundreds of dollars a year for the same driver and
@@ -160,30 +160,30 @@ const CarInsuranceCompareNSW = () => {
           <li>
             <strong>Driver age and history</strong> — NSW has comparatively strict licensing rules,
             and insurers price younger and less experienced drivers accordingly. The{" "}
-            <Link to="/car-insurance/young-drivers/" className="text-primary hover:underline">
+            <Link to="/car-insurance/young-drivers/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               young drivers page
             </Link>{" "}
             covers this in detail.
           </li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           For the broader picture of what shapes any quote, see{" "}
           <Link
             to="/car-insurance/how-much-is-car-insurance/"
-            className="text-primary hover:underline"
+            className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue"
           >
             how much car insurance costs in Australia
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           A NSW comparison routine
         </h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Decide your cover type and excess up front. Use the{" "}
-            <Link to="/car-insurance/excess/" className="text-primary hover:underline">
+            <Link to="/car-insurance/excess/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               excess explainer
             </Link>{" "}
             if you're undecided.
@@ -205,18 +205,18 @@ const CarInsuranceCompareNSW = () => {
             structure, choice of repairer and any age/at-fault excesses.
           </li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The general framework lives on our{" "}
-          <Link to="/car-insurance/compare/" className="text-primary hover:underline">
+          <Link to="/car-insurance/compare/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             comparing car insurance
           </Link>{" "}
           page.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Common NSW pitfalls
         </h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Mixing your green slip cost into a comprehensive comparison
           </li>
@@ -235,38 +235,38 @@ const CarInsuranceCompareNSW = () => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">
             Build your NSW shortlist
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             Browse plain-English overviews of sixteen Australian car insurers — including NRMA and
             other off-panel brands — then quote a handful direct using identical inputs.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/reviews/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Browse provider reviews
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/compare/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Comparison framework
             </Link>
             <Link
               to="/car-insurance/quotes/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               How quotes work
             </Link>
           </div>
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );

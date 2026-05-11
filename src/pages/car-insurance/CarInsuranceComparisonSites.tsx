@@ -54,23 +54,23 @@ const CarInsuranceComparisonSites = () => {
         canonicalPath={PATH}
         jsonLd={[breadcrumbSchema(meta.breadcrumbs), faqSchema(faqItems)]}
       />
-      <article className="container py-12 md:py-16 max-w-4xl">
-        <Breadcrumbs items={meta.breadcrumbs} className="mb-6" />
+      <article className="container py-14 md:py-20 max-w-[820px]">
+        <Breadcrumbs items={meta.breadcrumbs} className="mb-8" />
 
-        <h1 className="font-sans font-extrabold text-4xl md:text-5xl tracking-tight mb-6">
+        <h1 className="font-sans font-semibold text-[44px] md:text-[64px] tracking-[-0.035em] leading-[1.02] mb-8">
           Insurance comparison sites in Australia
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
           A plain-English guide to how Australian car insurance comparison sites work, who they
           show and don't show, how they make money, and how to use them well — including how
           CoverScout fits into the picture as a non-comparison editorial alternative.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           What a comparison site actually does
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           A typical Australian car insurance comparison site asks you a series of questions about
           your vehicle, driver and address, then displays quotes from a panel of insurers it has
           commercial relationships with. When you click through and buy a policy, the comparison
@@ -78,20 +78,20 @@ const CarInsuranceComparisonSites = () => {
           site's Financial Services Guide (FSG) sets it out — and it's how comparison sites fund
           their service.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The model means a comparison site is genuinely useful as a starting point, but it isn't
           a market-wide view. The panel is shaped by which insurers will pay for the referral, not
           by who's necessarily best for your circumstances.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           The insurers comparison sites typically miss
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Several of Australia's biggest and most-quoted car insurers commonly aren't on third-party
           comparison panels:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Youi</strong> — large Sunshine Coast-based insurer with a question-led pricing
             model. Typically only quotable directly.
@@ -109,20 +109,20 @@ const CarInsuranceComparisonSites = () => {
             channel
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           That doesn't make comparison sites useless — it just means they show one slice of the
           market. The cheapest quote on a comparison panel is the cheapest on that panel, not
           necessarily the cheapest available.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           How comparison sites are funded
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Most well-known Australian car insurance comparison sites operate on a referral-fee or
           commission model paid by the insurer. Specifically:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 leading-relaxed">
+        <ul className="list-disc pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Per-acquisition fee</strong> — the most common structure. The site is paid when
             a customer buys a policy through the click-through.
@@ -139,16 +139,16 @@ const CarInsuranceComparisonSites = () => {
             <strong>Flat advertising fees</strong> — for insurers that aren't on the active panel
           </li>
         </ul>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           This isn't unique to comparison sites or to insurance — most online financial product
           marketplaces work this way. The Australian Securities and Investments Commission (ASIC)
           requires the commercial model to be disclosed in the FSG.
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           How to use comparison sites well
         </h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-3 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-3 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             <strong>Treat the result as a partial view.</strong> The cheapest quote on the panel is
             the cheapest <em>on that panel</em>, not in the market.
@@ -170,39 +170,39 @@ const CarInsuranceComparisonSites = () => {
             price can have very different excesses, exclusions and claim experiences.
           </li>
         </ol>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The general comparison framework lives on our{" "}
-          <Link to="/car-insurance/comparison/" className="text-primary hover:underline">
+          <Link to="/car-insurance/comparison/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             comparison page
           </Link>
           .
         </p>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           Where CoverScout fits in
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           CoverScout isn't a comparison site in the traditional sense. We don't pull live quotes
           and we don't take applications. We're an editorial site — we publish neutral plain-English
           overviews of sixteen Australian car insurers (including the off-panel ones), a small
           number of head-to-head comparisons, and guides to help you understand what you're
           actually buying.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           We don't currently run any active affiliate programs, and we don't take payment for
           editorial coverage or favourable wording. Our{" "}
-          <Link to="/how-we-make-money/" className="text-primary hover:underline">
+          <Link to="/how-we-make-money/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
             how-we-make-money
           </Link>{" "}
           page sets out the full commercial picture.
         </p>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           The practical workflow we'd suggest:
         </p>
-        <ol className="list-decimal pl-6 mb-6 space-y-2 leading-relaxed">
+        <ol className="list-decimal pl-6 mb-6 space-y-2.5 text-[16px] leading-[1.65] text-foreground/85">
           <li>
             Use our{" "}
-            <Link to="/reviews/" className="text-primary hover:underline">
+            <Link to="/reviews/" className="text-brand-blue font-medium underline decoration-brand-blue/40 underline-offset-[4px] hover:decoration-brand-blue">
               provider directory
             </Link>{" "}
             to shortlist three to five insurers across budget-friendly, balanced and broader-cover
@@ -220,10 +220,10 @@ const CarInsuranceComparisonSites = () => {
           </li>
         </ol>
 
-        <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mt-12 mb-4">
+        <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mt-16 mb-5">
           A note on review sites and "best" rankings
         </h2>
-        <p className="text-base leading-relaxed mb-5">
+        <p className="text-[16px] leading-[1.65] text-foreground/85 mb-5">
           Several Australian sites publish "best car insurance" rankings or star ratings. Some are
           genuinely independent (and disclose their methodology); others are commercially funded
           and the rankings can quietly correlate with referral relationships. Worth checking the
@@ -234,11 +234,11 @@ const CarInsuranceComparisonSites = () => {
 
         <FAQAccordion items={faqItems} heading="Frequently asked questions" className="mt-16" />
 
-        <section className="mt-16 bg-card border border-border rounded-lg p-6 md:p-8">
-          <h2 className="font-sans font-extrabold text-2xl md:text-3xl tracking-tight mb-3">
+        <section className="mt-20 bg-secondary/60 border border-border rounded-3xl p-8 md:p-12">
+          <h2 className="font-sans font-semibold text-[28px] md:text-[36px] tracking-[-0.025em] leading-[1.1] mb-3">
             Build your shortlist on CoverScout
           </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[16px] text-muted-foreground leading-[1.6] mb-7 max-w-2xl">
             Plain-English overviews of sixteen Australian car insurers — including the off-panel
             ones comparison sites typically miss. No live quotes, no fake star ratings, no
             sponsored placements.
@@ -246,27 +246,27 @@ const CarInsuranceComparisonSites = () => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/reviews/"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Provider directory
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/car-insurance/comparison/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               Comparison framework
             </Link>
             <Link
               to="/how-we-make-money/"
-              className="inline-flex items-center gap-2 bg-secondary text-foreground px-5 py-3 rounded-md text-sm font-medium hover:bg-muted transition"
+              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
               How we make money
             </Link>
           </div>
         </section>
 
-        <DisclaimerBlock className="mt-10" />
+        <DisclaimerBlock className="mt-12" />
       </article>
     </>
   );
