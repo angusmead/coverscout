@@ -70,9 +70,27 @@ export const ProviderReviewPage = ({ slug }: Props) => {
           : cover, features and how it compares
         </h1>
 
-        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-12 max-w-[680px]">
+        <p className="text-[19px] md:text-[20px] text-muted-foreground leading-[1.55] mb-7 max-w-[680px]">
           {provider.lead}
         </p>
+
+        <div className="flex flex-wrap gap-3 mb-12">
+          <a
+            href={`${provider.website}?utm_source=coverscout&utm_medium=review&utm_campaign=${provider.slug}`}
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
+          >
+            Get a quote from {provider.name}
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+          </a>
+          <Link
+            to="/car-insurance/compare/"
+            className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
+          >
+            Compare with other insurers
+          </Link>
+        </div>
 
         <h2 className={h2}>Overview</h2>
         {provider.overview.map((para, i) => (
@@ -224,18 +242,20 @@ export const ProviderReviewPage = ({ slug }: Props) => {
             the comparison framework and the quote process.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              to="/car-insurance/compare/"
+            <a
+              href={`${provider.website}?utm_source=coverscout&utm_medium=review_cta&utm_campaign=${provider.slug}`}
+              target="_blank"
+              rel="sponsored noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
-              Compare car insurance
+              Get a quote from {provider.name}
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </a>
             <Link
-              to="/car-insurance/quotes/"
+              to="/car-insurance/compare/"
               className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
-              Get car insurance quotes
+              Compare with other insurers
             </Link>
             <Link
               to="/reviews/"

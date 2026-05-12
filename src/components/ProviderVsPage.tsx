@@ -293,24 +293,29 @@ export const ProviderVsPage = ({ path }: Props) => {
             the comparison framework and the quote process.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              to="/car-insurance/compare/"
+            <a
+              href={`${a.website}?utm_source=coverscout&utm_medium=vs_cta&utm_campaign=${comparison.slugA}-vs-${comparison.slugB}`}
+              target="_blank"
+              rel="sponsored noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
-              Compare car insurance
+              Quote from {a.name}
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </a>
+            <a
+              href={`${b.website}?utm_source=coverscout&utm_medium=vs_cta&utm_campaign=${comparison.slugA}-vs-${comparison.slugB}`}
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
+            >
+              Quote from {b.name}
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            </a>
             <Link
-              to="/car-insurance/quotes/"
+              to="/car-insurance/compare/"
               className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
             >
-              Get car insurance quotes
-            </Link>
-            <Link
-              to="/reviews/"
-              className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-secondary transition"
-            >
-              All provider reviews
+              Compare more insurers
             </Link>
           </div>
           <AffiliateDisclosure className="mt-6" />

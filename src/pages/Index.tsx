@@ -31,7 +31,7 @@ const featuredComparisons = [
   { label: "AAMI vs NRMA", to: "/reviews/aami-vs-nrma/" },
   { label: "Budget Direct vs Youi", to: "/reviews/budget-direct-vs-youi/" },
   { label: "Bingle vs Budget Direct", to: "/reviews/bingle-vs-budget-direct/" },
-  { label: "Coles vs Woolworths", to: "/reviews/coles-vs-woolworths/" },
+  { label: "Coles vs Everyday Insurance", to: "/reviews/coles-vs-woolworths/" },
   { label: "RACQ vs Suncorp", to: "/reviews/racq-vs-suncorp/" },
   { label: "APIA vs NRMA", to: "/reviews/apia-vs-nrma/" },
 ];
