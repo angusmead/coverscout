@@ -54,6 +54,7 @@ type ProviderRow = {
   slug: string;
   name: string;
   path: string;
+  website: string;
   facts: DirectoryFacts;
   paletteIndex: number;
 };
@@ -69,6 +70,7 @@ const ROWS: ProviderRow[] = [...PROVIDERS]
       slug: p.slug,
       name: p.name,
       path: p.path,
+      website: p.website,
       facts,
       paletteIndex: i % AVATAR_PALETTE.length,
     };
@@ -317,17 +319,19 @@ export const ProviderDirectory = ({
                     className="transition-transform group-hover:translate-x-0.5"
                   />
                 </Link>
-                <button
-                  type="button"
-                  disabled
-                  title="Affiliate quote links coming soon"
-                  className="inline-flex items-center justify-center gap-2 bg-secondary text-muted-foreground border border-border px-4 py-2.5 rounded-md text-sm font-medium cursor-not-allowed whitespace-nowrap"
+                <a
+                  href={`${row.website}?utm_source=coverscout&utm_medium=directory&utm_campaign=${row.slug}`}
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  onClick={() => track({ type: "quote_clicked", slug: row.slug })}
+                  className="group inline-flex items-center justify-center gap-2 bg-card border border-border text-foreground px-4 py-2.5 rounded-md text-sm font-medium hover:bg-secondary transition whitespace-nowrap"
                 >
                   Get quote
-                  <span className="text-[10px] uppercase tracking-[0.1em] text-muted-foreground/70">
-                    soon
-                  </span>
-                </button>
+                  <ArrowRight
+                    size={14}
+                    className="transition-transform group-hover:translate-x-0.5"
+                  />
+                </a>
               </div>
             </li>
           ))}

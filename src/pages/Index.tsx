@@ -19,12 +19,12 @@ const popularTopics = [
 ];
 
 const FEATURED_PROVIDER_SLUGS = [
+  "rollin",
   "aami",
   "nrma",
   "budget-direct",
   "youi",
   "allianz",
-  "bingle",
 ];
 
 const featuredComparisons = [
