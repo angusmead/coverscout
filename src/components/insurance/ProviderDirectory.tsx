@@ -9,15 +9,27 @@ import {
   type DirectoryFacts,
 } from "@/lib/provider-directory-data";
 import { ProviderLogo } from "@/components/insurance/ProviderLogo";
+import { trackEvent, trackOutboundClick } from "@/lib/analytics";
 
 type DirectoryEvent =
   | { type: "filter_changed"; brandType: BrandType | "all"; query: string }
   | { type: "review_clicked"; slug: string }
-  | { type: "quote_clicked"; slug: string };
+  | { type: "quote_clicked"; slug: string; destination: string };
 
 const track = (event: DirectoryEvent) => {
   if (typeof window === "undefined") return;
   if (import.meta.env.DEV) console.debug("[ProviderDirectory]", event);
+  if (event.type === "review_clicked") {
+    trackEvent("review_clicked", { provider: event.slug, surface: "directory" });
+  } else if (event.type === "quote_clicked") {
+    trackOutboundClick({
+      provider: event.slug,
+      surface: "directory",
+      destination: event.destination,
+    });
+  } else if (event.type === "filter_changed") {
+    trackEvent("directory_filter", { brand_type: event.brandType, query: event.query });
+  }
 };
 
 /**
@@ -323,7 +335,7 @@ export const ProviderDirectory = ({
                   href={`${row.website}?utm_source=coverscout&utm_medium=directory&utm_campaign=${row.slug}`}
                   target="_blank"
                   rel="sponsored noopener noreferrer"
-                  onClick={() => track({ type: "quote_clicked", slug: row.slug })}
+                  onClick={() => track({ type: "quote_clicked", slug: row.slug, destination: row.website })}
                   className="group inline-flex items-center justify-center gap-2 bg-card border border-border text-foreground px-4 py-2.5 rounded-md text-sm font-medium hover:bg-secondary transition whitespace-nowrap"
                 >
                   Get quote
