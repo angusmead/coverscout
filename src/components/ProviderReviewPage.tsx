@@ -8,6 +8,7 @@ import { AffiliateDisclosure } from "@/components/insurance/AffiliateDisclosure"
 import { ProviderLogo } from "@/components/insurance/ProviderLogo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getProvider, type ProviderProfile } from "@/lib/providers-data";
+import { trackOutboundClick } from "@/lib/analytics";
 
 type Props = { slug: string };
 
@@ -79,6 +80,7 @@ export const ProviderReviewPage = ({ slug }: Props) => {
             href={`${provider.website}?utm_source=coverscout&utm_medium=review&utm_campaign=${provider.slug}`}
             target="_blank"
             rel="sponsored noopener noreferrer"
+            onClick={() => trackOutboundClick({ provider: provider.slug, surface: "review_lead", destination: provider.website })}
             className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
           >
             Get a quote from {provider.name}
@@ -246,6 +248,7 @@ export const ProviderReviewPage = ({ slug }: Props) => {
               href={`${provider.website}?utm_source=coverscout&utm_medium=review_cta&utm_campaign=${provider.slug}`}
               target="_blank"
               rel="sponsored noopener noreferrer"
+              onClick={() => trackOutboundClick({ provider: provider.slug, surface: "review_cta", destination: provider.website })}
               className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Get a quote from {provider.name}

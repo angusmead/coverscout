@@ -13,6 +13,7 @@ import {
   type Comparison,
 } from "@/lib/comparisons-data";
 import { getProvider } from "@/lib/providers-data";
+import { trackOutboundClick } from "@/lib/analytics";
 
 type Props = { path: string };
 
@@ -297,6 +298,7 @@ export const ProviderVsPage = ({ path }: Props) => {
               href={`${a.website}?utm_source=coverscout&utm_medium=vs_cta&utm_campaign=${comparison.slugA}-vs-${comparison.slugB}`}
               target="_blank"
               rel="sponsored noopener noreferrer"
+              onClick={() => trackOutboundClick({ provider: a.slug, surface: "vs_cta", destination: a.website, context: `${comparison.slugA}-vs-${comparison.slugB}` })}
               className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Quote from {a.name}
@@ -306,6 +308,7 @@ export const ProviderVsPage = ({ path }: Props) => {
               href={`${b.website}?utm_source=coverscout&utm_medium=vs_cta&utm_campaign=${comparison.slugA}-vs-${comparison.slugB}`}
               target="_blank"
               rel="sponsored noopener noreferrer"
+              onClick={() => trackOutboundClick({ provider: b.slug, surface: "vs_cta", destination: b.website, context: `${comparison.slugA}-vs-${comparison.slugB}` })}
               className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-foreground/90 transition"
             >
               Quote from {b.name}
