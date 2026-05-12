@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Providers } from "@/lib/providers";
 import { Nav } from "./Nav";
@@ -8,10 +8,16 @@ import { trackPageView } from "@/lib/analytics";
 
 export const SiteLayout = () => {
   const location = useLocation();
+  const isFirstRender = useRef(true);
 
-  // Fire GA page_view on every route change. The initial automatic page_view
-  // is disabled in index.html (send_page_view: false), so this owns the count.
+  // GA fires page_view for the initial load via gtag('config'). Subsequent
+  // client-side route changes don't, so we fire them manually here. Skip
+  // the first render to avoid double-counting the initial page.
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     trackPageView(location.pathname);
   }, [location.pathname]);
 
